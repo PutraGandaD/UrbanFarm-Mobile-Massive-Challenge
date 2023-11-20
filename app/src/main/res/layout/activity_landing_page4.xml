@@ -11,9 +11,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:scaleType="centerCrop"
-        app:srcCompat="@drawable/background_full"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="0dp" />
+        app:srcCompat="@drawable/background_full"/>
 
     <View
         android:layout_width="match_parent"
@@ -115,14 +113,16 @@
                 android:paddingHorizontal="16dp"
                 android:layout_marginTop="20dp"
                 android:text="       Masuk dengan Google"
-                android:textColor="@color/black" />
+                android:textColor="@color/black"
+                android:onClick="onGoogleButtonClick" />
 
             <TextView
                 android:layout_marginTop="30dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:gravity="center"
-                android:text="Copyright 2023 CodeSmiths Team\nTentang Aplikasi" />
+                android:text="Copyright 2023 CodeSmiths Team\nTentang Aplikasi"
+                android:textColor="@color/black"/>
 
         </LinearLayout>
 
