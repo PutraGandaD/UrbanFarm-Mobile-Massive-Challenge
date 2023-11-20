@@ -3,5 +3,8 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="primary_green">#334B35</color>
-    <color name="secondary">#F7C35F</color>
+    <color name="secondary_green">#F7C35F</color>
+    <color name="tertiary_green">#F9E69E</color>
+    <color name="material3_primary_color">#D9E7CB</color>
+    <color name="material3_card_color">#FAF2F1</color>
 </resources>
