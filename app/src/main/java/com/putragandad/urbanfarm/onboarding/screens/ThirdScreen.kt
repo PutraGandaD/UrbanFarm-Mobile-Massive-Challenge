@@ -5,24 +5,32 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.viewpager2.widget.ViewPager2
 import com.putragandad.urbanfarm.R
+import com.putragandad.urbanfarm.databinding.FragmentSecondScreenBinding
+import com.putragandad.urbanfarm.databinding.FragmentThirdScreenBinding
 
-// TODO: Rename parameter arguments, choose names that match
-// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-private const val ARG_PARAM1 = "param1"
-private const val ARG_PARAM2 = "param2"
-
-/**
- * A simple [Fragment] subclass.
- * Use the [ThirdScreen.newInstance] factory method to
- * create an instance of this fragment.
- */
 class ThirdScreen : Fragment() {
+    private var _binding : FragmentThirdScreenBinding? = null
+    private val binding get() = _binding!!
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_third_screen, container, false)
+        _binding = FragmentThirdScreenBinding.inflate(inflater, container, false)
+
+        val viewPager = activity?.findViewById<ViewPager2>(R.id.viewPager)
+
+        binding.btnPrevOb3.setOnClickListener{
+            viewPager?.currentItem = 1
+        }
+
+        binding.btnDoneOb3.setOnClickListener{
+            // Landing Page unfinished
+        }
+
+        return binding.root
+
     }
 }
