@@ -1,5 +1,6 @@
 package com.putragandad.urbanfarm.fragments.registerpage
 
+import android.content.Context
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -18,6 +19,10 @@ class RegisterPageFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         _binding = FragmentRegisterPageBinding.inflate(inflater, container, false)
+
+        binding.btnRegisterPage.setOnClickListener{
+            findNavController().navigate(R.id.action_registerFinished_to_loginPage)
+        }
 
         return binding.root
     }

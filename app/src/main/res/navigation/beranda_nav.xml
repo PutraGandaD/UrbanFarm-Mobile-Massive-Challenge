@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/beranda_nav"
+    app:startDestination="@id/berandaPageFragment">
+
+    <fragment
+        android:id="@+id/berandaPageFragment"
+        android:name="com.putragandad.urbanfarm.fragments.berandapage.BerandaPageFragment"
+        android:label="fragment_beranda_page"
+        tools:layout="@layout/fragment_beranda_page" />
+</navigation>

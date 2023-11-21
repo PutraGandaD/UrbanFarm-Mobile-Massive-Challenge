@@ -1,5 +1,6 @@
 package com.putragandad.urbanfarm.fragments.loginpage
 
+import android.content.Context
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -19,6 +20,18 @@ class LoginPageFragment : Fragment() {
     ): View? {
         _binding = FragmentLoginPageBinding.inflate(inflater, container, false)
 
+        binding.btnLoginPage.setOnClickListener{
+            findNavController().navigate(R.id.action_login_to_beranda)
+            loginFinished()
+        }
+
         return binding.root
+    }
+
+    private fun loginFinished() {
+        val sharedPref = requireActivity().getSharedPreferences("loginFinished", Context.MODE_PRIVATE)
+        val editor = sharedPref.edit()
+        editor.putBoolean("Finished", true)
+        editor.apply()
     }
 }
