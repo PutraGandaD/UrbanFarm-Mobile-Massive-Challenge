@@ -9,5 +9,26 @@
         android:id="@+id/landingPageFragment"
         android:name="com.putragandad.urbanfarm.fragments.landingpage.LandingPageFragment"
         android:label="fragment_landing_page"
-        tools:layout="@layout/fragment_landing_page" />
+        tools:layout="@layout/fragment_landing_page" >
+        <action
+            android:id="@+id/action_landingPageFragment_to_loginPageFragment"
+            app:destination="@id/loginPageFragment"
+            app:popUpTo="@id/landingPageFragment"
+            app:popUpToInclusive="false" />
+        <action
+            android:id="@+id/action_landingPageFragment_to_registerPageFragment"
+            app:destination="@id/registerPageFragment"
+            app:popUpTo="@id/landingPageFragment"
+            app:popUpToInclusive="false" />
+    </fragment>
+    <fragment
+        android:id="@+id/loginPageFragment"
+        android:name="com.putragandad.urbanfarm.fragments.loginpage.LoginPageFragment"
+        android:label="fragment_login_page"
+        tools:layout="@layout/fragment_login_page" />
+    <fragment
+        android:id="@+id/registerPageFragment"
+        android:name="com.putragandad.urbanfarm.fragments.registerpage.RegisterPageFragment"
+        android:label="fragment_register_page"
+        tools:layout="@layout/fragment_register_page" />
 </navigation>
