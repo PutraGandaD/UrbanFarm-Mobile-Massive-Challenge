@@ -8,6 +8,7 @@
     <string name="onboarding_page3_title">Jual hasil panen dan dapatkan keuntungan</string>
     <string name="onboarding_page3_content">Jual hasil panen Anda dan nikmati kemudahan berinteraksi sesama pengguna di Urban Farming! Selamat menanam dan berbagi hasil panen!</string>
     <string name="landing_page_welcome">Ayo Mulai #UrbanFarming bersama UrbanFarm!</string>
+    <string name="landing_page_copyright">Copyright 2023 CodeSmiths Team</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
