@@ -29,7 +29,7 @@ class ThirdScreen : Fragment() {
         }
 
         binding.btnDoneOb3.setOnClickListener{
-            findNavController().navigate(R.id.action_viewPagerFragment_to_landingPageFragment)
+            findNavController().navigate(R.id.action_onboarding_to_landing)
             onBoardingFinished()
         }
 
