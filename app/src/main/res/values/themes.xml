@@ -1,3 +1,15 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
-    <style name="Theme.UrbanFarm" parent="Theme.Material3.DayNight.NoActionBar" />
+    <style name="Theme.UrbanFarm" parent="Theme.Material3.DayNight.NoActionBar" >
+        <item name="materialCardViewStyle">@style/Widget.App.CustomCardLandingPage</item>
+    </style>
+
+    <style name="Widget.App.CustomCardLandingPage" parent="Widget.Material3.CardView.Elevated">
+        <item name="shapeAppearance">@style/ShapeAppearance.App.MediumComponent</item>
+    </style>
+
+    <style name="ShapeAppearance.App.MediumComponent" parent="ShapeAppearance.Material3.MediumComponent">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSizeTopLeft">10dp</item>
+        <item name="cornerSizeTopRight">10dp</item>
+    </style>
 </resources>
