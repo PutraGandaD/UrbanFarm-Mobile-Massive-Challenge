@@ -13,9 +13,12 @@
         android:theme="@style/Theme.UrbanFarm"
         tools:targetApi="31">
         <activity
+            android:name=".activity.FragmentContainerActivity"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
-            android:label="UrbanFarm"
-            android:exported="true">
+            android:exported="true"
+            android:label="UrbanFarm">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
