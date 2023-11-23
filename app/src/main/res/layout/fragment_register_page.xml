@@ -4,18 +4,135 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".fragments.registerpage.RegisterPageFragment">
+    tools:context=".fragments.registerpage.RegisterPageFragment"
+    android:background="@drawable/background_full">
 
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/btn_register_page"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Register"
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#40000000" />
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/card_registerpage"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="175dp"
+        app:contentPadding="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
+        style="@style/Widget.App.CustomCardLandingPage">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="45dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:orientation="vertical"
+                android:gravity="center_horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/opensans_semibold"
+                    android:text="Registration"
+                    android:textSize="24dp"
+                    android:layout_marginBottom="50dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start"
+                    android:fontFamily="@font/opensans_semibold"
+                    android:text="Email"/>
+
+                <EditText
+                    android:id="@+id/edtEmail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/opensans_semibold"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start"
+                    android:fontFamily="@font/opensans_semibold"
+                    android:text="Nama Pengguna"/>
+
+                <EditText
+                    android:id="@+id/edtNamaPengguna"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/opensans_semibold"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start"
+                    android:fontFamily="@font/opensans_semibold"
+                    android:text="Kata Sandi"/>
+
+                <EditText
+                    android:id="@+id/edtKataSandi"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/opensans_semibold"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start"
+                    android:fontFamily="@font/opensans_semibold"
+                    android:text="Ketik Ulang Sandi"/>
+
+                <EditText
+                    android:id="@+id/edtKetikUlangSandi"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/opensans_semibold"/>
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn_register_page"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="10dp"
+                    android:backgroundTint="@color/primary_green"
+                    android:fontFamily="@font/opensans_semibold"
+                    android:text="Buat Akun"
+                    android:textSize="24dp"
+                    android:textColor="@color/white"
+                    app:cornerRadius="15dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/opensans_semibold"
+                    android:text="Sudah Punya Akun? Login!"
+                    android:textSize="14dp"/>
+
+            </LinearLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <ImageView
+        android:id="@+id/iv_logo_landing"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginBottom="-80dp"
+        android:src="@drawable/logo_bg_white"
+        app:layout_constraintBottom_toTopOf="@+id/card_registerpage"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.5" />
+        android:elevation="10dp"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

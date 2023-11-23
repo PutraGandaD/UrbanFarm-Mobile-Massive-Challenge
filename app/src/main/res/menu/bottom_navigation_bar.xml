@@ -9,7 +9,7 @@
         android:icon="@drawable/ic_tanamanku"/>
     <item android:title="Jual Beli Panen"
         android:id="@+id/jualBeliPanen"
-        android:icon="@drawable/ic_tanamanku"/>
+        android:icon="@drawable/ic_jual_beli_panen"/>
     <item android:title="Profil"
         android:id="@+id/profil"
         android:icon="@drawable/ic_profil"/>
