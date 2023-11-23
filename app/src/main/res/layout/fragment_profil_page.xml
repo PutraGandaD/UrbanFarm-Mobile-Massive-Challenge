@@ -1,23 +1,205 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".fragments.tanamankupage.TanamankuPageFragment">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".fragments.profilepage.ProfilePageFragment"
+    android:background="@drawable/background_full">
 
-    <!-- TODO: Update blank fragment layout -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#60000000" />
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/card_loginpage"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="175dp"
+        app:contentPadding="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        style="@style/Widget.App.CustomCardLandingPage">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="60dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:orientation="vertical"
+                android:gravity="center_horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/opensans_semibold"
+                    android:text="Putra Ganda Dewata"
+                    android:textSize="24dp"
+                    android:textColor="@color/black"
+                    android:layout_marginBottom="10dp"/>
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnEditProfil"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:backgroundTint="@color/secondary_green"
+                    android:fontFamily="@font/opensans_semibold"
+                    android:text="Edit Profil"
+                    android:textSize="12dp"
+                    app:icon="@drawable/ic_edit"
+                    app:iconTint="@color/primary_green"
+                    android:textColor="@color/primary_green"
+                    app:cornerRadius="20dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"/>
+
+                <ImageView
+                    android:id="@+id/divider_btn_profile"
+                    android:layout_width="400dp"
+                    android:layout_height="20dp"
+                    android:layout_marginBottom="10dp"
+                    android:src="@drawable/divider_profile_page"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"/>
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnPostinganAnda"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_marginBottom="10dp"
+                    android:backgroundTint="@color/material3_primary_color"
+                    android:fontFamily="@font/opensans_semibold"
+                    android:text="Postingan Anda"
+                    android:textSize="12dp"
+                    app:icon="@drawable/ic_media"
+                    app:iconTint="@color/primary_green"
+                    app:iconPadding="20dp"
+                    android:textColor="@color/primary_green"
+                    app:cornerRadius="10dp"
+                    android:gravity="start|center_vertical"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"/>
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnPengaturanAkun"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_marginBottom="10dp"
+                    android:backgroundTint="@color/material3_primary_color"
+                    android:fontFamily="@font/opensans_semibold"
+                    android:text="Pengaturan Akun"
+                    android:textSize="12dp"
+                    app:icon="@drawable/ic_profil_filled"
+                    app:iconTint="@color/primary_green"
+                    app:iconPadding="20dp"
+                    android:textColor="@color/primary_green"
+                    app:cornerRadius="10dp"
+                    android:gravity="start|center_vertical"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"/>
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnPengaturanAplikasi"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_marginBottom="10dp"
+                    android:backgroundTint="@color/material3_primary_color"
+                    android:fontFamily="@font/opensans_semibold"
+                    android:text="Pengaturan Aplikasi"
+                    android:textSize="12dp"
+                    app:icon="@drawable/ic_settings"
+                    app:iconTint="@color/primary_green"
+                    app:iconPadding="20dp"
+                    android:textColor="@color/primary_green"
+                    app:cornerRadius="10dp"
+                    android:gravity="start|center_vertical"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/opensans_semibold"
+                    android:text="Pusat Bantuan"
+                    android:textSize="12dp"
+                    android:textColor="#60000000"
+                    android:layout_marginBottom="10dp"
+                    android:layout_gravity="start"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/opensans_semibold"
+                    android:text="Tentang Aplikasi"
+                    android:textSize="12dp"
+                    android:textColor="#60000000"
+                    android:layout_marginBottom="10dp"
+                    android:layout_gravity="start"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/opensans_semibold"
+                    android:text="Keluar"
+                    android:textSize="12dp"
+                    android:textColor="@color/red"
+                    android:layout_marginBottom="10dp"
+                    android:layout_gravity="start"/>
+
+            </LinearLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="PROFIL"
-        android:textSize="25sp"
-        android:textStyle="bold"
-        android:textColor="@color/black"
-        android:fontFamily="@font/opensans_regular"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="24dp"
+        android:layout_marginStart="24dp"
+        android:fontFamily="@font/opensans_semibold"
+        android:text="Profil Anda"
+        android:textColor="@color/white"
+        android:textSize="24dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="155dp"
+        android:layout_height="155dp"
+        android:layout_marginBottom="-80dp"
+        app:cardBackgroundColor="@color/white"
+        app:cardCornerRadius="250dp"
+        app:layout_constraintBottom_toTopOf="@+id/card_loginpage"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_gravity="center"
+            app:cardCornerRadius="250dp">
+
+            <ImageView
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/profil" />
+
+        </androidx.cardview.widget.CardView>
+
+    </androidx.cardview.widget.CardView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
