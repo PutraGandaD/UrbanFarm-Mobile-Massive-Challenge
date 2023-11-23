@@ -1,4 +1,4 @@
-package com.putragandad.urbanfarm
+package com.putragandad.urbanfarm.fragments.splashscreen
 
 import android.content.Context
 import android.os.Bundle
