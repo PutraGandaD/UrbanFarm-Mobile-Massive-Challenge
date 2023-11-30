@@ -16,4 +16,15 @@ Lorem donec massa sapien faucibus et molestie ac. Euismod elementum nisi quis el
 Orci nulla pellentesque dignissim enim sit amet venenatis urna. Id cursus metus aliquam eleifend mi in nulla posuere. Id cursus metus aliquam eleifend mi in nulla posuere sollicitudin. Adipiscing vitae proin sagittis nisl rhoncus mattis rhoncus urna. Odio aenean sed adipiscing diam. Malesuada bibendum arcu vitae elementum curabitur vitae nunc sed. Consectetur adipiscing elit ut aliquam purus. Sit amet mauris commodo quis imperdiet massa tincidunt. Egestas congue quisque egestas diam in. Senectus et netus et malesuada. Ullamcorper sit amet risus nullam eget. Est placerat in egestas erat imperdiet. Commodo nulla facilisi nullam vehicula ipsum a. Erat velit scelerisque in dictum non. Lorem ipsum dolor sit amet consectetur adipiscing elit ut.
 Cras fermentum odio eu feugiat pretium nibh. Ac odio tempor orci dapibus ultrices in iaculis nunc sed. Convallis tellus id interdum velit laoreet id donec ultrices tincidunt. Mauris a diam maecenas sed. Id cursus metus aliquam eleifend mi in nulla posuere. Imperdiet nulla malesuada pellentesque elit eget gravida cum. Vitae turpis massa sed elementum. Eu lobortis elementum nibh tellus molestie nunc non. Erat velit scelerisque in dictum non consectetur a erat nam. Convallis tellus id interdum velit laoreet id donec. Eu facilisis sed odio morbi quis commodo odio aenean sed. Amet nisl suscipit adipiscing bibendum est ultricies integer quis. Purus in mollis nunc sed id.
 Convallis tellus id interdum velit laoreet id donec. Nunc id cursus metus aliquam eleifend mi in nulla posuere. Scelerisque mauris pellentesque pulvinar pellentesque habitant. Mattis enim ut tellus elementum sagittis vitae et leo. Tincidunt vitae semper quis lectus nulla at volutpat diam ut. Erat velit scelerisque in dictum non consectetur. Ac turpis egestas integer eget aliquet nibh praesent tristique magna. Placerat in egestas erat imperdiet. A cras semper auctor neque vitae tempus quam pellentesque nec. Lectus quam id leo in vitae turpis. Felis imperdiet proin fermentum leo. Quis commodo odio aenean sed. Euismod in pellentesque massa placerat duis ultricies lacus sed. Nisl purus in mollis nunc sed. Lectus vestibulum mattis ullamcorper velit. Massa tempor nec feugiat nisl pretium fusce id. At imperdiet dui accumsan sit amet nulla. Lacus laoreet non curabitur gravida arcu ac tortor. Varius quam quisque id diam vel quam elementum pulvinar</string>
+    <string name="card_tanamanku_placeholder1">Anda memiliki 0 tanaman</string>
+    <string name="card_tanamanku_placeholder2">Kontrol rutin tanaman yang anda tanam melalui fitur TanamanKu</string>
+    <string name="home_title_tanamanlist">Mau Tanam Apa hari ini?</string>
+    <string name="home_ic_icon1">Bawang Merah</string>
+    <string name="home_ic_icon2">Cabai Rawit</string>
+    <string name="home_ic_icon3">Buncis</string>
+    <string name="home_ic_icon4">Wortel</string>
+    <string name="home_ic_icon5">Kembang Kol</string>
+    <string name="home_ic_icon6">Tomat</string>
+    <string name="home_ic_icon7">Kacang Panjang</string>
+    <string name="home_ic_icon8">Timun</string>
 </resources>

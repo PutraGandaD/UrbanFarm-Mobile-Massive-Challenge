@@ -11,6 +11,7 @@
         android:layout_height="match_parent">
 
         <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/top_content"
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
@@ -75,15 +76,344 @@
 
             </androidx.cardview.widget.CardView>
 
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card_tanamanku"
+                android:layout_width="350dp"
+                android:layout_height="90dp"
+                android:layout_marginTop="15dp"
+                app:cardCornerRadius="12dp"
+                android:backgroundTint="@color/tertiary_green"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/card_weather_home">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="12dp">
+
+                    <ImageView
+                        android:id="@+id/ic_tanamanku_card"
+                        android:layout_width="80dp"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/ic_home_buncis"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/tv_title_card_tanamanku"
+                        android:layout_width="220dp"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/opensans_bold"
+                        android:text="@string/card_tanamanku_placeholder1"
+                        android:textColor="@color/black"
+                        android:textSize="16sp"
+                        android:layout_marginLeft="12dp"
+                        android:layout_marginTop="2dp"
+                        app:layout_constraintLeft_toRightOf="@id/ic_tanamanku_card"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:layout_width="230dp"
+                        android:layout_height="wrap_content"
+                        android:text="@string/card_tanamanku_placeholder2"
+                        android:fontFamily="@font/opensans_regular"
+                        android:textColor="@color/black"
+                        android:textSize="12sp"
+                        android:layout_marginLeft="12dp"
+                        android:layout_marginTop="4dp"
+                        app:layout_constraintLeft_toRightOf="@id/ic_tanamanku_card"
+                        app:layout_constraintTop_toBottomOf="@id/tv_title_card_tanamanku"/>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.cardview.widget.CardView>
+
             <TextView
+                android:id="@+id/tv_title_tanamanlist"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:text="@string/home_title_tanamanlist"
+                android:textColor="@color/black"
+                android:fontFamily="@font/opensans_bold"
+                android:textSize="18sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/card_tanamanku" />
+
+            <GridLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/lorem_ipsum"
-                app:layout_constraintTop_toBottomOf="@id/card_weather_home"
-                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginTop="5dp"
+                android:columnCount="4"
+                android:rowCount="2"
                 app:layout_constraintEnd_toEndOf="parent"
-                android:fontFamily="@font/opensans_regular"
-                android:padding="20dp"/>
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_title_tanamanlist">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/btn_tanaman1"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_columnWeight="1">
+
+                    <ImageView
+                        android:id="@+id/iv_icon1"
+                        android:layout_width="80dp"
+                        android:layout_height="60dp"
+                        android:layout_margin="10dp"
+                        android:src="@drawable/ic_home_bawangmerah"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent" />
+
+                    <TextView
+                        android:id="@+id/tv_icon1"
+                        android:layout_width="60dp"
+                        android:layout_height="wrap_content"
+                        android:text="@string/home_ic_icon1"
+                        android:fontFamily="@font/opensans_semibold"
+                        android:textColor="@color/black"
+                        android:textSize="12sp"
+                        android:gravity="center"
+                        android:layout_marginTop="6dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/iv_icon1" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/btn_tanaman2"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_columnWeight="1">
+
+                    <ImageView
+                        android:id="@+id/iv_icon2"
+                        android:layout_width="80dp"
+                        android:layout_height="60dp"
+                        android:layout_margin="10dp"
+                        android:src="@drawable/ic_home_cabairawit"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent" />
+
+                    <TextView
+                        android:id="@+id/tv_icon2"
+                        android:layout_width="60dp"
+                        android:layout_height="wrap_content"
+                        android:text="@string/home_ic_icon2"
+                        android:fontFamily="@font/opensans_semibold"
+                        android:textColor="@color/black"
+                        android:textSize="12sp"
+                        android:gravity="center"
+                        android:layout_marginTop="6dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/iv_icon2" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/btn_tanaman3"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_columnWeight="1">
+
+                    <ImageView
+                        android:id="@+id/iv_icon3"
+                        android:layout_width="80dp"
+                        android:layout_height="60dp"
+                        android:layout_margin="10dp"
+                        android:src="@drawable/ic_home_buncis"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent" />
+
+                    <TextView
+                        android:id="@+id/tv_icon3"
+                        android:layout_width="60dp"
+                        android:layout_height="wrap_content"
+                        android:text="@string/home_ic_icon3"
+                        android:fontFamily="@font/opensans_semibold"
+                        android:textColor="@color/black"
+                        android:textSize="12sp"
+                        android:gravity="center"
+                        android:layout_marginTop="6dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/iv_icon3" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/btn_tanaman4"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_columnWeight="1">
+
+                    <ImageView
+                        android:id="@+id/iv_icon4"
+                        android:layout_width="80dp"
+                        android:layout_height="60dp"
+                        android:layout_margin="10dp"
+                        android:src="@drawable/ic_home_wortel"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent" />
+
+                    <TextView
+                        android:id="@+id/tv_icon4"
+                        android:layout_width="60dp"
+                        android:layout_height="wrap_content"
+                        android:text="@string/home_ic_icon4"
+                        android:fontFamily="@font/opensans_semibold"
+                        android:textColor="@color/black"
+                        android:textSize="12sp"
+                        android:gravity="center"
+                        android:layout_marginTop="6dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/iv_icon4" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/btn_tanaman5"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_columnWeight="1"
+                    android:layout_marginTop="10dp">
+
+                    <ImageView
+                        android:id="@+id/iv_icon5"
+                        android:layout_width="80dp"
+                        android:layout_height="60dp"
+                        android:layout_margin="10dp"
+                        android:src="@drawable/ic_home_kembangkol"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent" />
+
+                    <TextView
+                        android:id="@+id/tv_icon5"
+                        android:layout_width="60dp"
+                        android:layout_height="wrap_content"
+                        android:text="@string/home_ic_icon5"
+                        android:fontFamily="@font/opensans_semibold"
+                        android:textColor="@color/black"
+                        android:textSize="12sp"
+                        android:gravity="center"
+                        android:layout_marginTop="6dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/iv_icon5" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/btn_tanaman6"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_columnWeight="1"
+                    android:layout_marginTop="10dp">
+
+                    <ImageView
+                        android:id="@+id/iv_icon6"
+                        android:layout_width="80dp"
+                        android:layout_height="60dp"
+                        android:layout_margin="10dp"
+                        android:src="@drawable/ic_home_tomat"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent" />
+
+                    <TextView
+                        android:id="@+id/tv_icon6"
+                        android:layout_width="60dp"
+                        android:layout_height="wrap_content"
+                        android:text="@string/home_ic_icon6"
+                        android:fontFamily="@font/opensans_semibold"
+                        android:textColor="@color/black"
+                        android:textSize="12sp"
+                        android:gravity="center"
+                        android:layout_marginTop="6dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/iv_icon6" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/btn_tanaman7"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_columnWeight="1"
+                    android:layout_marginTop="10dp">
+
+                    <ImageView
+                        android:id="@+id/iv_icon7"
+                        android:layout_width="80dp"
+                        android:layout_height="60dp"
+                        android:layout_margin="10dp"
+                        android:src="@drawable/ic_home_kacangpanjang"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent" />
+
+                    <TextView
+                        android:id="@+id/tv_icon7"
+                        android:layout_width="60dp"
+                        android:layout_height="wrap_content"
+                        android:text="@string/home_ic_icon7"
+                        android:fontFamily="@font/opensans_semibold"
+                        android:textColor="@color/black"
+                        android:textSize="12sp"
+                        android:gravity="center"
+                        android:layout_marginTop="6dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/iv_icon7" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/btn_tanaman8"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_columnWeight="1"
+                    android:layout_marginTop="10dp">
+
+                    <ImageView
+                        android:id="@+id/iv_icon8"
+                        android:layout_width="80dp"
+                        android:layout_height="60dp"
+                        android:layout_margin="10dp"
+                        android:src="@drawable/ic_home_timun"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent" />
+
+                    <TextView
+                        android:id="@+id/tv_icon8"
+                        android:layout_width="60dp"
+                        android:layout_height="wrap_content"
+                        android:text="@string/home_ic_icon8"
+                        android:fontFamily="@font/opensans_semibold"
+                        android:textColor="@color/black"
+                        android:textSize="12sp"
+                        android:gravity="center"
+                        android:layout_marginTop="6dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/iv_icon8" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </GridLayout>
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
