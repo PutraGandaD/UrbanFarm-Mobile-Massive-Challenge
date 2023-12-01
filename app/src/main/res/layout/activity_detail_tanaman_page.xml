@@ -36,7 +36,7 @@
             <ImageView
                 android:id="@+id/iv_bg_half_detail_tanaman_page"
                 android:layout_width="match_parent"
-                android:layout_height="150dp"
+                android:layout_height="140dp"
                 android:scaleType="centerCrop"
                 android:src="@drawable/background_dark_blur"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -47,7 +47,7 @@
                 android:id="@+id/iv_detail_tanaman_page"
                 android:layout_width="350dp"
                 android:layout_height="200dp"
-                android:layout_marginTop="40dp"
+                android:layout_marginTop="35dp"
                 app:cardCornerRadius="10dp"
                 app:cardElevation="0dp"
                 app:layout_constraintEnd_toEndOf="parent"
