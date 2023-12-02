@@ -33,14 +33,22 @@ class BerandaPageFragment : Fragment() {
         recyclerView.layoutManager = GridLayoutManager(context,4)
 
         val itemTanamanList = ArrayList<ItemTanamanModels>()
-        itemTanamanList.add(ItemTanamanModels(R.drawable.ic_home_bawangmerah, "Bawang Merah"))
-        itemTanamanList.add(ItemTanamanModels(R.drawable.ic_home_bawangmerah, "Bawang Merah"))
-        itemTanamanList.add(ItemTanamanModels(R.drawable.ic_home_bawangmerah, "Bawang Merah"))
-        itemTanamanList.add(ItemTanamanModels(R.drawable.ic_home_bawangmerah, "Bawang Merah"))
-        itemTanamanList.add(ItemTanamanModels(R.drawable.ic_home_bawangmerah, "Bawang Merah"))
-        itemTanamanList.add(ItemTanamanModels(R.drawable.ic_home_bawangmerah, "Bawang Merah"))
-        itemTanamanList.add(ItemTanamanModels(R.drawable.ic_home_bawangmerah, "Bawang Merah"))
-        itemTanamanList.add(ItemTanamanModels(R.drawable.ic_home_bawangmerah, "Bawang Merah"))
+        itemTanamanList.add(ItemTanamanModels(R.drawable.ic_home_bawangmerah,
+            "Bawang Merah"))
+        itemTanamanList.add(ItemTanamanModels(R.drawable.ic_home_cabairawit,
+            "Cabai Rawit"))
+        itemTanamanList.add(ItemTanamanModels(R.drawable.ic_home_buncis,
+            "Buncis"))
+        itemTanamanList.add(ItemTanamanModels(R.drawable.ic_home_wortel,
+            "Wortel"))
+        itemTanamanList.add(ItemTanamanModels(R.drawable.ic_home_kembangkol,
+            "Kembang Kol"))
+        itemTanamanList.add(ItemTanamanModels(R.drawable.ic_home_tomat,
+            "Tomat"))
+        itemTanamanList.add(ItemTanamanModels(R.drawable.ic_home_kacangpanjang,
+            "Kacang Panjang"))
+        itemTanamanList.add(ItemTanamanModels(R.drawable.ic_home_timun,
+            "Timun"))
 
         val itemTanamanAdapter = ItemTanamanAdapter(itemTanamanList)
         recyclerView.adapter = itemTanamanAdapter
