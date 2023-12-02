@@ -4,11 +4,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".activity.DetailTanamanPageActivity">
+    tools:context=".activity.beranda.DetailTanamanPageActivity">
 
     <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="50dp"
         app:liftOnScroll="true"
         style="@style/Widget.App.Toolbar">
 
