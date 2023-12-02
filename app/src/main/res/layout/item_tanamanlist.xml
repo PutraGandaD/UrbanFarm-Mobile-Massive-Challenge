@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="6dp">
+
+    <ImageView
+        android:id="@+id/iv_icontanaman"
+        android:layout_width="80dp"
+        android:layout_height="60dp"
+        android:src="@drawable/ic_home_bawangmerah"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_icontanaman"
+        android:layout_width="60dp"
+        android:layout_height="wrap_content"
+        android:text="@string/home_ic_icon1"
+        android:fontFamily="@font/opensans_semibold"
+        android:textColor="@color/black"
+        android:textSize="12sp"
+        android:gravity="center"
+        android:layout_marginTop="6dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/iv_icontanaman" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

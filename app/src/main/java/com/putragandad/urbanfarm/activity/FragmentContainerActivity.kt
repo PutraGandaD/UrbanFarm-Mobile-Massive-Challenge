@@ -3,12 +3,16 @@ package com.putragandad.urbanfarm.activity
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.fragment.app.Fragment
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import com.putragandad.urbanfarm.R
+import com.putragandad.urbanfarm.adapters.dashboard.ItemTanamanAdapter
 import com.putragandad.urbanfarm.databinding.ActivityFragmentContainerBinding
 import com.putragandad.urbanfarm.fragments.berandapage.BerandaPageFragment
 import com.putragandad.urbanfarm.fragments.jualpanenpage.JualPanenPageFragment
 import com.putragandad.urbanfarm.fragments.profilpage.ProfilPageFragment
 import com.putragandad.urbanfarm.fragments.tanamankupage.TanamankuPageFragment
+import com.putragandad.urbanfarm.models.dashboard.ItemTanamanModels
 
 class FragmentContainerActivity : AppCompatActivity() {
     private lateinit var binding : ActivityFragmentContainerBinding
