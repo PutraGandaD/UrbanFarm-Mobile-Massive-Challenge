@@ -1,4 +1,4 @@
-package com.putragandad.urbanfarm.adapters.dashboard
+package com.putragandad.urbanfarm.adapters.beranda
 
 import android.view.LayoutInflater
 import android.view.View
@@ -8,7 +8,7 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.putragandad.urbanfarm.R
 
-import com.putragandad.urbanfarm.models.dashboard.ItemTanamanModels
+import com.putragandad.urbanfarm.models.beranda.ItemTanamanModels
 
 class ItemTanamanAdapter(private val itemTanamanList : ArrayList<ItemTanamanModels>) :
     RecyclerView.Adapter<ItemTanamanAdapter.ItemTanamanViewHolder>() {

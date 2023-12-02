@@ -1,4 +1,4 @@
-package com.putragandad.urbanfarm.activity
+package com.putragandad.urbanfarm.activity.beranda
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
