@@ -7,22 +7,21 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.google.android.material.button.MaterialButton
 import com.putragandad.urbanfarm.R
 import com.putragandad.urbanfarm.models.tanamanku.TanamankuItemModels
 
-class TanamankuItemRVAdapter(
-    val context: Context,
-    val tanamankuClickDeleteInterface: TanamankuClickDeleteInterface,
-    val tanamankuClickInterface: TanamankuClickInterface
-) :
+class TanamankuItemRVAdapter(val context: Context, val tanamankuClickDeleteInterface: TanamankuClickDeleteInterface) :
     RecyclerView.Adapter<TanamankuItemRVAdapter.ViewHolder>()
 {
-    private val allTanaman = ArrayList<TanamankuItemModels>()
+    var onItemClick : ((TanamankuItemModels) -> Unit)? = null
+    private val AllTanaman = ArrayList<TanamankuItemModels>()
 
     inner class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val tanamankuTitleTV = itemView.findViewById<TextView>(R.id.tv_title_card_tanamanku_rv)
         val tanamankuTimestampTV = itemView.findViewById<TextView>(R.id.tv_timestamp_card_tanamanku_rv)
         val tanamankuFotoIV = itemView.findViewById<ImageView>(R.id.iv_card_tanamanku_rv)
+        val tanamankuDeleteBtn = itemView.findViewById<ImageView>(R.id.iv_delete_tanaman_tanamanku_page)
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
@@ -35,30 +34,30 @@ class TanamankuItemRVAdapter(
     }
 
     override fun getItemCount(): Int {
-        return allTanaman.size
+        return AllTanaman.size
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        holder.tanamankuTitleTV.setText(allTanaman.get(position).namaTanaman)
-        holder.tanamankuTimestampTV.setText("Ditanam " + allTanaman.get(position).kapanDitanam)
-        holder.tanamankuFotoIV.setImageResource(allTanaman.get(position).fotoTanaman)
+        val tanaman = AllTanaman[position]
+        holder.tanamankuTitleTV.text = tanaman.namaTanaman
+        holder.tanamankuTimestampTV.text = "Ditanam " + tanaman.kapanDitanam
+        holder.tanamankuFotoIV.setImageResource(tanaman.fotoTanaman)
+        holder.tanamankuDeleteBtn.setOnClickListener {
+            tanamankuClickDeleteInterface.onDeleteIconClick(tanaman)
+        }
 
         holder.itemView.setOnClickListener {
-            tanamankuClickInterface.onTanamanItemClick(allTanaman.get(position))
+            onItemClick?.invoke(tanaman)
         }
     }
 
     fun updateList(newList: List<TanamankuItemModels>) {
-        allTanaman.clear()
-        allTanaman.addAll(newList)
+        AllTanaman.clear()
+        AllTanaman.addAll(newList)
         notifyDataSetChanged()
     }
 }
 
 interface TanamankuClickDeleteInterface {
     fun onDeleteIconClick(tanamanku: TanamankuItemModels)
-}
-
-interface TanamankuClickInterface {
-    fun onTanamanItemClick(tanamanku: TanamankuItemModels)
 }
