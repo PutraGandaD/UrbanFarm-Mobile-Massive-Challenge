@@ -10,8 +10,8 @@ import com.putragandad.urbanfarm.R
 
 import com.putragandad.urbanfarm.models.beranda.ItemTanamanModels
 
-class ItemTanamanAdapter(private val itemTanamanList : ArrayList<ItemTanamanModels>) :
-    RecyclerView.Adapter<ItemTanamanAdapter.ItemTanamanViewHolder>() {
+class ItemTanamanRVAdapter(private val itemTanamanList : ArrayList<ItemTanamanModels>) :
+    RecyclerView.Adapter<ItemTanamanRVAdapter.ItemTanamanViewHolder>() {
 
     var onItemClick : ((ItemTanamanModels) -> Unit)? = null
 
@@ -21,7 +21,7 @@ class ItemTanamanAdapter(private val itemTanamanList : ArrayList<ItemTanamanMode
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ItemTanamanViewHolder {
-        val view = LayoutInflater.from(parent.context).inflate(R.layout.item_tanamanlist, parent, false)
+        val view = LayoutInflater.from(parent.context).inflate(R.layout.item_tanamanlist_dashboard_rv, parent, false)
         return ItemTanamanViewHolder(view)
     }
 
