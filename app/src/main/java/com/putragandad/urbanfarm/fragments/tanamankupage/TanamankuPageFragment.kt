@@ -13,7 +13,7 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.putragandad.urbanfarm.R
-import com.putragandad.urbanfarm.activity.tanamanku.AddEditTanamankuItemActivity
+import com.putragandad.urbanfarm.activity.tanamanku.AddTanamankuItemActivity
 import com.putragandad.urbanfarm.adapters.tanamanku.TanamankuClickDeleteInterface
 import com.putragandad.urbanfarm.adapters.tanamanku.TanamankuItemRVAdapter
 import com.putragandad.urbanfarm.databinding.FragmentTanamankuPageBinding
@@ -34,7 +34,7 @@ class TanamankuPageFragment : Fragment(), TanamankuClickDeleteInterface {
         _binding = FragmentTanamankuPageBinding.inflate(inflater, container, false)
 
         binding.fabTambahTanaman.setOnClickListener {
-            val intent = Intent(requireContext(), AddEditTanamankuItemActivity::class.java)
+            val intent = Intent(requireContext(), AddTanamankuItemActivity::class.java)
             startActivity(intent)
             Log.d("TanamankuPageFragment", "Fab button clicked")
         }

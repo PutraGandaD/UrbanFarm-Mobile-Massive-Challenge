@@ -9,7 +9,6 @@ import android.widget.Toast
 import androidx.lifecycle.ViewModelProvider
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.google.android.material.textfield.TextInputEditText
-import com.google.android.material.textfield.TextInputLayout
 import com.putragandad.urbanfarm.R
 import com.putragandad.urbanfarm.databinding.ActivityAddEditTanamankuItemBinding
 import com.putragandad.urbanfarm.models.tanamanku.TanamankuItemModels
@@ -17,7 +16,7 @@ import com.putragandad.urbanfarm.viewmodels.tanamanku.TanamankuViewModel
 import java.text.SimpleDateFormat
 import java.util.Date
 
-class AddEditTanamankuItemActivity : AppCompatActivity() {
+class AddTanamankuItemActivity : AppCompatActivity() {
     private lateinit var binding: ActivityAddEditTanamankuItemBinding
 
     lateinit var namaTanamanEdt : TextInputEditText

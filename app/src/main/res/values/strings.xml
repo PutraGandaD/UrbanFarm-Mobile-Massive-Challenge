@@ -28,6 +28,7 @@
     <string name="detail_tanaman_page_detail_subtitle_2">Teknik Menanam : </string>
     <string name="detail_tanaman_page_detail_subtitle_3">Tingkat Kesulitan : </string>
     <string name="detail_tanaman_page_detail_subheader_1">Deskripsi Tanaman</string>
+    <string name="btn_mulai_menanam_text">Ayo Tanam</string>
 
     <!-- TanamanKu screen -->
     <string name="tanamanku_page_title">Tanamanku</string>

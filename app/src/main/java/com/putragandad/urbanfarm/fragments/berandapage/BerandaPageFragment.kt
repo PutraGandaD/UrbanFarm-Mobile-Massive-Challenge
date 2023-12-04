@@ -1,5 +1,6 @@
 package com.putragandad.urbanfarm.fragments.berandapage
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -8,7 +9,8 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.putragandad.urbanfarm.R
-import com.putragandad.urbanfarm.adapters.beranda.ItemTanamanRVAdapter
+import com.putragandad.urbanfarm.activity.beranda.DetailTanamanPageActivity
+import com.putragandad.urbanfarm.adapters.beranda.IconTanamanRVAdapter
 import com.putragandad.urbanfarm.databinding.FragmentBerandaPageBinding
 import com.putragandad.urbanfarm.models.beranda.ItemTanamanModels
 
@@ -50,9 +52,12 @@ class BerandaPageFragment : Fragment() {
         itemTanamanList.add(ItemTanamanModels(R.drawable.ic_home_timun,
             "Timun"))
 
-        val itemTanamanAdapter = ItemTanamanRVAdapter(itemTanamanList)
+        val itemTanamanAdapter = IconTanamanRVAdapter(itemTanamanList)
         recyclerView.adapter = itemTanamanAdapter
 
-
+        itemTanamanAdapter.onItemClick = {
+            val intent = Intent(requireContext(), DetailTanamanPageActivity::class.java)
+            startActivity(intent)
+        }
     }
 }

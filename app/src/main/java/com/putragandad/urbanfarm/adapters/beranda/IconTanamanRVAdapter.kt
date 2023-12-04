@@ -10,8 +10,8 @@ import com.putragandad.urbanfarm.R
 
 import com.putragandad.urbanfarm.models.beranda.ItemTanamanModels
 
-class ItemTanamanRVAdapter(private val itemTanamanList : ArrayList<ItemTanamanModels>) :
-    RecyclerView.Adapter<ItemTanamanRVAdapter.ItemTanamanViewHolder>() {
+class IconTanamanRVAdapter(private val itemTanamanList : ArrayList<ItemTanamanModels>) :
+    RecyclerView.Adapter<IconTanamanRVAdapter.ItemTanamanViewHolder>() {
 
     var onItemClick : ((ItemTanamanModels) -> Unit)? = null
 
