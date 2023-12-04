@@ -69,5 +69,8 @@
     <string name="card_tanamanku_placeholder1">Anda memiliki 0 tanaman</string>
     <string name="card_tanamanku_placeholder2">Kontrol rutin tanaman yang anda tanam melalui fitur TanamanKu</string>
     <string name="detail_tanaman_page_title_placeholder">Bawang Merah</string>
+    <string name="jenis_tanaman_placeholder">Sayur</string>
+    <string name="teknik_menanam_placeholder">Hidroponik dan Polybag</string>
+    <string name="tingkat_kesulitan_placeholder">Mudah</string>
 
 </resources>
