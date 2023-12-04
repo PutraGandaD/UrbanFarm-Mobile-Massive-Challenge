@@ -73,4 +73,11 @@
     <string name="teknik_menanam_placeholder">Hidroponik dan Polybag</string>
     <string name="tingkat_kesulitan_placeholder">Mudah</string>
 
+    <!-- Deskripsi Tanaman -->
+    <string name="deskripsi_bawang_merah">Bawang merah umum menjadi bumbu masak penguat rasa. Namun, di balik kegunaannya untuk masakan, umbi-umbian ini juga bisa bermanfaat untuk merawat kesehatan tubuh.
+Kandungan anthocyanin pada bumbu dapur ini dapat bekerja melindungi tubuh dari penyakit jantung, beberapa jenis kanker, dan penyakit gula.
+Selain anthocyanin, sayuran ini juga mengandung berbagai vitamin, mineral, dan senyawa yang telah terbukti meningkatkan kesehatan dalam banyak hal.</string>
+    <string name="deskripsi_cabai_merah">Cabai rawit merupakan salah satu jenis cabai favorit di Indonesia. Bahkan cabai rawit merah sangat digemari karena rasanya yang sangat pedas.
+Cabai rawit sangat mudah ditanam di rumah. Cabai rawit juga dapat tumbuh dengan baik di dataran rendah sampai dataran tinggi. Hampir semua jenis tanah cocok ditanami cabai. Namun yang paling baik adalah tanah humus yang kaya akan unsur hara.</string>
+
 </resources>

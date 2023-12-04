@@ -36,27 +36,28 @@ class BerandaPageFragment : Fragment() {
 
         val itemTanamanList = ArrayList<ItemTanamanModels>()
         itemTanamanList.add(ItemTanamanModels(R.drawable.ic_home_bawangmerah,
-            "Bawang Merah"))
+            "Bawang Merah", "Sayur", "Hidroponik dan Polybag", "Mudah", requireContext().getString(R.string.deskripsi_bawang_merah), R.drawable.img_card_bawangmerah_tanamanku))
         itemTanamanList.add(ItemTanamanModels(R.drawable.ic_home_cabairawit,
-            "Cabai Rawit"))
+            "Cabai Rawit", "Cabai", "Hidroponik dan Polybag", "Mudah", requireContext().getString(R.string.deskripsi_cabai_merah), R.drawable.img_card_cabai_rawit_tanamanku))
         itemTanamanList.add(ItemTanamanModels(R.drawable.ic_home_buncis,
-            "Buncis"))
+            "Buncis", "Sayur", "Hidroponik dan Polybag", "Mudah", requireContext().getString(R.string.deskripsi_bawang_merah), R.drawable.img_card_bawangmerah_tanamanku))
         itemTanamanList.add(ItemTanamanModels(R.drawable.ic_home_wortel,
-            "Wortel"))
+            "Wortel", "Sayur", "Hidroponik dan Polybag", "Mudah", requireContext().getString(R.string.deskripsi_bawang_merah), R.drawable.img_card_bawangmerah_tanamanku))
         itemTanamanList.add(ItemTanamanModels(R.drawable.ic_home_kembangkol,
-            "Kembang Kol"))
+            "Kembang Kol", "Sayur", "Hidroponik dan Polybag", "Mudah", requireContext().getString(R.string.deskripsi_bawang_merah), R.drawable.img_card_bawangmerah_tanamanku))
         itemTanamanList.add(ItemTanamanModels(R.drawable.ic_home_tomat,
-            "Tomat"))
+            "Tomat", "Sayur", "Hidroponik dan Polybag", "Mudah", requireContext().getString(R.string.deskripsi_bawang_merah), R.drawable.img_card_bawangmerah_tanamanku))
         itemTanamanList.add(ItemTanamanModels(R.drawable.ic_home_kacangpanjang,
-            "Kacang Panjang"))
+            "Kacang Panjang", "Sayur", "Hidroponik dan Polybag", "Mudah", requireContext().getString(R.string.deskripsi_bawang_merah), R.drawable.img_card_bawangmerah_tanamanku))
         itemTanamanList.add(ItemTanamanModels(R.drawable.ic_home_timun,
-            "Timun"))
+            "Timun", "Sayur", "Hidroponik dan Polybag", "Mudah", requireContext().getString(R.string.deskripsi_bawang_merah), R.drawable.img_card_bawangmerah_tanamanku))
 
         val itemTanamanAdapter = IconTanamanRVAdapter(itemTanamanList)
         recyclerView.adapter = itemTanamanAdapter
 
         itemTanamanAdapter.onItemClick = {
             val intent = Intent(requireContext(), DetailTanamanPageActivity::class.java)
+            intent.putExtra("item_tanaman_dashboard", it)
             startActivity(intent)
         }
     }
