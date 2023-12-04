@@ -2,7 +2,9 @@
     <style name="Theme.UrbanFarm" parent="Theme.Material3.Light.NoActionBar" >
         <item name="materialCardViewStyle">@style/Widget.App.CustomCardLandingPage</item>
         <item name="materialCardViewStyle">@style/Widget.App.CustomCardTanamankuPage</item>
-        <item name="toolbarStyle">@style/Widget.App.Toolbar</item>
+        <item name="materialCardViewStyle">@style/Widget.App.CustomCardTambahTanamankuPage</item>
+        <item name="toolbarStyle">@style/Toolbar.Detail.Tanaman.Beranda</item>
+        <item name="toolbarStyle">@style/Toolbar.Tambah.Tanaman.Tanamanku</item>
     </style>
 
     <style name="Widget.App.CustomCardLandingPage" parent="Widget.Material3.CardView.Elevated">
@@ -11,6 +13,10 @@
 
     <style name="Widget.App.CustomCardTanamankuPage" parent="Widget.Material3.CardView.Elevated">
         <item name="shapeAppearance">@style/ShapeAppearance.CustomCardTanamankuPage</item>
+    </style>
+
+    <style name="Widget.App.CustomCardTambahTanamankuPage" parent="Widget.Material3.CardView.Elevated">
+        <item name="shapeAppearance">@style/ShapeAppearance.CustomCardTambahTanamankuPage</item>
     </style>
 
     <style name="ShapeAppearance.CustomCardLandingPage" parent="ShapeAppearance.Material3.MediumComponent">
@@ -29,7 +35,16 @@
         <item name="cornerSizeBottomRight">0dp</item>
     </style>
 
-    <style name="Widget.App.Toolbar" parent="Widget.Material3.Toolbar">
+    <style name="ShapeAppearance.CustomCardTambahTanamankuPage" parent="ShapeAppearance.Material3.MediumComponent">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSizeTopLeft">15dp</item>
+        <item name="cornerSizeTopRight">15dp</item>
+        <item name="cornerSizeBottomLeft">0dp</item>
+        <item name="cornerSizeBottomRight">0dp</item>
+    </style>
+
+
+    <style name="Toolbar.Detail.Tanaman.Beranda" parent="Widget.Material3.Toolbar">
         <item name="materialThemeOverlay">@style/ThemeOverlay.App.Toolbar</item>
         <item name="titleTextAppearance">@style/TextAppearance.App.TitleMedium</item>
         <item name="subtitleTextAppearance">@style/TextAppearance.App.TitleMedium</item>
@@ -48,6 +63,16 @@
     <style name="TextAppearance.App.TitleMedium" parent="TextAppearance.Material3.TitleMedium">
         <item name="fontFamily">@font/opensans_medium</item>
         <item name="android:fontFamily">@font/opensans_medium</item>
+    </style>
+
+    <style name="Toolbar.Tambah.Tanaman.Tanamanku" parent="Widget.Material3.Toolbar">
+        <item name="titleTextAppearance">@style/TextAppearance.Tambah.Tanamanku.Page.TitleMedium</item>
+        <item name="subtitleTextAppearance">@style/TextAppearance.Tambah.Tanamanku.Page.TitleMedium</item>
+    </style>
+
+    <style name="TextAppearance.Tambah.Tanamanku.Page.TitleMedium" parent="TextAppearance.Material3.TitleMedium">
+        <item name="fontFamily">@font/opensans_bold</item>
+        <item name="android:fontFamily">@font/opensans_bold</item>
     </style>
 
 </resources>

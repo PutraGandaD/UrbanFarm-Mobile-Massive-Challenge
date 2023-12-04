@@ -61,7 +61,7 @@
                 android:layout_margin="10dp">
 
                 <androidx.recyclerview.widget.RecyclerView
-                    android:id="@+id/rv_tanamanku_list_item"
+                    android:id="@+id/rv_card_tanamanku_list_item"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     app:layout_constraintEnd_toEndOf="parent"

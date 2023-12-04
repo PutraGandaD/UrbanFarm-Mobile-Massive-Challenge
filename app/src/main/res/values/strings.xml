@@ -31,9 +31,31 @@
 
     <!-- TanamanKu screen -->
     <string name="tanamanku_page_title">Tanamanku</string>
+    <string name="tanamanku_tambah_page_title_placeholder">Tambah Tanaman</string>
     <string name="tanamanku_fab_string_add">Tambah Tanaman Anda</string>
     <string name="tanamanku_card_title_placeholder">Nama Tanaman</string>
     <string name="tanamanku_card_timestamp_placeholder">Ditanam 4 Desember 2023</string>
+
+    <string name="tambah_tanamanku_nama_tanaman_hint">Nama Tanaman</string>
+    <string name="tambah_tanamanku_jenis_tanaman_hint">Pilih Jenis Tanaman...</string>
+    <string name="tambah_tanamanku_metode_tanam_hint">Pilih Metode Tanam...</string>
+
+    <string-array name="jenis_tanaman">
+        <item>Bawang Merah</item>
+        <item>Cabai Rawit</item>
+        <item>Buncis</item>
+        <item>Wortel</item>
+        <item>Kembang Kol</item>
+        <item>Tomat</item>
+        <item>Kacang Panjang</item>
+        <item>Timun</item>
+    </string-array>
+
+    <string-array name="metode_tanam">
+        <item>Polybag</item>
+        <item>Hidroponik</item>
+    </string-array>
+
 
     <!-- Lorem ipsum / placeholder -->
     <string name="lorem_ipsum">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Eget egestas purus viverra accumsan. Sed libero enim sed faucibus turpis. Integer malesuada nunc vel risus commodo viverra maecenas. Nibh mauris cursus mattis molestie. Facilisi etiam dignissim diam quis enim lobortis. Montes nascetur ridiculus mus mauris vitae ultricies leo integer. Ornare massa eget egestas purus viverra accumsan in. Etiam sit amet nisl purus in mollis nunc sed id. Elit eget gravida cum sociis natoque. Feugiat in ante metus dictum at. Sit amet risus nullam eget felis eget nunc lobortis. Ante in nibh mauris cursus mattis molestie a. Id porta nibh venenatis cras sed felis eget velit. Risus viverra adipiscing at in tellus integer feugiat. Venenatis lectus magna fringilla urna porttitor. Nunc congue nisi vitae suscipit tellus mauris a diam maecenas. Malesuada fames ac turpis egestas.
@@ -46,6 +68,5 @@
     <string name="card_tanamanku_placeholder1">Anda memiliki 0 tanaman</string>
     <string name="card_tanamanku_placeholder2">Kontrol rutin tanaman yang anda tanam melalui fitur TanamanKu</string>
     <string name="detail_tanaman_page_title_placeholder">Bawang Merah</string>
-
 
 </resources>
