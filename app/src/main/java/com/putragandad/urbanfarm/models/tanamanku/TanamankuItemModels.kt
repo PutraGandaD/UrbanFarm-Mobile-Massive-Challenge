@@ -10,6 +10,7 @@ data class TanamankuItemModels(
     @ColumnInfo(name = "Jenis") val jenisTanaman: String,
     @ColumnInfo(name = "Metode") val metodeTanam: String,
     @ColumnInfo(name = "Waktu") val kapanDitanam: String,
+    @ColumnInfo(name = "Foto") val fotoTanaman: Int
 ) {
     @PrimaryKey(autoGenerate = true) var id = 0
 }
