@@ -1,4 +1,4 @@
-package com.putragandad.urbanfarm.onboarding
+package com.putragandad.urbanfarm.adapters.onboarding
 
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager

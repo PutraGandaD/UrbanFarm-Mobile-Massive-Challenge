@@ -1,15 +1,11 @@
-package com.putragandad.urbanfarm.fragments.landingpage
+package com.putragandad.urbanfarm.activity.landingpage
 
 import android.app.Activity
 import android.content.Intent
+import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import androidx.fragment.app.Fragment
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
 import android.widget.Toast
 import androidx.activity.result.contract.ActivityResultContracts
-import androidx.navigation.fragment.findNavController
 import com.google.android.gms.auth.api.signin.GoogleSignIn
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount
 import com.google.android.gms.auth.api.signin.GoogleSignInClient
@@ -19,19 +15,16 @@ import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.GoogleAuthProvider
 import com.putragandad.urbanfarm.R
 import com.putragandad.urbanfarm.activity.beranda.FragmentContainerNavbarActivity
-import com.putragandad.urbanfarm.databinding.FragmentLandingPageBinding
+import com.putragandad.urbanfarm.databinding.ActivityLandingPageBinding
 
-class LandingPageFragment : Fragment() {
-    private var _binding : FragmentLandingPageBinding? = null
-    private val binding get() = _binding!!
+class LandingPageActivity : AppCompatActivity() {
+    private lateinit var binding: ActivityLandingPageBinding
     private lateinit var googleSignInClient: GoogleSignInClient
     private lateinit var auth: FirebaseAuth
-
-    override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
-        _binding = FragmentLandingPageBinding.inflate(inflater, container, false)
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        binding = ActivityLandingPageBinding.inflate(layoutInflater)
+        setContentView(binding.root)
 
         // Get instance of Firebase
         auth = FirebaseAuth.getInstance()
@@ -41,13 +34,11 @@ class LandingPageFragment : Fragment() {
             .requestEmail()
             .build()
 
-        googleSignInClient = GoogleSignIn.getClient(requireContext() , gso)
+        googleSignInClient = GoogleSignIn.getClient(this , gso)
 
         binding.btnGoogleLanding.setOnClickListener {
             signInGoogle()
         }
-
-        return binding.root
 
         // Check if user already login or not
         if (auth.currentUser != null) {
@@ -76,7 +67,7 @@ class LandingPageFragment : Fragment() {
                 updateUI(account)
             }
         }else{
-            Toast.makeText(requireContext(), task.exception.toString() , Toast.LENGTH_SHORT).show()
+            Toast.makeText(this, task.exception.toString() , Toast.LENGTH_SHORT).show()
         }
     }
 
@@ -86,13 +77,14 @@ class LandingPageFragment : Fragment() {
             if (it.isSuccessful){
                 goToDashboard()
             }else{
-                Toast.makeText(requireContext(), it.exception.toString() , Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, it.exception.toString() , Toast.LENGTH_SHORT).show()
             }
         }
     }
 
     private fun goToDashboard() {
-        val intent = Intent(requireContext(), FragmentContainerNavbarActivity::class.java)
+        val intent = Intent(this, FragmentContainerNavbarActivity::class.java)
         startActivity(intent)
+        finish()
     }
 }

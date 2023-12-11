@@ -1,6 +1,7 @@
-package com.putragandad.urbanfarm.onboarding.screens
+package com.putragandad.urbanfarm.fragments.onboarding.screens
 
 import android.content.Context
+import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -9,6 +10,7 @@ import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
 import androidx.viewpager2.widget.ViewPager2
 import com.putragandad.urbanfarm.R
+import com.putragandad.urbanfarm.activity.landingpage.LandingPageActivity
 import com.putragandad.urbanfarm.databinding.FragmentSecondScreenBinding
 import com.putragandad.urbanfarm.databinding.FragmentThirdScreenBinding
 
@@ -29,8 +31,10 @@ class ThirdScreen : Fragment() {
         }
 
         binding.btnDoneOb3.setOnClickListener{
-            findNavController().navigate(R.id.action_onboarding_to_landing)
+            val intent = Intent(requireContext(), LandingPageActivity::class.java)
+            startActivity(intent)
             onBoardingFinished()
+            requireActivity().finish()
         }
 
         return binding.root

@@ -7,11 +7,6 @@
     tools:context=".fragments.landingpage.LandingPageFragment"
     android:background="@drawable/background_full">
 
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="#40000000" />
-
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/layout_above_card"
         android:layout_width="match_parent"
