@@ -20,10 +20,6 @@ class RegisterPageFragment : Fragment() {
     ): View? {
         _binding = FragmentRegisterPageBinding.inflate(inflater, container, false)
 
-        binding.btnRegisterPage.setOnClickListener{
-            findNavController().navigate(R.id.action_registerFinished_to_loginPage)
-        }
-
         return binding.root
     }
 }

@@ -18,14 +18,6 @@ class LandingPageFragment : Fragment() {
     ): View? {
         _binding = FragmentLandingPageBinding.inflate(inflater, container, false)
 
-        binding.btnSigninLanding.setOnClickListener{
-            findNavController().navigate(R.id.action_landingPageFragment_to_loginPageFragment)
-        }
-
-        binding.btnSignupLanding.setOnClickListener{
-            findNavController().navigate(R.id.action_landingPageFragment_to_registerPageFragment)
-        }
-
         return binding.root
     }
 }

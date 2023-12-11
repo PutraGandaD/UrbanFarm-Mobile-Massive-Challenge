@@ -33,6 +33,11 @@ class AddTanamankuItemActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityAddEditTanamankuItemBinding.inflate(layoutInflater)
+
+        binding.topAppBarTambahTanamanku.setNavigationOnClickListener {
+            onBackPressedDispatcher.onBackPressed()
+        }
+
         setContentView(binding.root)
 
         // Connect ViewModels

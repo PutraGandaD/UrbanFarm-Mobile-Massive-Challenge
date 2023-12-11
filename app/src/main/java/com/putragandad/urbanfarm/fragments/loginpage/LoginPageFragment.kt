@@ -20,18 +20,6 @@ class LoginPageFragment : Fragment() {
     ): View? {
         _binding = FragmentLoginPageBinding.inflate(inflater, container, false)
 
-        binding.btnLoginPage.setOnClickListener{
-            findNavController().navigate(R.id.action_login_to_beranda)
-            loginFinished()
-        }
-
         return binding.root
-    }
-
-    private fun loginFinished() {
-        val sharedPref = requireActivity().getSharedPreferences("loginFinished", Context.MODE_PRIVATE)
-        val editor = sharedPref.edit()
-        editor.putBoolean("Finished", true)
-        editor.apply()
     }
 }
