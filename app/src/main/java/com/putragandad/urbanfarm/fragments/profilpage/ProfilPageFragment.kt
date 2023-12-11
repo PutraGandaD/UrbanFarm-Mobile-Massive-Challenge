@@ -10,6 +10,7 @@ import com.bumptech.glide.Glide
 import com.google.firebase.auth.FirebaseAuth
 import com.putragandad.urbanfarm.R
 import com.putragandad.urbanfarm.activity.landingpage.LandingPageActivity
+import com.putragandad.urbanfarm.activity.profilpage.ProfilEditPageActivity
 import com.putragandad.urbanfarm.databinding.FragmentProfilPageBinding
 
 class ProfilPageFragment : Fragment() {
@@ -41,6 +42,10 @@ class ProfilPageFragment : Fragment() {
             auth.signOut()
             startActivity(Intent(requireContext(), LandingPageActivity::class.java))
             requireActivity().finish()
+        }
+
+        binding.btnEditProfil.setOnClickListener {
+            startActivity(Intent(requireContext(), ProfilEditPageActivity::class.java))
         }
 
         return binding.root
