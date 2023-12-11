@@ -19,7 +19,7 @@
             android:name=".activity.beranda.DetailTanamanPageActivity"
             android:exported="false" />
         <activity
-            android:name=".activity.FragmentContainerActivity"
+            android:name=".activity.beranda.FragmentContainerNavbarActivity"
             android:exported="false" />
         <activity
             android:name=".MainActivity"

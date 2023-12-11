@@ -1,4 +1,4 @@
-package com.putragandad.urbanfarm.activity
+package com.putragandad.urbanfarm.activity.beranda
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -10,7 +10,7 @@ import com.putragandad.urbanfarm.fragments.jualpanenpage.JualPanenPageFragment
 import com.putragandad.urbanfarm.fragments.profilpage.ProfilPageFragment
 import com.putragandad.urbanfarm.fragments.tanamankupage.TanamankuPageFragment
 
-class FragmentContainerActivity : AppCompatActivity() {
+class FragmentContainerNavbarActivity : AppCompatActivity() {
     private lateinit var binding : ActivityFragmentContainerBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
