@@ -18,12 +18,14 @@ class OnboardingActivity : AppCompatActivity() {
         binding = ActivityOnboardingBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        // List of screens for ViewPager
         val fragmentList = arrayListOf<Fragment>(
             FirstScreen(),
             SecondScreen(),
             ThirdScreen()
         )
 
+        // Calling ViewPager id from Binding and set the adapter
         viewPager = binding.viewPager
         val adapter = ViewPagerAdapter(fragmentList, this.supportFragmentManager, lifecycle)
 
