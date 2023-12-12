@@ -36,7 +36,7 @@ class TanamankuPageFragment : Fragment(), TanamankuClickDeleteInterface {
         binding.fabTambahTanaman.setOnClickListener {
             val intent = Intent(requireContext(), AddTanamankuItemActivity::class.java)
             startActivity(intent)
-            Log.d("TanamankuPageFragment", "Fab button clicked")
+            //Log.d("TanamankuPageFragment", "Fab button clicked")
         }
 
         return binding.root

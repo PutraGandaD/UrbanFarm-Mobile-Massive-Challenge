@@ -37,7 +37,9 @@ class LandingPageActivity : AppCompatActivity() {
         googleSignInClient = GoogleSignIn.getClient(this , gso)
 
         binding.btnGoogleLanding.setOnClickListener {
-            signInGoogle()
+            googleSignInClient.signOut().addOnCompleteListener {
+                signInGoogle()
+            }
         }
 
         // Check if user already login or not
@@ -45,7 +47,7 @@ class LandingPageActivity : AppCompatActivity() {
             goToDashboard()
         }
     }
-
+stat
     private fun signInGoogle(){
         val signInIntent = googleSignInClient.signInIntent
         launcher.launch(signInIntent)
