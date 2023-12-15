@@ -47,7 +47,7 @@ class LandingPageActivity : AppCompatActivity() {
             goToDashboard()
         }
     }
-stat
+
     private fun signInGoogle(){
         val signInIntent = googleSignInClient.signInIntent
         launcher.launch(signInIntent)
