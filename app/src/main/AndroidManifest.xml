@@ -13,10 +13,7 @@
         android:theme="@style/Theme.UrbanFarm"
         tools:targetApi="31">
         <activity
-            android:name=".activity.tanamanku.TanamankuItemActivity"
-            android:exported="false" />
-        <activity
-            android:name=".activity.tanamanku.DetailTanamankuActivity"
+            android:name=".activity.tanamanku.DetailTanamankuItemActivity"
             android:exported="false" />
         <activity
             android:name=".activity.profilpage.ProfilEditPageActivity"

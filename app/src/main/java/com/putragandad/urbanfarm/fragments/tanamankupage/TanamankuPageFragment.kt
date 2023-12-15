@@ -14,6 +14,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.putragandad.urbanfarm.R
 import com.putragandad.urbanfarm.activity.tanamanku.AddTanamankuItemActivity
+import com.putragandad.urbanfarm.activity.tanamanku.DetailTanamankuItemActivity
 import com.putragandad.urbanfarm.adapters.tanamanku.TanamankuClickDeleteInterface
 import com.putragandad.urbanfarm.adapters.tanamanku.TanamankuItemRVAdapter
 import com.putragandad.urbanfarm.databinding.FragmentTanamankuPageBinding
@@ -63,6 +64,12 @@ class TanamankuPageFragment : Fragment(), TanamankuClickDeleteInterface {
                 tanamankuRVAdapter.updateList(it)
             }
         })
+
+        tanamankuRVAdapter.onItemClick = {
+            val intent = Intent(requireContext(), DetailTanamankuItemActivity::class.java)
+            intent.putExtra("item_tanamanku_list",  it)
+            startActivity(intent)
+        }
     }
 
     override fun onDeleteIconClick(tanamanku: TanamankuItemModels) {
