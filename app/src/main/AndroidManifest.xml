@@ -16,9 +16,6 @@
             android:name=".activity.tanamanku.DetailTanamankuItemActivity"
             android:exported="false" />
         <activity
-            android:name=".activity.tanamanku.DetailTanamankuActivity"
-            android:exported="false" />
-        <activity
             android:name=".activity.profilpage.ProfilEditPageActivity"
             android:exported="false" />
         <activity
