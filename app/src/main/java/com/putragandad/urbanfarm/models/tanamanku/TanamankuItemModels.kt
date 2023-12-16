@@ -36,6 +36,7 @@ data class TanamankuItemModels(
         parcel.writeString(metodeTanam)
         parcel.writeString(kapanDitanam)
         parcel.writeInt(fotoTanaman)
+        parcel.writeInt(id)
     }
 
     companion object CREATOR : Parcelable.Creator<TanamankuItemModels> {
