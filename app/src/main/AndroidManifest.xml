@@ -13,7 +13,10 @@
         android:theme="@style/Theme.UrbanFarm"
         tools:targetApi="31">
         <activity
-            android:name=".activity.tanamanku.DetailTanamankuItemActivity"
+            android:name=".activity.tanamanku.detailtanamanpage.DetailTanamankuItemPolybagActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.tanamanku.detailtanamanpage.DetailTanamankuItemHidroponikActivity"
             android:exported="false" />
         <activity
             android:name=".activity.profilpage.ProfilEditPageActivity"
@@ -23,9 +26,6 @@
             android:exported="false" />
         <activity
             android:name=".activity.onboarding.OnboardingActivity"
-            android:exported="false" />
-        <activity
-            android:name=".activity.splashscreen.SplashActivity"
             android:exported="false" />
         <activity
             android:name=".activity.tanamanku.AddTanamankuItemActivity"

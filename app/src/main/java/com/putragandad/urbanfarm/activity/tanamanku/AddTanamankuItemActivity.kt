@@ -82,8 +82,8 @@ class AddTanamankuItemActivity : AppCompatActivity() {
                 val sdf = SimpleDateFormat("dd MMM yyyy")
                 val currentDateAndTime: String = sdf.format(Date())
                 when(jenisTanaman) {
-                    "Bawang Merah" -> viewModel.addTanaman(TanamankuItemModels(namaTanaman, jenisTanaman, metodeTanam, currentDateAndTime, R.drawable.img_card_bawangmerah_tanamanku))
-                    "Cabai Rawit" -> viewModel.addTanaman(TanamankuItemModels(namaTanaman, jenisTanaman, metodeTanam, currentDateAndTime, R.drawable.img_card_cabai_rawit_tanamanku))
+                    "Bawang Merah" -> viewModel.addTanaman(TanamankuItemModels(namaTanaman, jenisTanaman, metodeTanam, currentDateAndTime, R.drawable.img_card_bawangmerah_tanamanku, "bawangMerah"))
+                    "Cabai Rawit" -> viewModel.addTanaman(TanamankuItemModels(namaTanaman, jenisTanaman, metodeTanam, currentDateAndTime, R.drawable.img_card_cabai_rawit_tanamanku, "cabaiRawit"))
                 }
                 Toast.makeText(this, "Tanaman anda $namaTanaman berhasil ditambah", Toast.LENGTH_LONG).show()
             }

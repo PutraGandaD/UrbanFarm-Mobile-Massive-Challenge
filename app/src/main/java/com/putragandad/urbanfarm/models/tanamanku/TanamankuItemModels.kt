@@ -12,7 +12,8 @@ data class TanamankuItemModels(
     @ColumnInfo(name = "Jenis") val jenisTanaman: String,
     @ColumnInfo(name = "Metode") val metodeTanam: String,
     @ColumnInfo(name = "Waktu") val kapanDitanam: String,
-    @ColumnInfo(name = "Foto") val fotoTanaman: Int
+    @ColumnInfo(name = "Foto") val fotoTanaman: Int,
+    @ColumnInfo(name = "idTanaman") val idTanaman: String
 ) : Parcelable {
     @PrimaryKey(autoGenerate = true) var id = 0
 
@@ -21,7 +22,8 @@ data class TanamankuItemModels(
         parcel.readString()!!,
         parcel.readString()!!,
         parcel.readString()!!,
-        parcel.readInt()
+        parcel.readInt(),
+        parcel.readString()!!
     ) {
         id = parcel.readInt()
     }
@@ -36,6 +38,7 @@ data class TanamankuItemModels(
         parcel.writeString(metodeTanam)
         parcel.writeString(kapanDitanam)
         parcel.writeInt(fotoTanaman)
+        parcel.writeString(idTanaman)
         parcel.writeInt(id)
     }
 

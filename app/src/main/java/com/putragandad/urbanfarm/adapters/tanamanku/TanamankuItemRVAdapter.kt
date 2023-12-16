@@ -14,7 +14,7 @@ import com.putragandad.urbanfarm.models.tanamanku.TanamankuItemModels
 class TanamankuItemRVAdapter(val context: Context, val tanamankuClickDeleteInterface: TanamankuClickDeleteInterface) :
     RecyclerView.Adapter<TanamankuItemRVAdapter.ViewHolder>()
 {
-    var onItemClick : ((TanamankuItemModels) -> Unit)? = null
+    var onItemClick : ((TanamankuItemModels, String) -> Unit)? = null
     private val AllTanaman = ArrayList<TanamankuItemModels>()
 
     inner class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
@@ -47,7 +47,7 @@ class TanamankuItemRVAdapter(val context: Context, val tanamankuClickDeleteInter
         }
 
         holder.itemView.setOnClickListener {
-            onItemClick?.invoke(tanaman)
+            onItemClick?.invoke(tanaman, tanaman.metodeTanam)
         }
     }
 

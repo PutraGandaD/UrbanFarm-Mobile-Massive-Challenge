@@ -2,7 +2,6 @@ package com.putragandad.urbanfarm.fragments.tanamankupage
 
 import android.content.Intent
 import android.os.Bundle
-import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -14,7 +13,8 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.putragandad.urbanfarm.R
 import com.putragandad.urbanfarm.activity.tanamanku.AddTanamankuItemActivity
-import com.putragandad.urbanfarm.activity.tanamanku.DetailTanamankuItemActivity
+import com.putragandad.urbanfarm.activity.tanamanku.detailtanamanpage.DetailTanamankuItemHidroponikActivity
+import com.putragandad.urbanfarm.activity.tanamanku.detailtanamanpage.DetailTanamankuItemPolybagActivity
 import com.putragandad.urbanfarm.adapters.tanamanku.TanamankuClickDeleteInterface
 import com.putragandad.urbanfarm.adapters.tanamanku.TanamankuItemRVAdapter
 import com.putragandad.urbanfarm.databinding.FragmentTanamankuPageBinding
@@ -65,10 +65,22 @@ class TanamankuPageFragment : Fragment(), TanamankuClickDeleteInterface {
             }
         })
 
-        tanamankuRVAdapter.onItemClick = {
-            val intent = Intent(requireContext(), DetailTanamankuItemActivity::class.java)
-            intent.putExtra("item_tanamanku_list",  it)
-            startActivity(intent)
+        tanamankuRVAdapter.onItemClick = {tanaman, metodeTanam ->
+            when(metodeTanam) {
+                "Hidroponik" -> {
+                    val intent = Intent(requireContext(), DetailTanamankuItemHidroponikActivity::class.java)
+                    intent.putExtra("item_tanamanku_list", tanaman)
+                    startActivity(intent)
+                }
+                "Polybag" -> {
+                    val intent = Intent(requireContext(), DetailTanamankuItemPolybagActivity::class.java)
+                    intent.putExtra("item_tanamanku_list", tanaman)
+                    startActivity(intent)
+                }
+                else -> {
+                    Toast.makeText(requireContext(), "Not found", Toast.LENGTH_SHORT).show()
+                }
+            }
         }
     }
 

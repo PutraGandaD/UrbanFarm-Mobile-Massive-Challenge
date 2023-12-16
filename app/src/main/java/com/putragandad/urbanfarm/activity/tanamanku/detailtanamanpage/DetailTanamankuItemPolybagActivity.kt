@@ -1,21 +1,25 @@
-package com.putragandad.urbanfarm.activity.tanamanku
+package com.putragandad.urbanfarm.activity.tanamanku.detailtanamanpage
 
+import android.app.AlarmManager
+import android.app.PendingIntent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
 import android.widget.Toast
-import com.putragandad.urbanfarm.R
-import com.putragandad.urbanfarm.databinding.ActivityDetailTanamankuItemBinding
+import com.putragandad.urbanfarm.databinding.ActivityDetailTanamankuItemPolybagBinding
 import com.putragandad.urbanfarm.models.tanamanku.TanamankuItemModels
-import java.util.UUID
 
-class DetailTanamankuItemActivity : AppCompatActivity() {
-    private lateinit var binding: ActivityDetailTanamankuItemBinding
+class DetailTanamankuItemPolybagActivity : AppCompatActivity() {
+    private lateinit var binding: ActivityDetailTanamankuItemPolybagBinding
     private var id : Int? = 0
+    private var tanamanId: String? = null
+
+    private var alarmManager : AlarmManager? = null
+    private lateinit var amSiramTanamanIntent : PendingIntent
+    private lateinit var amCekKondisiTanamanIntent: PendingIntent
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ActivityDetailTanamankuItemBinding.inflate(layoutInflater)
+        binding = ActivityDetailTanamankuItemPolybagBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
         val tanamankuListItem = intent.getParcelableExtra<TanamankuItemModels>("item_tanamanku_list")
@@ -32,7 +36,8 @@ class DetailTanamankuItemActivity : AppCompatActivity() {
         }
 
         id = tanamankuListItem?.id
-        Toast.makeText(this, "$id", Toast.LENGTH_SHORT).show()
-        //Log.d("DetailTanamankuItemActivity", "ID: $id")
+        tanamanId = tanamankuListItem?.idTanaman
+        Toast.makeText(this, "$id , $tanamanId", Toast.LENGTH_SHORT).show()
+        //Log.d("DetailTanamankuItemPolybagActivity", "ID: $id")
     }
 }
