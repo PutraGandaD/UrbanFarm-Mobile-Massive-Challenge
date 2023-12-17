@@ -92,6 +92,7 @@ class DetailTanamankuItemPolybagActivity : AppCompatActivity() {
                             updatedTanamankuListItem.id = id // set the id
                             viewModel.updateTanaman(updatedTanamankuListItem)
                         }
+                        cancelAlarm(id)
                     }
                 }
             }
@@ -167,7 +168,12 @@ class DetailTanamankuItemPolybagActivity : AppCompatActivity() {
     }
 
     private fun cancelAlarm(id: Int) {
+        alarmManager = this.getSystemService(Context.ALARM_SERVICE) as? AlarmManager
+        val intent = Intent(this, TanamankuAlarmReceiver::class.java)
 
+        amSiramTanamanIntent = PendingIntent.getBroadcast(this, id, intent, PendingIntent.FLAG_UPDATE_CURRENT)
+        alarmManager?.cancel(amSiramTanamanIntent)
+        Toast.makeText(this, "Pengingat Siram Tanaman telah dimatikan", Toast.LENGTH_SHORT).show()
     }
 
     private fun getAlarmIntent(id: Int, notificationContent: String) : PendingIntent {
