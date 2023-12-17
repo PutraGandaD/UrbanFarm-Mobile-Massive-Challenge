@@ -1,8 +1,12 @@
 package com.putragandad.urbanfarm.activity.tanamanku.detailtanamanpage
 
 import android.app.AlarmManager
+import android.app.NotificationChannel
+import android.app.NotificationManager
 import android.app.PendingIntent
 import android.content.Context
+import android.content.Intent
+import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
@@ -12,10 +16,12 @@ import com.google.android.material.materialswitch.MaterialSwitch
 import com.putragandad.urbanfarm.dao.tanamanku.TanamankuDao
 import com.putragandad.urbanfarm.databinding.ActivityDetailTanamankuItemPolybagBinding
 import com.putragandad.urbanfarm.models.tanamanku.TanamankuItemModels
+import com.putragandad.urbanfarm.notifications.tanamanku.TanamankuAlarmReceiver
 import com.putragandad.urbanfarm.viewmodels.tanamanku.TanamankuViewModel
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
+import java.util.Calendar
 import java.util.UUID
 
 class DetailTanamankuItemPolybagActivity : AppCompatActivity() {
@@ -38,6 +44,8 @@ class DetailTanamankuItemPolybagActivity : AppCompatActivity() {
         binding = ActivityDetailTanamankuItemPolybagBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        createNotificationChannel()
+
         viewModel = ViewModelProvider(
             this,
             ViewModelProvider.AndroidViewModelFactory.getInstance(application)
@@ -57,8 +65,8 @@ class DetailTanamankuItemPolybagActivity : AppCompatActivity() {
             id = tanamankuListItem.id
             tanamanId = tanamankuListItem?.idTanaman
 
-        //        Toast.makeText(this, "$id , $tanamanId", Toast.LENGTH_SHORT).show()
-        //        Log.d("DetailTanamankuItemPolybagActivity", "ID: $id")
+            Toast.makeText(this, "$id , $tanamanId", Toast.LENGTH_SHORT).show()
+            Log.d("DetailTanamankuItemPolybagActivity", "ID: $id")
         }
 
         switchSiramTanamanState = binding.switchSiramTanaman
@@ -75,6 +83,7 @@ class DetailTanamankuItemPolybagActivity : AppCompatActivity() {
                             updatedTanamankuListItem.id = id // set the id
                             viewModel.updateTanaman(updatedTanamankuListItem)
                         }
+                        setAlarmSiramTanaman(id, tanamanId, "Jangan Biarkan Tanaman Anda Kekeringan! Siram tanaman anda sekarang.")
                     }
                 } else {
                     CoroutineScope(Dispatchers.Main).launch {
@@ -108,6 +117,79 @@ class DetailTanamankuItemPolybagActivity : AppCompatActivity() {
                     }
                 }
             }
+        }
+    }
+
+    private fun setAlarmSiramTanaman(id: Int, tanamanId: String?, notificationContent: String) {
+        alarmManager = this.getSystemService(Context.ALARM_SERVICE) as? AlarmManager
+
+        amSiramTanamanIntent = getAlarmIntent(id, notificationContent)
+
+        when(tanamanId) {
+            "bawangMerah" -> {
+                val calendar: Calendar = Calendar.getInstance().apply {
+                    timeInMillis = System.currentTimeMillis()
+                    set(Calendar.HOUR_OF_DAY, 14) // hardcode hour here
+                    set(Calendar.MINUTE, 10) // hardcode minute here
+                }
+
+                alarmManager?.setInexactRepeating(
+                    AlarmManager.RTC_WAKEUP,
+                    calendar.timeInMillis,
+                    AlarmManager.INTERVAL_DAY,
+                    amSiramTanamanIntent
+                )
+
+                Toast.makeText(this, "Pengingat Siram Tanaman Dihidupkan!", Toast.LENGTH_SHORT).show()
+            }
+
+            "cabaiRawit" -> {
+                val calendar: Calendar = Calendar.getInstance().apply {
+                    timeInMillis = System.currentTimeMillis()
+                    set(Calendar.HOUR_OF_DAY, 14) // hardcode hour here
+                    set(Calendar.MINUTE, 10) // hardcode minute here
+                }
+
+                alarmManager?.setInexactRepeating(
+                    AlarmManager.RTC_WAKEUP,
+                    calendar.timeInMillis,
+                    AlarmManager.INTERVAL_DAY,
+                    amSiramTanamanIntent
+                )
+
+                Toast.makeText(this, "Pengingat Siram Tanaman Dihidupkan!", Toast.LENGTH_SHORT).show()
+            }
+
+            else -> {
+                Toast.makeText(this, "Testing", Toast.LENGTH_SHORT).show()
+            }
+        }
+    }
+
+    private fun cancelAlarm(id: Int) {
+
+    }
+
+    private fun getAlarmIntent(id: Int, notificationContent: String) : PendingIntent {
+        val intent = Intent(this, TanamankuAlarmReceiver::class.java).apply {
+            putExtra("customText", notificationContent)
+        }
+        return PendingIntent.getBroadcast(this, id, intent, PendingIntent.FLAG_UPDATE_CURRENT)
+    }
+
+    private fun createNotificationChannel() {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+            val name: CharSequence = "UrbanFarm Notifications"
+            val description = "Notification Channel for UrbanFarm app"
+            val importance = NotificationManager.IMPORTANCE_HIGH
+            val channel = NotificationChannel("urbanFarmNotificationAlarm", name, importance)
+            channel.description = description
+            val notificationManager = getSystemService(
+                NotificationManager::class.java
+            )
+
+            notificationManager.createNotificationChannel(channel)
+
         }
     }
 }
