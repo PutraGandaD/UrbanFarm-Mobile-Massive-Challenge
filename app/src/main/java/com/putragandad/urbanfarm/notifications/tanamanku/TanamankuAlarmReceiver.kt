@@ -1,4 +1,4 @@
-package com.putragandad.urbanfarm.notifications
+package com.putragandad.urbanfarm.notifications.tanamanku
 
-class AlarmReceiver {
+class TanamankuAlarmReceiver {
 }

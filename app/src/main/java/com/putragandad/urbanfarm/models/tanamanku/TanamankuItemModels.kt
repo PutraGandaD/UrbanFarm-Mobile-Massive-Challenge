@@ -13,7 +13,9 @@ data class TanamankuItemModels(
     @ColumnInfo(name = "Metode") val metodeTanam: String,
     @ColumnInfo(name = "Waktu") val kapanDitanam: String,
     @ColumnInfo(name = "Foto") val fotoTanaman: Int,
-    @ColumnInfo(name = "idTanaman") val idTanaman: String
+    @ColumnInfo(name = "idTanaman") val idTanaman: String,
+    @ColumnInfo(name = "switchSiramTanamanState") val switchSiramTanaman: Boolean = false,
+    @ColumnInfo(name = "switchCekTanamanState") val switchCekTanaman: Boolean = false
 ) : Parcelable {
     @PrimaryKey(autoGenerate = true) var id = 0
 
@@ -23,7 +25,9 @@ data class TanamankuItemModels(
         parcel.readString()!!,
         parcel.readString()!!,
         parcel.readInt(),
-        parcel.readString()!!
+        parcel.readString()!!,
+        parcel.readInt() == 1,
+        parcel.readInt() == 1
     ) {
         id = parcel.readInt()
     }
@@ -39,6 +43,8 @@ data class TanamankuItemModels(
         parcel.writeString(kapanDitanam)
         parcel.writeInt(fotoTanaman)
         parcel.writeString(idTanaman)
+        parcel.writeInt(if(switchSiramTanaman) 1 else 0)
+        parcel.writeInt(if(switchCekTanaman) 1 else 0)
         parcel.writeInt(id)
     }
 

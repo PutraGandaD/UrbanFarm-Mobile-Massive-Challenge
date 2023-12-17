@@ -217,7 +217,7 @@
                         android:id="@+id/switch_siram_tanaman"
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
-                        android:checked="true" />
+                        android:checked="false" />
 
                 </LinearLayout>
 
@@ -251,7 +251,7 @@
                         android:id="@+id/switch_cek_tanaman"
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
-                        android:checked="true" />
+                        android:checked="false" />
 
                 </LinearLayout>
 
