@@ -23,12 +23,6 @@ interface TanamankuDao {
     @Update
     suspend fun update(tanamanku: TanamankuItemModels)
 
-    @Query("Select switchSiramTanamanState from tanamanku_list WHERE id = :itemId ")
-    fun getStateSiramTanaman(itemId: Int) : Boolean
-
-    @Query("Select switchCekTanamanState from tanamanku_list WHERE id = :itemId ")
-    fun getStateCekTanaman(itemId: Int) : Boolean
-
-    @Update
-    suspend fun updateSwitchSiramTanaman(tanamanku: TanamankuItemModels)
+    @Query("SELECT * FROM tanamanku_list WHERE id = :id")
+    suspend fun getTanamankuItemById(id: Int): TanamankuItemModels?
 }

@@ -18,4 +18,8 @@ class TanamankuRepository(private val tanamankuDao: TanamankuDao) {
     suspend fun update(tanamanku: TanamankuItemModels) {
         tanamankuDao.update(tanamanku)
     }
+
+    suspend fun getTanamankuItemById(id: Int): TanamankuItemModels? {
+        return tanamankuDao.getTanamankuItemById(id)
+    }
 }

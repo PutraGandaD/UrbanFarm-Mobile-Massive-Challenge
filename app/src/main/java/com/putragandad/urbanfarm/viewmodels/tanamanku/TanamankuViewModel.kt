@@ -32,4 +32,8 @@ class TanamankuViewModel(application: Application)
         fun addTanaman(tanamanku: TanamankuItemModels) = viewModelScope.launch(Dispatchers.IO) {
             repository.insert(tanamanku)
         }
+
+    suspend fun getTanamankuItemById(id: Int): TanamankuItemModels? {
+        return repository.getTanamankuItemById(id)
+    }
 }

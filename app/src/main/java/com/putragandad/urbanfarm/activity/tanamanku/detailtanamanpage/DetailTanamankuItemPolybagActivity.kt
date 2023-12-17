@@ -13,6 +13,9 @@ import com.putragandad.urbanfarm.dao.tanamanku.TanamankuDao
 import com.putragandad.urbanfarm.databinding.ActivityDetailTanamankuItemPolybagBinding
 import com.putragandad.urbanfarm.models.tanamanku.TanamankuItemModels
 import com.putragandad.urbanfarm.viewmodels.tanamanku.TanamankuViewModel
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
 import java.util.UUID
 
 class DetailTanamankuItemPolybagActivity : AppCompatActivity() {
@@ -66,19 +69,20 @@ class DetailTanamankuItemPolybagActivity : AppCompatActivity() {
         binding.switchSiramTanaman.setOnCheckedChangeListener { _, isChecked ->
             if (id != null) {
                 if(isChecked) {
-                    val updatedTanamankuListItem = tanamankuListItem?.copy(switchSiramTanaman = true) // update Switch to true
-                    updatedTanamankuListItem?.id = id // set the id
-//                    Log.d("Activity", "Updated item: $updatedTanamankuListItem")
-                    if (updatedTanamankuListItem != null) {
-                        viewModel.updateTanaman(updatedTanamankuListItem)
+                    CoroutineScope(Dispatchers.Main).launch {
+                        viewModel.getTanamankuItemById(id)?.let { latestData ->
+                            val updatedTanamankuListItem = latestData.copy(switchSiramTanaman = true)
+                            updatedTanamankuListItem.id = id // set the id
+                            viewModel.updateTanaman(updatedTanamankuListItem)
+                        }
                     }
-//                    Toast.makeText(this, "Switch on", Toast.LENGTH_SHORT).show()
                 } else {
-//                    Toast.makeText(this, "Switch off", Toast.LENGTH_SHORT).show()
-                    val updatedTanamankuListItem = tanamankuListItem?.copy(switchSiramTanaman = false)
-                    updatedTanamankuListItem?.id = id
-                    if (updatedTanamankuListItem != null) {
-                        viewModel.updateTanaman(updatedTanamankuListItem)
+                    CoroutineScope(Dispatchers.Main).launch {
+                        viewModel.getTanamankuItemById(id)?.let { latestData ->
+                            val updatedTanamankuListItem = latestData.copy(switchSiramTanaman = false)
+                            updatedTanamankuListItem.id = id // set the id
+                            viewModel.updateTanaman(updatedTanamankuListItem)
+                        }
                     }
                 }
             }
@@ -87,19 +91,20 @@ class DetailTanamankuItemPolybagActivity : AppCompatActivity() {
         binding.switchCekTanaman.setOnCheckedChangeListener { _, isChecked ->
             if (id != null) {
                 if(isChecked) {
-                    val updatedTanamankuListItem = tanamankuListItem?.copy(switchCekTanaman = true) // update Switch to true
-                    updatedTanamankuListItem?.id = id // set the id
-//                    Log.d("Activity", "Updated item: $updatedTanamankuListItem")
-                    if (updatedTanamankuListItem != null) {
-                        viewModel.updateTanaman(updatedTanamankuListItem)
+                    CoroutineScope(Dispatchers.Main).launch {
+                        viewModel.getTanamankuItemById(id)?.let { latestData ->
+                            val updatedTanamankuListItem = latestData.copy(switchCekTanaman = true)
+                            updatedTanamankuListItem.id = id // set the id
+                            viewModel.updateTanaman(updatedTanamankuListItem)
+                        }
                     }
-//                    Toast.makeText(this, "Switch on", Toast.LENGTH_SHORT).show()
                 } else {
-//                    Toast.makeText(this, "Switch off", Toast.LENGTH_SHORT).show()
-                    val updatedTanamankuListItem = tanamankuListItem?.copy(switchCekTanaman = false)
-                    updatedTanamankuListItem?.id = id
-                    if (updatedTanamankuListItem != null) {
-                        viewModel.updateTanaman(updatedTanamankuListItem)
+                    CoroutineScope(Dispatchers.Main).launch {
+                        viewModel.getTanamankuItemById(id)?.let { latestData ->
+                            val updatedTanamankuListItem = latestData.copy(switchCekTanaman = false)
+                            updatedTanamankuListItem.id = id // set the id
+                            viewModel.updateTanaman(updatedTanamankuListItem)
+                        }
                     }
                 }
             }
