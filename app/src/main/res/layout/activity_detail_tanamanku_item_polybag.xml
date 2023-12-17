@@ -205,7 +205,7 @@
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:text="Siram Tanaman"
+                        android:text="Siram Tanaman dan Cek Kondisi Tanaman"
                         android:textSize="14dp"
                         android:fontFamily="@font/opensans_regular"
                         android:drawableStart="@drawable/ic_siram"
@@ -239,16 +239,16 @@
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:text="Cek Kondisi Tanaman"
+                        android:text="Beri Pupuk Tanaman"
                         android:textSize="14dp"
                         android:fontFamily="@font/opensans_regular"
-                        android:drawableStart="@drawable/ic_kondisi"
+                        android:drawableStart="@drawable/ic_pupuk"
                         android:drawablePadding="15sp"
                         android:gravity="center_vertical"
                         android:layout_gravity="start"/>
 
                     <com.google.android.material.materialswitch.MaterialSwitch
-                        android:id="@+id/switch_cek_tanaman"
+                        android:id="@+id/switch_pupuk_tanaman"
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
                         android:checked="false" />

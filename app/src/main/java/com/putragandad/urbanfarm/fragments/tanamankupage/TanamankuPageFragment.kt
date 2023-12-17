@@ -26,6 +26,7 @@ class TanamankuPageFragment : Fragment(), TanamankuClickDeleteInterface {
     lateinit var viewModel: TanamankuViewModel
     lateinit var tanamankuRV: RecyclerView
 
+
     private val binding get() = _binding!!
 
     override fun onCreateView(

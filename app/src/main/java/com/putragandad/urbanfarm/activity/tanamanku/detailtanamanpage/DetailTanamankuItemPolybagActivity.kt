@@ -26,16 +26,23 @@ import java.util.UUID
 
 class DetailTanamankuItemPolybagActivity : AppCompatActivity() {
     private lateinit var binding: ActivityDetailTanamankuItemPolybagBinding
-    private var id : Int = 0
-    private var tanamanId: String? = null
-    private var amCekKondisiTanamanId: Int? = null
+    private var id : Int = 0 // id data tanaman
+    private var tanamanId: String = "" // id data tanaman, in String (example : bawangMerah)
+    private var requestCode1: Int = 0 // random unique requestCode for AlarmManager purpose
+    private var requestCode2: Int = 0
+    private var requestCode3: Int = 0
+    private var requestCode4: Int = 0
+    private var requestCode5: Int = 0
 
     private var alarmManager : AlarmManager? = null
-    private lateinit var amSiramTanamanIntent : PendingIntent
-    private lateinit var amCekKondisiTanamanIntent: PendingIntent
+    private lateinit var amSiramTanamanIntent1 : PendingIntent // intent for pendingIntent purpose - Siram Tanaman
+    private lateinit var amSiramTanamanIntent2 : PendingIntent
+    private lateinit var amSiramTanamanIntent3 : PendingIntent
+    private lateinit var amPupukTanamanIntent1 : PendingIntent // intent for pendingIntent purpose - Pupuk Tanaman
+    private lateinit var amPupukTanamanIntent2 : PendingIntent
 
     private lateinit var switchSiramTanamanState : MaterialSwitch
-    private lateinit var switchCekTanamanState: MaterialSwitch
+    private lateinit var switchPupukTanamanState: MaterialSwitch
 
     lateinit var viewModel: TanamankuViewModel
 
@@ -63,47 +70,50 @@ class DetailTanamankuItemPolybagActivity : AppCompatActivity() {
             metodeTanamku.text = tanamankuListItem.metodeTanam
             jenisTanamanku.text = tanamankuListItem.jenisTanaman
             id = tanamankuListItem.id
-            tanamanId = tanamankuListItem?.idTanaman
+            tanamanId = tanamankuListItem.idTanaman
+            requestCode1 = tanamankuListItem.reqCode1
+            requestCode2 = tanamankuListItem.reqCode2
+            requestCode3 = tanamankuListItem.reqCode3
+            requestCode4 = tanamankuListItem.reqCode4
+            requestCode5 = tanamankuListItem.reqCode5
 
-            Toast.makeText(this, "$id , $tanamanId", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this, "$id , $tanamanId, $requestCode1, $requestCode2, $requestCode3, $requestCode4, $requestCode5", Toast.LENGTH_SHORT).show()
             Log.d("DetailTanamankuItemPolybagActivity", "ID: $id")
         }
 
         switchSiramTanamanState = binding.switchSiramTanaman
-        switchCekTanamanState = binding.switchCekTanaman
+        switchPupukTanamanState = binding.switchPupukTanaman
         switchSiramTanamanState.isChecked = tanamankuListItem?.switchSiramTanaman == true
-        switchCekTanamanState.isChecked = tanamankuListItem?.switchCekTanaman == true
+        switchPupukTanamanState.isChecked = tanamankuListItem?.switchPupukTanaman == true
 
         binding.switchSiramTanaman.setOnCheckedChangeListener { _, isChecked ->
-            if (id != null) {
-                if(isChecked) {
-                    CoroutineScope(Dispatchers.Main).launch {
-                        viewModel.getTanamankuItemById(id)?.let { latestData ->
-                            val updatedTanamankuListItem = latestData.copy(switchSiramTanaman = true)
-                            updatedTanamankuListItem.id = id // set the id
-                            viewModel.updateTanaman(updatedTanamankuListItem)
-                        }
-                        setAlarmSiramTanaman(id, tanamanId, "Jangan Biarkan Tanaman Anda Kekeringan! Siram tanaman anda sekarang.")
+            if(isChecked) {
+                CoroutineScope(Dispatchers.Main).launch {
+                    viewModel.getTanamankuItemById(id)?.let { latestData ->
+                        val updatedTanamankuListItem = latestData.copy(switchSiramTanaman = true)
+                        updatedTanamankuListItem.id = id // set the id
+                        viewModel.updateTanaman(updatedTanamankuListItem)
                     }
-                } else {
-                    CoroutineScope(Dispatchers.Main).launch {
-                        viewModel.getTanamankuItemById(id)?.let { latestData ->
-                            val updatedTanamankuListItem = latestData.copy(switchSiramTanaman = false)
-                            updatedTanamankuListItem.id = id // set the id
-                            viewModel.updateTanaman(updatedTanamankuListItem)
-                        }
-                        cancelAlarm(id)
+                    setAlarmSiramTanaman(requestCode1, requestCode2, requestCode3, tanamanId, "Jangan Biarkan Tanamanmu Kekeringan!", "Siram Tanaman Anda Sekarang.")
+                }
+            } else {
+                CoroutineScope(Dispatchers.Main).launch {
+                    viewModel.getTanamankuItemById(id)?.let { latestData ->
+                        val updatedTanamankuListItem = latestData.copy(switchSiramTanaman = false)
+                        updatedTanamankuListItem.id = id // set the id
+                        viewModel.updateTanaman(updatedTanamankuListItem)
                     }
+                    cancelAlarmSiramTanaman(requestCode1, requestCode2, requestCode3, tanamanId)
                 }
             }
         }
 
-        binding.switchCekTanaman.setOnCheckedChangeListener { _, isChecked ->
+        binding.switchPupukTanaman.setOnCheckedChangeListener { _, isChecked ->
             if (id != null) {
                 if(isChecked) {
                     CoroutineScope(Dispatchers.Main).launch {
                         viewModel.getTanamankuItemById(id)?.let { latestData ->
-                            val updatedTanamankuListItem = latestData.copy(switchCekTanaman = true)
+                            val updatedTanamankuListItem = latestData.copy(switchPupukTanaman = true)
                             updatedTanamankuListItem.id = id // set the id
                             viewModel.updateTanaman(updatedTanamankuListItem)
                         }
@@ -111,7 +121,7 @@ class DetailTanamankuItemPolybagActivity : AppCompatActivity() {
                 } else {
                     CoroutineScope(Dispatchers.Main).launch {
                         viewModel.getTanamankuItemById(id)?.let { latestData ->
-                            val updatedTanamankuListItem = latestData.copy(switchCekTanaman = false)
+                            val updatedTanamankuListItem = latestData.copy(switchPupukTanaman = false)
                             updatedTanamankuListItem.id = id // set the id
                             viewModel.updateTanaman(updatedTanamankuListItem)
                         }
@@ -121,25 +131,46 @@ class DetailTanamankuItemPolybagActivity : AppCompatActivity() {
         }
     }
 
-    private fun setAlarmSiramTanaman(id: Int, tanamanId: String?, notificationContent: String) {
+    private fun setAlarmSiramTanaman(
+        id1: Int,
+        id2: Int,
+        id3: Int,
+        tanamanId: String?,
+        notificationTitle: String,
+        notificationContent: String)
+    {
         alarmManager = this.getSystemService(Context.ALARM_SERVICE) as? AlarmManager
-
-        amSiramTanamanIntent = getAlarmIntent(id, notificationContent)
 
         when(tanamanId) {
             "bawangMerah" -> {
-                val calendar: Calendar = Calendar.getInstance().apply {
+                amSiramTanamanIntent1 = getAlarmIntent(id1, notificationTitle, notificationContent) // use id1 for requestCode
+                amSiramTanamanIntent2 = getAlarmIntent(id2, notificationTitle, notificationContent) // use id2 for requestCode
+
+                val calendar1: Calendar = Calendar.getInstance().apply {
                     timeInMillis = System.currentTimeMillis()
-                    set(Calendar.HOUR_OF_DAY, 14) // hardcode hour here
-                    set(Calendar.MINUTE, 10) // hardcode minute here
-                }
+                    set(Calendar.HOUR_OF_DAY, 8) // hardcode hour here
+                    set(Calendar.MINUTE, 5) // hardcode minute here
+                } // calendar1 for Siram Tanaman - pagi
+
+                val calendar2: Calendar = Calendar.getInstance().apply {
+                    timeInMillis = System.currentTimeMillis()
+                    set(Calendar.HOUR_OF_DAY, 16) // hardcode hour here
+                    set(Calendar.MINUTE, 30) // hardcode minute here
+                } // calendar1 for Siram Tanaman - sore
 
                 alarmManager?.setInexactRepeating(
                     AlarmManager.RTC_WAKEUP,
-                    calendar.timeInMillis,
+                    calendar1.timeInMillis,
                     AlarmManager.INTERVAL_DAY,
-                    amSiramTanamanIntent
-                )
+                    amSiramTanamanIntent1
+                ) // set AlarmManager for Siram Tanaman - pagi
+
+                alarmManager?.setInexactRepeating(
+                    AlarmManager.RTC_WAKEUP,
+                    calendar2.timeInMillis,
+                    AlarmManager.INTERVAL_DAY,
+                    amSiramTanamanIntent2
+                ) // set AlarmManager for Siram Tanaman - sore
 
                 Toast.makeText(this, "Pengingat Siram Tanaman Dihidupkan!", Toast.LENGTH_SHORT).show()
             }
@@ -151,13 +182,6 @@ class DetailTanamankuItemPolybagActivity : AppCompatActivity() {
                     set(Calendar.MINUTE, 10) // hardcode minute here
                 }
 
-                alarmManager?.setInexactRepeating(
-                    AlarmManager.RTC_WAKEUP,
-                    calendar.timeInMillis,
-                    AlarmManager.INTERVAL_DAY,
-                    amSiramTanamanIntent
-                )
-
                 Toast.makeText(this, "Pengingat Siram Tanaman Dihidupkan!", Toast.LENGTH_SHORT).show()
             }
 
@@ -167,18 +191,31 @@ class DetailTanamankuItemPolybagActivity : AppCompatActivity() {
         }
     }
 
-    private fun cancelAlarm(id: Int) {
+    private fun cancelAlarmSiramTanaman(
+        id1: Int,
+        id2: Int,
+        id3: Int,
+        idTanaman: String)
+    {
         alarmManager = this.getSystemService(Context.ALARM_SERVICE) as? AlarmManager
         val intent = Intent(this, TanamankuAlarmReceiver::class.java)
 
-        amSiramTanamanIntent = PendingIntent.getBroadcast(this, id, intent, PendingIntent.FLAG_UPDATE_CURRENT)
-        alarmManager?.cancel(amSiramTanamanIntent)
+        when(idTanaman) {
+            "bawangMerah" -> {
+                amSiramTanamanIntent1 = PendingIntent.getBroadcast(this, id1, intent, PendingIntent.FLAG_UPDATE_CURRENT)
+                amSiramTanamanIntent2 = PendingIntent.getBroadcast(this, id2, intent, PendingIntent.FLAG_UPDATE_CURRENT)
+
+                alarmManager?.cancel(amSiramTanamanIntent1)
+                alarmManager?.cancel(amSiramTanamanIntent2)
+            }
+        }
         Toast.makeText(this, "Pengingat Siram Tanaman telah dimatikan", Toast.LENGTH_SHORT).show()
     }
 
-    private fun getAlarmIntent(id: Int, notificationContent: String) : PendingIntent {
+    private fun getAlarmIntent(id: Int, notificationTitle: String, notificationContent: String) : PendingIntent {
         val intent = Intent(this, TanamankuAlarmReceiver::class.java).apply {
-            putExtra("customText", notificationContent)
+            putExtra("customTitleNotification", notificationTitle)
+            putExtra("customContentNotification", notificationContent)
         }
         return PendingIntent.getBroadcast(this, id, intent, PendingIntent.FLAG_UPDATE_CURRENT)
     }

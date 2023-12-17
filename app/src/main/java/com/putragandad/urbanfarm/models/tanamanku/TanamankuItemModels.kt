@@ -5,6 +5,8 @@ import android.os.Parcelable
 import androidx.room.ColumnInfo
 import androidx.room.Entity
 import androidx.room.PrimaryKey
+import java.util.UUID
+import kotlin.math.absoluteValue
 
 @Entity(tableName = "tanamanku_list")
 data class TanamankuItemModels(
@@ -14,8 +16,13 @@ data class TanamankuItemModels(
     @ColumnInfo(name = "Waktu") val kapanDitanam: String,
     @ColumnInfo(name = "Foto") val fotoTanaman: Int,
     @ColumnInfo(name = "idTanaman") val idTanaman: String,
+    @ColumnInfo(name = "ReqCode1") val reqCode1: Int = UUID.randomUUID().hashCode().absoluteValue,
+    @ColumnInfo(name = "ReqCode2") val reqCode2: Int = UUID.randomUUID().hashCode().absoluteValue,
+    @ColumnInfo(name = "ReqCode3") val reqCode3: Int = UUID.randomUUID().hashCode().absoluteValue,
+    @ColumnInfo(name = "ReqCode4") val reqCode4: Int = UUID.randomUUID().hashCode().absoluteValue,
+    @ColumnInfo(name = "ReqCode5") val reqCode5: Int = UUID.randomUUID().hashCode().absoluteValue,
     @ColumnInfo(name = "switchSiramTanamanState") val switchSiramTanaman: Boolean = false,
-    @ColumnInfo(name = "switchCekTanamanState") val switchCekTanaman: Boolean = false
+    @ColumnInfo(name = "switchPupukTanamanState") val switchPupukTanaman: Boolean = false
 ) : Parcelable {
     @PrimaryKey(autoGenerate = true) var id = 0
 
@@ -26,6 +33,11 @@ data class TanamankuItemModels(
         parcel.readString()!!,
         parcel.readInt(),
         parcel.readString()!!,
+        parcel.readInt(),
+        parcel.readInt(),
+        parcel.readInt(),
+        parcel.readInt(),
+        parcel.readInt(),
         parcel.readInt() == 1,
         parcel.readInt() == 1
     ) {
@@ -43,8 +55,13 @@ data class TanamankuItemModels(
         parcel.writeString(kapanDitanam)
         parcel.writeInt(fotoTanaman)
         parcel.writeString(idTanaman)
+        parcel.writeInt(reqCode1)
+        parcel.writeInt(reqCode2)
+        parcel.writeInt(reqCode3)
+        parcel.writeInt(reqCode4)
+        parcel.writeInt(reqCode5)
         parcel.writeInt(if(switchSiramTanaman) 1 else 0)
-        parcel.writeInt(if(switchCekTanaman) 1 else 0)
+        parcel.writeInt(if(switchPupukTanaman) 1 else 0)
         parcel.writeInt(id)
     }
 

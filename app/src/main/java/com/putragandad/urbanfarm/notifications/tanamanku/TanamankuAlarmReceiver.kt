@@ -11,20 +11,21 @@ import com.putragandad.urbanfarm.R
 
 class TanamankuAlarmReceiver : BroadcastReceiver() {
     override fun onReceive(context: Context?, intent: Intent?) {
-        val i = Intent(context, MainActivity::class.java)
+        val i = Intent()
         intent!!.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
-        val pendingIntent = PendingIntent.getActivity(context, 0, i, PendingIntent.FLAG_MUTABLE)
+        val pendingIntent = PendingIntent.getActivity(context, 0, i, PendingIntent.FLAG_UPDATE_CURRENT)
 
-        val customText = intent?.getStringExtra("customText") ?: "Default Text"
+        val customTitleNotification = intent?.getStringExtra("customTitleNotification") ?: "UrbanFarm"
+        val customContentNotification = intent?.getStringExtra("customContentNotification") ?: "This is Notification"
 
         val builder = NotificationCompat.Builder(context!!, "urbanFarmNotificationAlarm")
             .setSmallIcon(R.drawable.ic_launcher_foreground)
-            .setContentTitle("UrbanFarm")
-            .setContentText(customText)
+            .setContentTitle(customTitleNotification)
+            .setContentText(customContentNotification)
             .setAutoCancel(true)
             .setDefaults(NotificationCompat.DEFAULT_ALL)
             .setPriority(NotificationCompat.PRIORITY_HIGH)
-            .setContentIntent(pendingIntent)
+            .setFullScreenIntent(pendingIntent, true)
 
         val notificationManager = NotificationManagerCompat.from(context)
         notificationManager.notify(123, builder.build())
