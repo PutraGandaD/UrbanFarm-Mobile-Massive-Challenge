@@ -88,5 +88,15 @@ Cabai rawit sangat mudah ditanam di rumah. Cabai rawit juga dapat tumbuh dengan 
     <string name="bawangmerah_polybag_menanam_step3">Gunakan Bagian bawahnya, tujuan dari pemotongan ini berfungsi agar mempercepat pertumbuhan.</string>
     <string name="bawangmerah_polybag_menanam_step4">Setelah bawang merah dipotong, tanam ke dalam media tanam. Satu polybag berukuran 25 cm perlu ditanam 2 buah potongan bawang merah. Tanam di bagian tengah media tanam.</string>
     <string name="bawangmerah_polybag_menanam_step5">Setelah potongan bawang merah ditanam ke dalam media tanam, diamkan sampai 8 hari hingga muncul kecambah. Siramkan air secukupnya sehari sekali. Letakkan polybag berisi bawang merah di tempat yang terbuka yang mendapatkan pancaran sinar matahari yang utuh. Penempatan tanaman bawang merah di polybag di tempat teduh atau kurang sinat matahari membuat pertumbuhannya kurang bagus.</string>
+    <string name="bawangmerah_hidroponik_mediatanam_step1">Siapkan pipa dengan diameter 3 inch dan panjang yang disesuaikan dengan kebutuhan. Lalu buat lubang tanam dengan jarak antar lubang sekitar 20 cm. Pastikan lubang tanam sesuai dengan diameter netpot.</string>
+    <string name="bawangmerah_hidroponik_mediatanam_step2">Potong kain flanel yang berfungsi sebagai filter seukuran dengan netpot. Setelah semua siap, pasang media tanam arang sekam di dalam netpot</string>
+    <string name="bawangmerah_hidroponik_menanam_step1">Bibit bawang merah dari sisa bawang merah yang ada di dapur. Bawang merah yang bisa digunakan adalah yang berbiji tunggal dan masih segar.</string>
+    <string name="bawangmerah_hidroponik_menanam_step2">Potong ujung bawang merah</string>
+    <string name="bawangmerah_hidroponik_menanam_step3">Tancapkan bawang merah ke dalam media tanam sedalam separuh dari bawang merah.</string>
+    <string name="bawangmerah_hidroponik_menanam_step4">Taruh netpot yang sudah ditanam benih bawang merah ke lubang lubang pada pipa.</string>
+    <string name="bawangmerah_hidroponik_menanam_step5">Isi pipa dengan air nutrisi dan letakkan pipa di tempat yang mendapatkan sinar matahari cukup namun tidak terlalu panas.</string>
+    <string name="bawangmerah_hidroponik_perawatan_step1">Pemberian air nutrisi dilakukan saat air pada pipa mulai menyusut atau berkurang. Nutrisi untuk bawang merah hidroponik terbuat dari pupuk NPK phonska + sempurna daun sebanyak 1 sendok yang dicampurkan dalam 1 ember air.</string>
+    <string name="bawangmerah_hidroponik_perawatan_step2">Untuk menjaga agar bawang merah tidak membusuk pastikan hanya kain flanel yang terkena air. Beri pupuk yang dimasukkan ke dalam air di pipa dengan tujuan agar nutrisi yang diserap cukup baik.</string>
+    <string name="bawangmerah_hidroponik_panen_step1">Bawang merah yang ditanam menggunakan sistem hidroponik bisa dipanen saat berumur 2,5 bulan setelah tanam. Jumlah umbi yang bisa dipanen antara 5 hingga 10 umbi per netpot.</string>
 
 </resources>

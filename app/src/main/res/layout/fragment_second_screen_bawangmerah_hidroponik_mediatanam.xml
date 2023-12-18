@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".fragments.panduantanam.bawangmerah.polybag.menanam.SecondScreen">
+    tools:context=".fragments.panduantanam.bawangmerah.hidroponik.mediatanam.SecondScreen">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -35,7 +35,7 @@
                     app:layout_constraintTop_toTopOf="parent"
                     app:menu="@menu/top_app_bar"
                     app:navigationIcon="@drawable/baseline_arrow_back_24"
-                    app:title="Proses Menanam"
+                    app:title="Menyiapkan Media Tanam"
                     app:titleTextColor="@color/white" />
 
             </com.google.android.material.appbar.AppBarLayout>
@@ -48,7 +48,7 @@
             android:layout_marginStart="20dp"
             android:layout_marginTop="30dp"
             android:layout_marginEnd="20dp"
-            android:progress="40"
+            android:progress="100"
             app:indicatorColor="@color/primary_green"/>
 
         <com.google.android.material.textview.MaterialTextView
@@ -56,7 +56,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="20dp"
             android:layout_gravity="start"
-            android:text="40%"
+            android:text="100%"
             android:textColor="@color/primary_green"
             android:textSize="14dp"
             android:fontFamily="@font/opensans_regular"/>
@@ -64,21 +64,21 @@
         <ImageView
             android:layout_width="400dp"
             android:layout_height="400dp"
-            android:src="@drawable/menanam_bawangmerah_polybag_2" />
+            android:src="@drawable/media_tanam_bawangmerah_hidroponik_2"/>
 
         <com.google.android.material.textview.MaterialTextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="20dp"
             android:layout_marginEnd="20dp"
-            android:text="@string/bawangmerah_polybag_menanam_step2"
-            android:textSize="14dp"
+            android:text="@string/bawangmerah_hidroponik_mediatanam_step2"
+            android:textSize="18dp"
             android:fontFamily="@font/opensans_semibold"/>
 
     </LinearLayout>
 
     <com.google.android.material.button.MaterialButton
-        android:id="@+id/btn_previous_bawangmerah_polybag_menanam2"
+        android:id="@+id/btn_previous_bawangmerah_hidroponik_mediatanam2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="30dp"
@@ -92,7 +92,7 @@
         app:strokeWidth="1dp"/>
 
     <com.google.android.material.button.MaterialButton
-        android:id="@+id/btn_next_bawangmerah_polybag_menanam2"
+        android:id="@+id/btn_next_bawangmerah_hidroponik_mediatanam2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="30dp"
@@ -100,7 +100,7 @@
         android:backgroundTint="@color/secondary_green"
         android:drawableEnd="@drawable/ic_next_primary_green"
         android:fontFamily="@font/roboto_medium"
-        android:text="Berikutnya"
+        android:text="Selesai"
         android:textColor="@color/primary_green"
         android:textSize="14dp" />
 
