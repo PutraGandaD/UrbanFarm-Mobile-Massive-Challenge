@@ -98,5 +98,14 @@ Cabai rawit sangat mudah ditanam di rumah. Cabai rawit juga dapat tumbuh dengan 
     <string name="bawangmerah_hidroponik_perawatan_step1">Pemberian air nutrisi dilakukan saat air pada pipa mulai menyusut atau berkurang. Nutrisi untuk bawang merah hidroponik terbuat dari pupuk NPK phonska + sempurna daun sebanyak 1 sendok yang dicampurkan dalam 1 ember air.</string>
     <string name="bawangmerah_hidroponik_perawatan_step2">Untuk menjaga agar bawang merah tidak membusuk pastikan hanya kain flanel yang terkena air. Beri pupuk yang dimasukkan ke dalam air di pipa dengan tujuan agar nutrisi yang diserap cukup baik.</string>
     <string name="bawangmerah_hidroponik_panen_step1">Bawang merah yang ditanam menggunakan sistem hidroponik bisa dipanen saat berumur 2,5 bulan setelah tanam. Jumlah umbi yang bisa dipanen antara 5 hingga 10 umbi per netpot.</string>
+    <string name="kacangpanjang_polybag_mediatanam_step1">Siapkan polybag dengan diameter 30x30 cm.</string>
+    <string name="kacangpanjang_polybag_mediatanam_step2">Masukkan media tanam ke dalam polybag. Media tanam yang digunakan adalah campuran tanah, kompos, dan pasir dengan perbandingan 1:1:1. Campur hingga merata.</string>
+    <string name="kacangpanjang_polybag_menanam_step1">Buat lubang pada media sedalam setengah jari telunjuk, bibit kacang panjang langsung disemai di media polybag yang sudah disiapkan sebanyak 2-3 bibit.</string>
+    <string name="kacangpanjang_polybag_menanam_step2">Selanjutnya tutup dengan media tipis-tipis saja.</string>
+    <string name="kacangpanjang_polybag_menanam_step3">Siram dengan air untuk menjaga kelembabannya. Letakkan di tempat terbuka dengan sinar matahari yang cukup, suhu optimal antara 25-30°C. Untuk penyiraman tanaman lakukan dua kali sehari yaitu pada pagi dan sore hari saja. </string>
+    <string name="kacangpanjang_polybag_menanam_step4">Dalam beberapa hari, bibit kacang panjang akan segera berkecambah dan tumbuh. Mulai semai benih sampai kondisi seperti gambar di bawah kira – kira butuh waktu 7 hari.</string>
+    <string name="kacangpanjang_polybag_menanam_step5">Ajir adalah area rambatan kacang panjang, sehingga kacang panjang akan menggantung pada ajir dan mempermudah perawatan dan pemanenan. Pemberian ajir dilakukan ketika kacang panjang sudah mulai tumbuh sulurnya.</string>
+    <string name="kacangpanjang_polybag_menanam_step6">Memberi pupuk pada kacang panjang</string>
+    <string name="kacangpanjang_polybag_menanam_step7">Pemupukan dilakukan setiap 1 minggu sekali. Tanamkan di bagian pinggir polybag sebanyak 1 sdt jangan terlalu dekat dengan perakaran, karena kacang panjang dapat gosong.</string>
 
 </resources>
