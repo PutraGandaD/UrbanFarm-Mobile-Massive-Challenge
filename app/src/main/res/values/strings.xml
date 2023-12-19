@@ -141,5 +141,19 @@ Cabai rawit sangat mudah ditanam di rumah. Cabai rawit juga dapat tumbuh dengan 
     <string name="timun_polybag_perawatan_step5">Pemupukan pertama dilakukan pada usia 10 hari dengan melarutkan 1 sendok makan pupuk dengan 5 liter air.</string>
     <string name="timun_polybag_perawatan_step6">Larutan sebanyak 250 ml kita alirkan setiap 3 hari sekali.</string>
     <string name="timun_polybag_panen_step1">Tanaman timun bisa kita panen pada usia 35 hingga 40 hari setelah tanam.</string>
+    <string name="tomat_polybag_mediatanam_step1">Siapkan polybag dengan diameter 30x30 cm.</string>
+    <string name="tomat_polybag_mediatanam_step2">Masukkan media tanam ke dalam polybag. Media tanam yang digunakan adalah campuran tanah, pasir, dan pupuk kandang dengan perbandingan 1:1:1. Campur hingga merata.</string>
+    <string name="tomat_polybag_menanam_step1">Buatlah lubang di media tanam menggunakan jari sekitar 2 - 3 cm. Masukkan biji tomat ke dalam lubang.</string>
+    <string name="tomat_polybag_menanam_step2">Tutup kembali dengan tanah tipis-tipis saja.</string>
+    <string name="tomat_polybag_menanam_step3">Beri air secukupnya, agar tetap lembab.</string>
+    <string name="tomat_polybag_menanam_step4">Tutup rapat permukaan media tanam menggunakan kain basah, agar pembelahan biji lebih maksimal. Diamkan selama 2 hari, jangan lupa untuk tetap menyiramnya sehari sekali, kemudian tutup kembali dengan rapat.</string>
+    <string name="tomat_polybag_menanam_step5">Buka kain sebelumnya, kemudian letakkan di sinar matahari yang cukup dan lakukan penyiraman setiap hari secara rutin.</string>
+    <string name="tomat_polybag_menanam_step6">Apabila sudah berumur 20 hari, maka pindahkan ke polybag  yang berisi campuran tanah, pasir, dan pupuk kandang sebelumnya.</string>
+    <string name="tomat_polybag_menanam_step7">Pindahkan tomat ke dalam polybag dengan akar yang masih menyatu dengan bagian tanah yang masih menempel pada tomat secara perlahan.</string>
+    <string name="tomat_polybag_perawatan_step1">Sirami tanaman dua kali sehari dengan air bersih. Jangan terlalu basah saat menyirami tanaman. Karena pembusukan terjadi ketika penuangan melebihi anjuran yang direkomendasikan. Ketika menemukan tanaman yang layu atau mati, segera buang dari media tanam agar tidak menular ke tanaman lain.</string>
+    <string name="tomat_polybag_perawatan_step2">Dilakukan untuk menopang tanaman yang mulai tumbuh besar. Hal ini dimaksudkan agar tanaman yang dimaksud tidak mudah roboh.</string>
+    <string name="tomat_polybag_perawatan_step3">Campurkan pupuk urea sebanyak 40% dan NPK Mutiara sebanyak 60% di dalam wadah.</string>
+    <string name="tomat_polybag_perawatan_step4">Pemupukan dilakukan setiap 1 minggu sekali. Tanamkan di bagian pinggir polybag sebanyak 1 sdt jangan terlalu dekat dengan perakaran, karena tomat dapat gosong.</string>
+    <string name="tomat_polybag_panen_step1">Tomat dapat dipanen ketika berusia 3 bulan. Kriterianya adalah perubahan warna dari hijau menjadi kekuningan, tepi daun yang mengering dan batangnya mulai menguning. Perlu dicatat bahwa proses pematangan tomat tidak terjadi secara bersamaan. maka dari itu lakukan pemetikkan setiap 3 hari sekali pada buah yang telah matang.</string>
 
 </resources>
