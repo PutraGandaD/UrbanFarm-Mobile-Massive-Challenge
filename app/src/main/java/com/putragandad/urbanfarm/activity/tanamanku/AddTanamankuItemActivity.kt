@@ -55,7 +55,6 @@ class AddTanamankuItemActivity : AppCompatActivity() {
         // Connect string-array to dropdown
         val jenisTanamanDropdownItem = resources.getStringArray(R.array.jenis_tanaman)
         val metodeTanamDropdownItem = resources.getStringArray(R.array.metode_tanam)
-
         val arrayJenisTanamanAdapter = ArrayAdapter(this, R.layout.dropdown_item_jenis_tanaman, jenisTanamanDropdownItem)
         binding.dropdownJenisTanaman.setAdapter(arrayJenisTanamanAdapter)
 
