@@ -2,6 +2,7 @@ package com.putragandad.urbanfarm.api
 
 import com.putragandad.urbanfarm.models.api.JualPanenModel
 import com.putragandad.urbanfarm.models.api.ResponseModel
+import com.putragandad.urbanfarm.models.api.VideosDashboardModel
 import retrofit2.Call
 import retrofit2.http.Field
 import retrofit2.http.FormUrlEncoded
@@ -15,6 +16,10 @@ interface ApiEndpoint {
     @GET("api/v1/jualpanen")
     @Headers("Content-Type: application/json")
     fun data(): Call<JualPanenModel>
+
+    @GET("api/v1/videos")
+    @Headers("Content-Type: application/json")
+    fun getVideos(): Call<VideosDashboardModel>
 
     @GET("api/v1/jualpanen/users/{id_user}")
     @Headers("Content-Type: application/json")

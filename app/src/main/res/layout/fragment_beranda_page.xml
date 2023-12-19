@@ -154,6 +154,31 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/tv_title_tanamanlist" />
 
+            <TextView
+                android:id="@+id/tv_title_videos"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:text="Ketahui Lebih banyak tentang\n#UrbanFarming"
+                android:textColor="@color/black"
+                android:fontFamily="@font/opensans_bold"
+                android:textSize="18sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/rv_tanamanlist" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_videoslist"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginTop="8dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                app:layout_constraintTop_toBottomOf="@id/tv_title_videos" />
+
         </androidx.constraintlayout.widget.ConstraintLayout>
 
     </ScrollView>

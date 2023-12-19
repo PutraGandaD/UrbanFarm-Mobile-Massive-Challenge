@@ -2,20 +2,33 @@ package com.putragandad.urbanfarm.fragments.berandapage
 
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.GridLayoutManager
+import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.putragandad.urbanfarm.R
 import com.putragandad.urbanfarm.activity.beranda.DetailTanamanPageActivity
 import com.putragandad.urbanfarm.adapters.beranda.IconTanamanRVAdapter
+import com.putragandad.urbanfarm.adapters.beranda.VideosRVAdapter
+import com.putragandad.urbanfarm.api.ApiRetrofit
 import com.putragandad.urbanfarm.databinding.FragmentBerandaPageBinding
+import com.putragandad.urbanfarm.models.api.JualPanenModel
+import com.putragandad.urbanfarm.models.api.VideosDashboardModel
 import com.putragandad.urbanfarm.models.beranda.ItemTanamanModels
+import retrofit2.Call
+import retrofit2.Callback
+import retrofit2.Response
+import java.util.Timer
+import kotlin.concurrent.timerTask
 
 class BerandaPageFragment : Fragment() {
+    private val api by lazy { ApiRetrofit().endpoint }
     private var _binding : FragmentBerandaPageBinding? = null
+    private lateinit var videosDashboardRVAdapter: VideosRVAdapter
     private val binding get() = _binding!!
 
     override fun onCreateView(
@@ -25,6 +38,23 @@ class BerandaPageFragment : Fragment() {
         _binding = FragmentBerandaPageBinding.inflate(inflater, container, false)
 
         return binding.root
+    }
+
+    override fun onStart() {
+        super.onStart()
+        val funtimer: Timer = Timer()
+        funtimer.scheduleAtFixedRate(
+            timerTask() {
+                getVideos()
+            }, 5000, 5000)
+    }
+
+    private fun timer() {
+        val funtimer: Timer = Timer()
+        funtimer.scheduleAtFixedRate(
+            timerTask() {
+                getVideos()
+            }, 5000, 5000)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -60,5 +90,42 @@ class BerandaPageFragment : Fragment() {
             intent.putExtra("item_tanaman_dashboard", it)
             startActivity(intent)
         }
+
+        // initiate video dashboard
+        var videosRV: RecyclerView = view.findViewById(R.id.rv_videoslist)
+        val layoutManagerVideos = LinearLayoutManager(requireContext(), LinearLayoutManager.HORIZONTAL, false)
+        videosDashboardRVAdapter = VideosRVAdapter(arrayListOf())
+        videosRV.adapter = videosDashboardRVAdapter
+        videosRV.layoutManager = layoutManagerVideos
+        timer()
+    }
+
+    private fun getVideos() {
+        api.getVideos().enqueue(object : Callback<VideosDashboardModel> {
+            override fun onResponse(
+                call: Call<VideosDashboardModel>,
+                response: Response<VideosDashboardModel>
+            ) {
+                if(response.isSuccessful) {
+                    val videosModel = response.body()
+                    val listData = videosModel!!.data
+
+                    if (listData != null && listData.isNotEmpty()) {
+                        for (item in listData) {
+                            Log.e("MainActivity", "ID : ${item.id}")
+                        }
+                    } else {
+                        Log.e("MainActivity", "ListData is null or empty")
+
+                    }
+                    videosDashboardRVAdapter.setData(listData)
+                    Log.e("JualPanenFragment", "Content-Type: ${response.headers().get("Content-Type")}")
+                }
+            }
+
+            override fun onFailure(call: Call<VideosDashboardModel>, t: Throwable) {
+                Log.e("MainActivity", t.toString())
+            }
+        })
     }
 }
