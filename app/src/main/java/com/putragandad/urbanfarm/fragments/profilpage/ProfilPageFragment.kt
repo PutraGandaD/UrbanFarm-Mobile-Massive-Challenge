@@ -11,6 +11,7 @@ import com.google.firebase.Firebase
 import com.google.firebase.auth.FirebaseAuth
 import com.putragandad.urbanfarm.R
 import com.putragandad.urbanfarm.activity.landingpage.LandingPageActivity
+import com.putragandad.urbanfarm.activity.profilpage.PostinganAndaPageActivity
 import com.putragandad.urbanfarm.activity.profilpage.ProfilEditPageActivity
 import com.putragandad.urbanfarm.databinding.FragmentProfilPageBinding
 
@@ -47,6 +48,10 @@ class ProfilPageFragment : Fragment() {
 
         binding.btnEditProfil.setOnClickListener {
             startActivity(Intent(requireContext(), ProfilEditPageActivity::class.java))
+        }
+
+        binding.btnPostinganAnda.setOnClickListener {
+            startActivity(Intent(requireContext(), PostinganAndaPageActivity::class.java))
         }
 
         return binding.root

@@ -16,6 +16,12 @@ interface ApiEndpoint {
     @Headers("Content-Type: application/json")
     fun data(): Call<JualPanenModel>
 
+    @GET("api/v1/jualpanen/users/{id_user}")
+    @Headers("Content-Type: application/json")
+    fun dataByIdUser(
+        @Path("id_user") id_user: String,
+    ): Call<JualPanenModel>
+
     @FormUrlEncoded
     @POST("api/v1/jualpanen")
     fun create(
