@@ -113,5 +113,16 @@ Cabai rawit sangat mudah ditanam di rumah. Cabai rawit juga dapat tumbuh dengan 
     <string name="bawangmerah_polybag_perawatan_step2">Beri Pupuk (15 hari sekali) → 15-30-45. Pada saat tanaman berusia 15 hari, proses pemupukan sudah bisa dilakukan. Buat larutan pupuk yang terdiri dari 1 sdm pupuk NPK 16-16-16 dengan 3 liter air lalu larutkan sampai tercampur merata.</string>
     <string name="bawangmerah_polybag_perawatan_step3">Siramkan setengah gelas minum (120 ml) larutan ke 1 polybag bawang merah. Lakukan kembali pada hari ke-30 dan hari ke-45.</string>
     <string name="bawangmerah_polybag_panen_step1">Pada usia 62 hari bawang merah siap dipanen.</string>
+    <string name="cabai_polybag_menanam_step1">Penyemaian dapat dilakukan dengan menggunakan polybag hitam ukuran 10 cm x 5 cm (diameter 5 cm) yang telah diisi media semai.</string>
+    <string name="cabai_polybag_menanam_step2">Menyiram media secara hati-hati sebelum peletakan benih (menggunakan spayer)</string>
+    <string name="cabai_polybag_menanam_step3">Meletakkan benih yang sudah siap ke dalam polybag persemaian</string>
+    <string name="cabai_polybag_menanam_step4">Polybag semai diletakkan pada tempat yang tidak terkena hujan/sinar matahari secara langsung/ bisa juga untuk di tutup.</string>
+    <string name="cabai_polybag_menanam_step5">Melakukan penyemprotan air secara berkala dengan menggunakan sprayer.</string>
+    <string name="cabai_polybag_menanam_step6">Memelihara tanaman sampai siap dipindahkan ke polybag pembesaran (kira kira sudah tumbuh 3-4 daun).</string>
+    <string name="cabai_polybag_menanam_step7">Umur bibit kurang lebih 21 hari (minimal memiliki 3-4 helai daun sempurna)</string>
+    <string name="cabai_polybag_menanam_step8">Media tanam disiram air terlebih dahulu sehari sebelum transplanting</string>
+    <string name="cabai_polybag_menanam_step9">Membuat lubang pada media tanam sesuai ukuran polybag persemaian</string>
+    <string name="cabai_polybag_menanam_step10">Memindahkan bibit ke polybag pembesaran secara hati-hati</string>
+    <string name="cabai_polybag_menanam_step11">Memasang ajir/kayu 21 hari setelah tanam.</string>
 
 </resources>
