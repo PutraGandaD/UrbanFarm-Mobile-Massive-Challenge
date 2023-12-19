@@ -168,5 +168,19 @@ Cabai rawit sangat mudah ditanam di rumah. Cabai rawit juga dapat tumbuh dengan 
     <string name="buncis_polybag_perawatan_step4">Berilah pupuk kompos setelah tanaman berumur sekitar 2 minggu, masukkan sebanyak satu kepal pupuk kedalam media tanam lalu siram dengan air secukupnya agar pupuk tercampur dengan rata.</string>
     <string name="buncis_polybag_perawatan_step5">Pada usia tanam lebih dari 35 hari, semprotkan larutan Pupuk Organik Cair (POC) GDM Spesialis Pangan di tangki semprot pada seluruh tanaman buncis. Aplikasikan pemupukan ini tiap seminggu sekali.</string>
     <string name="buncis_polybag_panen_step1">Buncis bisa mulai dipanen ketika berumur 45 hari setelah tanam bergantung varietas dan perawatan tanamannya. Buncis yang siap panen memiliki ciri-ciri ukuran buah maksimal dan padat, warnanya berubah dibandingkan dengan buncis muda. Pemanenan dapat dilakukan dengan interval 3—4 hari dan pemanenan tersebut dapat dilakukan dalam jangka waktu lama.</string>
+    <string name="wortel_polybag_mediatanam_step1">Penyemaian adalah tahap pertama dalam penanaman yang juga sangat penting untuk dilakukan. Penyemaian benih wortel akan lebih baik untuk dilakukan pada media terpisah dibanding dengan penanaman langsung di tanah.</string>
+    <string name="wortel_polybag_mediatanam_step2">Penyemaian dilakukan dengan terlebih dahulu mencampurkan pupuk kandang. Pupuk kandang kemudian dicampur bersama tanah. Pencampuran tanah dan pupuk diaduk hingga merata.</string>
+    <string name="wortel_polybag_mediatanam_step3">Hasil percampuran kemudian dimasukan ke dalam kotak pembenihan. Tempat pembenihan dapat dilakukan pada polybag kecil dengan ukuran 5 x 6 cm.Tanah di dalam tempat pembenihan kemudian dipadatkan</string>
+    <string name="wortel_polybag_menanam_step1">Benih wortel direndam ke dalam air hangat dengan waktu 15 menit. Perendaman pada air hangat akan membuat biji wortel menjadi lebih cepat untuk memecah masa dormansi. Dormansi adalah masa istirahat biji sehingga tidak melakukan perkembangan maupun pertumbuhan. </string>
+    <string name="wortel_polybag_menanam_step2">Benih yang dipilih hanya benih yang tenggelam dalam air. Benih yang mengapung menunjukkan kualitas benih tidak baik.</string>
+    <string name="wortel_polybag_menanam_step3">Lubangi tempat pembibitan dengan kedalaman 2 cm hingga 3 cm.</string>
+    <string name="wortel_polybag_menanam_step4">Tutup kembali dengan tanah tipis-tipis saja.</string>
+    <string name="wortel_polybag_menanam_step5">Penyiraman kemudian dilakukan secara teratur selama 1 minggu hingga tumbuh dengan tinggi sekitar 5 cm. Tanaman wortel yang siap untuk dipindahkan adalah tanaman yang sudah dilengkapi dengan 3 hingga 4 daun. </string>
+    <string name="wortel_polybag_menanam_step6">Persiapkan media tanam berupa polybag ukuran 30 cm dengan percampuran antara arang sekam, pupuk kandang dan tanah perbandingan 1:1:2. Campuran semua bahan, kemudian diamkan selama 3 hari. Hal ini agar pencampuran merata dan semakin baik hasil penanamannya.</string>
+    <string name="wortel_polybag_menanam_step7">Pemindahan bibit dilakukan dengan sangat hati – hati. Media bekas pembibitan sebaiknya ikut dimasukan bersama akar. Hal ini untuk memudahkan tanaman segera beradaptasi.</string>
+    <string name="wortel_polybag_menanam_step8">Bibit dimasukan ke media tanam dengan kedalaman lubang dengan kurang lebih 5 cm. </string>
+    <string name="wortel_polybag_perawatan_step1">Penyiraman dilakukan setiap hari pada saat matahari tidak terlalu terik, sekitar jam 3-5 sore.</string>
+    <string name="wortel_polybag_perawatan_step2">Pemupukan dilakukan setelah tanaman berumur 1 bulan, dilakukan selama 2 minggu sekali, hingga panen. Tanamkan di bagian pinggir polybag sebanyak 1 sdt jangan terlalu dekat dengan perakaran, karena wortel dapat gosong.</string>
+    <string name="wortel_polybag_panen_step1">Wortel dapat dipanen ketika sudah berusia 3 bulan.</string>
 
 </resources>
