@@ -1,5 +1,6 @@
 package com.putragandad.urbanfarm.fragments.jualpanenpage
 
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import androidx.fragment.app.Fragment
@@ -9,8 +10,11 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.putragandad.urbanfarm.R
+import com.putragandad.urbanfarm.activity.jualpanenpage.AddJualPanenPostActivity
 import com.putragandad.urbanfarm.adapters.jualpanen.JualPanenRVAdapter
 import com.putragandad.urbanfarm.api.ApiRetrofit
+import com.putragandad.urbanfarm.databinding.FragmentJualPanenPageBinding
+import com.putragandad.urbanfarm.databinding.FragmentTanamankuPageBinding
 import com.putragandad.urbanfarm.models.api.JualPanenModel
 import retrofit2.Call
 import retrofit2.Callback
@@ -23,13 +27,31 @@ class JualPanenPageFragment : Fragment() {
     private lateinit var jualPanenRVAdapter: JualPanenRVAdapter
     private lateinit var listJualPanen: RecyclerView
     private lateinit var fabAdd : FloatingActionButton
+    private var _binding : FragmentJualPanenPageBinding? = null
+    private val binding get() = _binding!!
+
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_jual_panen_page, container, false)
+        _binding = FragmentJualPanenPageBinding.inflate(inflater, container, false)
+
+        binding.fabBuatPostingan.setOnClickListener {
+            val intent = Intent(requireContext(), AddJualPanenPostActivity::class.java)
+            startActivity(intent)
+        }
+
+        return binding.root
+    }
+
+    override fun onStart() {
+        super.onStart()
+        val funtimer: Timer = Timer()
+        funtimer.scheduleAtFixedRate(
+            timerTask() {
+                getNote()
+            }, 5000, 5000)
     }
 
     private fun timer() {
