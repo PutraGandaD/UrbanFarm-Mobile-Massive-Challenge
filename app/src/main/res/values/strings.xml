@@ -109,5 +109,9 @@ Cabai rawit sangat mudah ditanam di rumah. Cabai rawit juga dapat tumbuh dengan 
     <string name="kacangpanjang_polybag_menanam_step7">Pemupukan dilakukan setiap 1 minggu sekali. Tanamkan di bagian pinggir polybag sebanyak 1 sdt jangan terlalu dekat dengan perakaran, karena kacang panjang dapat gosong.</string>
     <string name="kacangpanjang_polybag_perawatan_step1">Jika ada tanaman yang rusak atau terkena bibit penyakit segeralah ganti dengan tanaman yang baru. Hal ini dilakukan ketika tanaman menginjak umur 5 sampai 7 hari. Selain itu, jangan lupa untuk melakukan penyiangan tanaman. Bersihkan sekitar pot atau polybag dari rumput liar atau gulma yang mengganggu. Gulma dan rumput liar akan merebut pasukan nutrisi yang didapat oleh kacang panjang. Sehingga pertumbuhannya tidak maksimal.</string>
     <string name="kacangpanjang_polybag_panen_step1">Kacang panjang dapat dipanen jika sudah seperti ini. Umumnya kacang panjang tidak panen sekaligus, tetapi siap dipanen dalam beberapa kali, jika penanaman yang dilakukan bagus maka dapat panen hingga belasan kali.</string>
+    <string name="bawangmerah_polybag_perawatan_step1">Siramkan air secukupnya sekitar 240 ml ke tanaman bawang merah berusia 8 hari. Jangan siram tanaman bawang merah banyak-banyak, agar tidak terjadi pembusukan. Lakukan penyiraman sehari sekali hingga panen.</string>
+    <string name="bawangmerah_polybag_perawatan_step2">Beri Pupuk (15 hari sekali) → 15-30-45. Pada saat tanaman berusia 15 hari, proses pemupukan sudah bisa dilakukan. Buat larutan pupuk yang terdiri dari 1 sdm pupuk NPK 16-16-16 dengan 3 liter air lalu larutkan sampai tercampur merata.</string>
+    <string name="bawangmerah_polybag_perawatan_step3">Siramkan setengah gelas minum (120 ml) larutan ke 1 polybag bawang merah. Lakukan kembali pada hari ke-30 dan hari ke-45.</string>
+    <string name="bawangmerah_polybag_panen_step1">Pada usia 62 hari bawang merah siap dipanen.</string>
 
 </resources>
