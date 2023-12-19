@@ -1,0 +1,173 @@
+Index: app/src/main/res/layout/fragment_profil_page.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"utf-8\"?>\r\n<androidx.constraintlayout.widget.ConstraintLayout xmlns:android=\"http://schemas.android.com/apk/res/android\"\r\n    xmlns:tools=\"http://schemas.android.com/tools\"\r\n    android:layout_width=\"match_parent\"\r\n    android:layout_height=\"match_parent\"\r\n    xmlns:app=\"http://schemas.android.com/apk/res-auto\"\r\n    tools:context=\".fragments.profilepage.ProfilePageFragment\"\r\n    android:background=\"@drawable/background_full\">\r\n\r\n    <View\r\n        android:layout_width=\"match_parent\"\r\n        android:layout_height=\"match_parent\"\r\n        android:background=\"#60000000\" />\r\n\r\n    <com.google.android.material.card.MaterialCardView\r\n        android:id=\"@+id/card_loginpage\"\r\n        android:layout_width=\"match_parent\"\r\n        android:layout_height=\"match_parent\"\r\n        android:layout_marginTop=\"175dp\"\r\n        app:contentPadding=\"20dp\"\r\n        app:layout_constraintBottom_toBottomOf=\"parent\"\r\n        style=\"@style/Widget.App.CustomCardLandingPage\">\r\n\r\n        <androidx.constraintlayout.widget.ConstraintLayout\r\n            android:layout_width=\"match_parent\"\r\n            android:layout_height=\"match_parent\">\r\n\r\n            <LinearLayout\r\n                android:layout_width=\"match_parent\"\r\n                android:layout_height=\"match_parent\"\r\n                android:layout_marginTop=\"60dp\"\r\n                app:layout_constraintBottom_toBottomOf=\"parent\"\r\n                app:layout_constraintEnd_toEndOf=\"parent\"\r\n                app:layout_constraintStart_toStartOf=\"parent\"\r\n                app:layout_constraintTop_toTopOf=\"parent\"\r\n                android:orientation=\"vertical\"\r\n                android:gravity=\"center_horizontal\">\r\n\r\n                <TextView\r\n                    android:layout_width=\"wrap_content\"\r\n                    android:layout_height=\"wrap_content\"\r\n                    android:fontFamily=\"@font/opensans_semibold\"\r\n                    android:text=\"Putra Ganda Dewata\"\r\n                    android:textSize=\"24dp\"\r\n                    android:textColor=\"@color/black\"\r\n                    android:layout_marginBottom=\"10dp\"/>\r\n\r\n                <com.google.android.material.button.MaterialButton\r\n                    android:id=\"@+id/btnEditProfil\"\r\n                    android:layout_width=\"wrap_content\"\r\n                    android:layout_height=\"wrap_content\"\r\n                    android:layout_marginBottom=\"10dp\"\r\n                    android:backgroundTint=\"@color/secondary_green\"\r\n                    android:fontFamily=\"@font/opensans_semibold\"\r\n                    android:text=\"Edit Profil\"\r\n                    android:textSize=\"12dp\"\r\n                    app:icon=\"@drawable/ic_edit\"\r\n                    app:iconTint=\"@color/primary_green\"\r\n                    android:textColor=\"@color/primary_green\"\r\n                    app:cornerRadius=\"20dp\"\r\n                    app:layout_constraintEnd_toEndOf=\"parent\"\r\n                    app:layout_constraintStart_toStartOf=\"parent\"\r\n                    app:layout_constraintTop_toTopOf=\"parent\"/>\r\n\r\n                <ImageView\r\n                    android:id=\"@+id/divider_btn_profile\"\r\n                    android:layout_width=\"400dp\"\r\n                    android:layout_height=\"20dp\"\r\n                    android:layout_marginBottom=\"10dp\"\r\n                    android:src=\"@drawable/divider_profile_page\"\r\n                    app:layout_constraintEnd_toEndOf=\"parent\"\r\n                    app:layout_constraintStart_toStartOf=\"parent\"/>\r\n\r\n                <com.google.android.material.button.MaterialButton\r\n                    android:id=\"@+id/btnPostinganAnda\"\r\n                    android:layout_width=\"match_parent\"\r\n                    android:layout_height=\"60dp\"\r\n                    android:layout_marginBottom=\"10dp\"\r\n                    android:backgroundTint=\"@color/material3_primary_color\"\r\n                    android:fontFamily=\"@font/opensans_semibold\"\r\n                    android:text=\"Postingan Anda\"\r\n                    android:textSize=\"12dp\"\r\n                    app:icon=\"@drawable/ic_media\"\r\n                    app:iconTint=\"@color/primary_green\"\r\n                    app:iconPadding=\"20dp\"\r\n                    android:textColor=\"@color/primary_green\"\r\n                    app:cornerRadius=\"10dp\"\r\n                    android:gravity=\"start|center_vertical\"\r\n                    app:layout_constraintEnd_toEndOf=\"parent\"\r\n                    app:layout_constraintStart_toStartOf=\"parent\"\r\n                    app:layout_constraintTop_toTopOf=\"parent\"/>\r\n\r\n                <com.google.android.material.button.MaterialButton\r\n                    android:id=\"@+id/btnPengaturanAkun\"\r\n                    android:layout_width=\"match_parent\"\r\n                    android:layout_height=\"60dp\"\r\n                    android:layout_marginBottom=\"10dp\"\r\n                    android:backgroundTint=\"@color/material3_primary_color\"\r\n                    android:fontFamily=\"@font/opensans_semibold\"\r\n                    android:text=\"Pengaturan Akun\"\r\n                    android:textSize=\"12dp\"\r\n                    app:icon=\"@drawable/ic_profil_filled\"\r\n                    app:iconTint=\"@color/primary_green\"\r\n                    app:iconPadding=\"20dp\"\r\n                    android:textColor=\"@color/primary_green\"\r\n                    app:cornerRadius=\"10dp\"\r\n                    android:gravity=\"start|center_vertical\"\r\n                    app:layout_constraintEnd_toEndOf=\"parent\"\r\n                    app:layout_constraintStart_toStartOf=\"parent\"\r\n                    app:layout_constraintTop_toTopOf=\"parent\"/>\r\n\r\n                <com.google.android.material.button.MaterialButton\r\n                    android:id=\"@+id/btnPengaturanAplikasi\"\r\n                    android:layout_width=\"match_parent\"\r\n                    android:layout_height=\"60dp\"\r\n                    android:layout_marginBottom=\"10dp\"\r\n                    android:backgroundTint=\"@color/material3_primary_color\"\r\n                    android:fontFamily=\"@font/opensans_semibold\"\r\n                    android:text=\"Pengaturan Aplikasi\"\r\n                    android:textSize=\"12dp\"\r\n                    app:icon=\"@drawable/ic_settings\"\r\n                    app:iconTint=\"@color/primary_green\"\r\n                    app:iconPadding=\"20dp\"\r\n                    android:textColor=\"@color/primary_green\"\r\n                    app:cornerRadius=\"10dp\"\r\n                    android:gravity=\"start|center_vertical\"\r\n                    app:layout_constraintEnd_toEndOf=\"parent\"\r\n                    app:layout_constraintStart_toStartOf=\"parent\"\r\n                    app:layout_constraintTop_toTopOf=\"parent\"/>\r\n\r\n                <TextView\r\n                    android:layout_width=\"wrap_content\"\r\n                    android:layout_height=\"wrap_content\"\r\n                    android:fontFamily=\"@font/opensans_semibold\"\r\n                    android:text=\"Pusat Bantuan\"\r\n                    android:textSize=\"12dp\"\r\n                    android:textColor=\"#60000000\"\r\n                    android:layout_marginBottom=\"10dp\"\r\n                    android:layout_gravity=\"start\"/>\r\n\r\n                <TextView\r\n                    android:layout_width=\"wrap_content\"\r\n                    android:layout_height=\"wrap_content\"\r\n                    android:fontFamily=\"@font/opensans_semibold\"\r\n                    android:text=\"Tentang Aplikasi\"\r\n                    android:textSize=\"12dp\"\r\n                    android:textColor=\"#60000000\"\r\n                    android:layout_marginBottom=\"10dp\"\r\n                    android:layout_gravity=\"start\"/>\r\n\r\n                <TextView\r\n                    android:layout_width=\"wrap_content\"\r\n                    android:layout_height=\"wrap_content\"\r\n                    android:fontFamily=\"@font/opensans_semibold\"\r\n                    android:text=\"Keluar\"\r\n                    android:textSize=\"12dp\"\r\n                    android:textColor=\"@color/red\"\r\n                    android:layout_marginBottom=\"10dp\"\r\n                    android:layout_gravity=\"start\"/>\r\n\r\n            </LinearLayout>\r\n\r\n        </androidx.constraintlayout.widget.ConstraintLayout>\r\n\r\n    </com.google.android.material.card.MaterialCardView>\r\n\r\n    <TextView\r\n        android:layout_width=\"wrap_content\"\r\n        android:layout_height=\"wrap_content\"\r\n        android:layout_marginTop=\"24dp\"\r\n        android:layout_marginStart=\"24dp\"\r\n        android:fontFamily=\"@font/opensans_semibold\"\r\n        android:text=\"Profil Anda\"\r\n        android:textColor=\"@color/white\"\r\n        android:textSize=\"24dp\"\r\n        app:layout_constraintStart_toStartOf=\"parent\"\r\n        app:layout_constraintTop_toTopOf=\"parent\"/>\r\n\r\n    <androidx.cardview.widget.CardView\r\n        android:layout_width=\"155dp\"\r\n        android:layout_height=\"155dp\"\r\n        android:layout_marginBottom=\"-80dp\"\r\n        app:cardBackgroundColor=\"@color/white\"\r\n        app:cardCornerRadius=\"250dp\"\r\n        app:layout_constraintBottom_toTopOf=\"@+id/card_loginpage\"\r\n        app:layout_constraintEnd_toEndOf=\"parent\"\r\n        app:layout_constraintStart_toStartOf=\"parent\">\r\n\r\n        <androidx.cardview.widget.CardView\r\n            android:layout_width=\"150dp\"\r\n            android:layout_height=\"150dp\"\r\n            android:layout_gravity=\"center\"\r\n            app:cardCornerRadius=\"250dp\">\r\n\r\n            <ImageView\r\n                android:layout_width=\"150dp\"\r\n                android:layout_height=\"150dp\"\r\n                android:scaleType=\"centerCrop\"\r\n                android:src=\"@drawable/profil\" />\r\n\r\n        </androidx.cardview.widget.CardView>\r\n\r\n    </androidx.cardview.widget.CardView>\r\n\r\n</androidx.constraintlayout.widget.ConstraintLayout>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/res/layout/fragment_profil_page.xml b/app/src/main/res/layout/fragment_profil_page.xml
+--- a/app/src/main/res/layout/fragment_profil_page.xml	
++++ b/app/src/main/res/layout/fragment_profil_page.xml	
+@@ -29,21 +29,23 @@
+                 android:layout_width="match_parent"
+                 android:layout_height="match_parent"
+                 android:layout_marginTop="60dp"
++                android:gravity="center_horizontal"
++                android:orientation="vertical"
+                 app:layout_constraintBottom_toBottomOf="parent"
+                 app:layout_constraintEnd_toEndOf="parent"
++                app:layout_constraintHorizontal_bias="0.0"
+                 app:layout_constraintStart_toStartOf="parent"
+                 app:layout_constraintTop_toTopOf="parent"
+-                android:orientation="vertical"
+-                android:gravity="center_horizontal">
++                app:layout_constraintVertical_bias="1.0">
+ 
+                 <TextView
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
++                    android:layout_marginBottom="10dp"
+                     android:fontFamily="@font/opensans_semibold"
+                     android:text="Putra Ganda Dewata"
+-                    android:textSize="24dp"
+                     android:textColor="@color/black"
+-                    android:layout_marginBottom="10dp"/>
++                    android:textSize="24dp" />
+ 
+                 <com.google.android.material.button.MaterialButton
+                     android:id="@+id/btnEditProfil"
+@@ -53,14 +55,14 @@
+                     android:backgroundTint="@color/secondary_green"
+                     android:fontFamily="@font/opensans_semibold"
+                     android:text="Edit Profil"
++                    android:textColor="@color/primary_green"
+                     android:textSize="12dp"
++                    app:cornerRadius="20dp"
+                     app:icon="@drawable/ic_edit"
+                     app:iconTint="@color/primary_green"
+-                    android:textColor="@color/primary_green"
+-                    app:cornerRadius="20dp"
+                     app:layout_constraintEnd_toEndOf="parent"
+                     app:layout_constraintStart_toStartOf="parent"
+-                    app:layout_constraintTop_toTopOf="parent"/>
++                    app:layout_constraintTop_toTopOf="parent" />
+ 
+                 <ImageView
+                     android:id="@+id/divider_btn_profile"
+@@ -69,7 +71,7 @@
+                     android:layout_marginBottom="10dp"
+                     android:src="@drawable/divider_profile_page"
+                     app:layout_constraintEnd_toEndOf="parent"
+-                    app:layout_constraintStart_toStartOf="parent"/>
++                    app:layout_constraintStart_toStartOf="parent" />
+ 
+                 <com.google.android.material.button.MaterialButton
+                     android:id="@+id/btnPostinganAnda"
+@@ -78,17 +80,17 @@
+                     android:layout_marginBottom="10dp"
+                     android:backgroundTint="@color/material3_primary_color"
+                     android:fontFamily="@font/opensans_semibold"
++                    android:gravity="start|center_vertical"
+                     android:text="Postingan Anda"
++                    android:textColor="@color/primary_green"
+                     android:textSize="12dp"
++                    app:cornerRadius="10dp"
+                     app:icon="@drawable/ic_media"
+-                    app:iconTint="@color/primary_green"
+                     app:iconPadding="20dp"
+-                    android:textColor="@color/primary_green"
+-                    app:cornerRadius="10dp"
+-                    android:gravity="start|center_vertical"
++                    app:iconTint="@color/primary_green"
+                     app:layout_constraintEnd_toEndOf="parent"
+                     app:layout_constraintStart_toStartOf="parent"
+-                    app:layout_constraintTop_toTopOf="parent"/>
++                    app:layout_constraintTop_toTopOf="parent" />
+ 
+                 <com.google.android.material.button.MaterialButton
+                     android:id="@+id/btnPengaturanAkun"
+@@ -97,17 +99,17 @@
+                     android:layout_marginBottom="10dp"
+                     android:backgroundTint="@color/material3_primary_color"
+                     android:fontFamily="@font/opensans_semibold"
++                    android:gravity="start|center_vertical"
+                     android:text="Pengaturan Akun"
++                    android:textColor="@color/primary_green"
+                     android:textSize="12dp"
++                    app:cornerRadius="10dp"
+                     app:icon="@drawable/ic_profil_filled"
+-                    app:iconTint="@color/primary_green"
+                     app:iconPadding="20dp"
+-                    android:textColor="@color/primary_green"
+-                    app:cornerRadius="10dp"
+-                    android:gravity="start|center_vertical"
++                    app:iconTint="@color/primary_green"
+                     app:layout_constraintEnd_toEndOf="parent"
+                     app:layout_constraintStart_toStartOf="parent"
+-                    app:layout_constraintTop_toTopOf="parent"/>
++                    app:layout_constraintTop_toTopOf="parent" />
+ 
+                 <com.google.android.material.button.MaterialButton
+                     android:id="@+id/btnPengaturanAplikasi"
+@@ -116,47 +118,47 @@
+                     android:layout_marginBottom="10dp"
+                     android:backgroundTint="@color/material3_primary_color"
+                     android:fontFamily="@font/opensans_semibold"
++                    android:gravity="start|center_vertical"
+                     android:text="Pengaturan Aplikasi"
++                    android:textColor="@color/primary_green"
+                     android:textSize="12dp"
++                    app:cornerRadius="10dp"
+                     app:icon="@drawable/ic_settings"
+-                    app:iconTint="@color/primary_green"
+                     app:iconPadding="20dp"
+-                    android:textColor="@color/primary_green"
+-                    app:cornerRadius="10dp"
+-                    android:gravity="start|center_vertical"
++                    app:iconTint="@color/primary_green"
+                     app:layout_constraintEnd_toEndOf="parent"
+                     app:layout_constraintStart_toStartOf="parent"
+-                    app:layout_constraintTop_toTopOf="parent"/>
++                    app:layout_constraintTop_toTopOf="parent" />
+ 
+                 <TextView
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
++                    android:layout_gravity="start"
++                    android:layout_marginBottom="10dp"
+                     android:fontFamily="@font/opensans_semibold"
+                     android:text="Pusat Bantuan"
+-                    android:textSize="12dp"
+                     android:textColor="#60000000"
+-                    android:layout_marginBottom="10dp"
+-                    android:layout_gravity="start"/>
++                    android:textSize="12dp" />
+ 
+                 <TextView
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
++                    android:layout_gravity="start"
++                    android:layout_marginBottom="10dp"
+                     android:fontFamily="@font/opensans_semibold"
+                     android:text="Tentang Aplikasi"
+-                    android:textSize="12dp"
+                     android:textColor="#60000000"
+-                    android:layout_marginBottom="10dp"
+-                    android:layout_gravity="start"/>
++                    android:textSize="12dp" />
+ 
+                 <TextView
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
++                    android:layout_gravity="start"
++                    android:layout_marginBottom="10dp"
+                     android:fontFamily="@font/opensans_semibold"
+                     android:text="Keluar"
+-                    android:textSize="12dp"
+                     android:textColor="@color/red"
+-                    android:layout_marginBottom="10dp"
+-                    android:layout_gravity="start"/>
++                    android:textSize="12dp" />
+ 
+             </LinearLayout>
+ 
