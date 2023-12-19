@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".fragments.panduantanam.bawangmerah.polybag.panen.FirstScreen">
+    tools:context=".fragments.panduantanam.cabai.polybag.panen.FirstScreen">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -64,7 +64,7 @@
         <ImageView
             android:layout_width="400dp"
             android:layout_height="400dp"
-            android:src="@drawable/panen_bawangmerah_polybag_1"/>
+            android:src="@drawable/panen_cabai_polybag_1"/>
 
         <com.google.android.material.textview.MaterialTextView
             android:layout_width="match_parent"
@@ -72,14 +72,14 @@
             android:layout_marginTop="20dp"
             android:layout_marginStart="20dp"
             android:layout_marginEnd="20dp"
-            android:text="@string/bawangmerah_polybag_panen_step1"
+            android:text="@string/cabai_polybag_panen_step1"
             android:textSize="14dp"
             android:fontFamily="@font/opensans_semibold"/>
 
     </LinearLayout>
 
     <com.google.android.material.button.MaterialButton
-        android:id="@+id/btn_next_bawangmerah_polybag_panen1"
+        android:id="@+id/btn_next_cabai_polybag_panen1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="30dp"

@@ -124,5 +124,11 @@ Cabai rawit sangat mudah ditanam di rumah. Cabai rawit juga dapat tumbuh dengan 
     <string name="cabai_polybag_menanam_step9">Membuat lubang pada media tanam sesuai ukuran polybag persemaian</string>
     <string name="cabai_polybag_menanam_step10">Memindahkan bibit ke polybag pembesaran secara hati-hati</string>
     <string name="cabai_polybag_menanam_step11">Memasang ajir/kayu 21 hari setelah tanam.</string>
+    <string name="cabai_polybag_perawatan_step1">Melakukan penyiraman pagi/sore hari</string>
+    <string name="cabai_polybag_perawatan_step2">Membersihan gulma/rumput</string>
+    <string name="cabai_polybag_perawatan_step3">Melakukan pemupukan NPK 15:15:15 dosis 5 gr/polybag.</string>
+    <string name="cabai_polybag_perawatan_step4">Umur tanaman 3,5,7 dan 9 minggu setelah tanam.</string>
+    <string name="cabai_polybag_perawatan_step5">Umur tanaman 13 dan 15 minggu setelah tanam.</string>
+    <string name="cabai_polybag_panen_step1">Cabai bisa dipanen saat buahnya sudah berubah warna menjadi kemerahan. Cara panennya cukup dengan memetik buah cabai tersebut. pastikan memetika di pagi hari saat cuaca cerah</string>
 
 </resources>
