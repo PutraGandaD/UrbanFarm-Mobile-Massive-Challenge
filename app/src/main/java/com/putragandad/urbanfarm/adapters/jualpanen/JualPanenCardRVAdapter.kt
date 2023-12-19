@@ -1,8 +1,11 @@
 package com.putragandad.urbanfarm.adapters.jualpanen
 
+import android.content.Intent
+import android.net.Uri
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
@@ -23,6 +26,7 @@ class JualPanenRVAdapter(
         val tvTitle: TextView = itemView.findViewById(R.id.tv_title)
         val tvContent: TextView = itemView.findViewById(R.id.tv_content)
         val ivContent: ImageView = itemView.findViewById(R.id.iv_content)
+        val btnWhatsApp: Button = itemView.findViewById(R.id.btn_chat_whatsapp)
     }
 
     override fun onCreateViewHolder(
@@ -38,6 +42,7 @@ class JualPanenRVAdapter(
 
         val ivContentUrl = jualPanen.contentimg_url
         val ivProfileUrl = jualPanen.profileimg_url
+        val whatsappNumber = jualPanen.whatsapp_no
 
         Glide.with(holder.itemView.context)
             .load(ivProfileUrl)
@@ -54,6 +59,12 @@ class JualPanenRVAdapter(
 
         holder.itemView.setOnClickListener {
             onItemClick?.invoke(jualPanen)
+        }
+
+        holder.btnWhatsApp.setOnClickListener {
+            var waUri: Uri = Uri.parse("https://wa.me/62" + whatsappNumber)
+            val intent = Intent(Intent.ACTION_VIEW, waUri)
+            holder.itemView.context.startActivity(intent)
         }
     }
 
