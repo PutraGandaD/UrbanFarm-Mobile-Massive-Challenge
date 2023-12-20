@@ -1,5 +1,7 @@
 package com.putragandad.urbanfarm.fragments.berandapage
 
+import android.content.Context
+import android.content.Context.MODE_PRIVATE
 import android.content.Intent
 import android.os.Bundle
 import android.util.Log
@@ -30,12 +32,16 @@ class BerandaPageFragment : Fragment() {
     private var _binding : FragmentBerandaPageBinding? = null
     private lateinit var videosDashboardRVAdapter: VideosRVAdapter
     private val binding get() = _binding!!
+    private var tanamankuCount: Int? = null
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         _binding = FragmentBerandaPageBinding.inflate(inflater, container, false)
+
+        tanamankuCount = setTanamankuItemCount()
+        binding.tvTitleCardTanamanku.setText("Anda Memiliki $tanamankuCount tanaman")
 
         getVideos()
 
@@ -111,5 +117,10 @@ class BerandaPageFragment : Fragment() {
                 Log.e("MainActivity", t.toString())
             }
         })
+    }
+
+    private fun setTanamankuItemCount() : Int? {
+        val sharedPreferences = requireContext().getSharedPreferences("TanamankuCount", Context.MODE_PRIVATE)
+        return sharedPreferences.getInt("itemCount", 0)
     }
 }

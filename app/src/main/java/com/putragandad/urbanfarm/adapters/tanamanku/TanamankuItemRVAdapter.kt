@@ -34,7 +34,9 @@ class TanamankuItemRVAdapter(val context: Context, val tanamankuClickDeleteInter
     }
 
     override fun getItemCount(): Int {
-        return AllTanaman.size
+        val itemCount = AllTanaman.size
+        saveItemCount(itemCount)
+        return itemCount
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
@@ -55,6 +57,13 @@ class TanamankuItemRVAdapter(val context: Context, val tanamankuClickDeleteInter
         AllTanaman.clear()
         AllTanaman.addAll(newList)
         notifyDataSetChanged()
+    }
+
+    private fun saveItemCount(itemCount: Int) {
+        val sharedPreferences = context.getSharedPreferences("TanamankuCount", Context.MODE_PRIVATE)
+        val editor = sharedPreferences.edit()
+        editor.putInt("itemCount", itemCount)
+        editor.apply()
     }
 }
 

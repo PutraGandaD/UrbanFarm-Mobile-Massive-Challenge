@@ -54,6 +54,8 @@ class TanamankuPageFragment : Fragment(), TanamankuClickDeleteInterface {
 
         val tanamankuRVAdapter = TanamankuItemRVAdapter(requireContext(), this)
         tanamankuRV.adapter = tanamankuRVAdapter
+        val itemCount = tanamankuRVAdapter.itemCount
+
 
         viewModel = ViewModelProvider(
             this,
