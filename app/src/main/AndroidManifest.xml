@@ -21,6 +21,9 @@
         android:theme="@style/Theme.UrbanFarm"
         tools:targetApi="31">
         <activity
+            android:name=".activity.panduantanampage.PanduanTanamPageActivity"
+            android:exported="false" />
+        <activity
             android:name=".activity.profilpage.PostinganAndaPageActivity"
             android:exported="false" />
         <activity

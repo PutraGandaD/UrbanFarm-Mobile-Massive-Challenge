@@ -3,10 +3,13 @@ package com.putragandad.urbanfarm.activity.beranda
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.putragandad.urbanfarm.databinding.ActivityDetailTanamanPageBinding
+import com.putragandad.urbanfarm.fragments.berandapage.modalbottomsheet.PilihMetodeTanamBottomSheetFragment
 import com.putragandad.urbanfarm.models.beranda.ItemTanamanModels
 
 class DetailTanamanPageActivity : AppCompatActivity() {
     private lateinit var binding: ActivityDetailTanamanPageBinding
+    private lateinit var bottomSheetFragment: PilihMetodeTanamBottomSheetFragment
+    private lateinit var getNamaTanaman: String
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -34,6 +37,26 @@ class DetailTanamanPageActivity : AppCompatActivity() {
             teknikMenanam.text = tanamanItem.teknikMenanam
             tingkatKesulitanMenanam.text = tanamanItem.tingkatKesulitan
             deskripsiTanaman.text = tanamanItem.deskripsiTanaman
+
+            getNamaTanaman = tanamanItem.namaTanaman
         }
+
+        // send value to bottomsheet
+
+
+        // add listener for starting bottomsheet
+        binding.btnMulaiMenanam.setOnClickListener {
+            bottomSheetFragment = PilihMetodeTanamBottomSheetFragment()
+            sendStringtoBottomSheet()
+            bottomSheetFragment.show(supportFragmentManager, bottomSheetFragment.tag)
+        }
+
+
+    }
+
+    private fun sendStringtoBottomSheet() {
+        val bundle = Bundle()
+        bundle.putString("namatanaman", getNamaTanaman)
+        bottomSheetFragment.arguments = bundle
     }
 }

@@ -1,4 +1,4 @@
-package com.putragandad.urbanfarm.fragments.panduantanam.timun.polybag.mediatanam
+package com.putragandad.urbanfarm.fragments.panduantanam
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -14,10 +14,10 @@ private const val ARG_PARAM2 = "param2"
 
 /**
  * A simple [Fragment] subclass.
- * Use the [SecondScreen.newInstance] factory method to
+ * Use the [PerawatanPageFragment.newInstance] factory method to
  * create an instance of this fragment.
  */
-class SecondScreen : Fragment() {
+class PerawatanPageFragment : Fragment() {
     // TODO: Rename and change types of parameters
     private var param1: String? = null
     private var param2: String? = null
@@ -35,11 +35,7 @@ class SecondScreen : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(
-            R.layout.fragment_second_screen_timun_polybag_mediatanam,
-            container,
-            false
-        )
+        return inflater.inflate(R.layout.fragment_perawatan_page, container, false)
     }
 
     companion object {
@@ -49,12 +45,12 @@ class SecondScreen : Fragment() {
          *
          * @param param1 Parameter 1.
          * @param param2 Parameter 2.
-         * @return A new instance of fragment SecondScreen.
+         * @return A new instance of fragment PerawatanPageFragment.
          */
         // TODO: Rename and change types and number of parameters
         @JvmStatic
         fun newInstance(param1: String, param2: String) =
-            SecondScreen().apply {
+            PerawatanPageFragment().apply {
                 arguments = Bundle().apply {
                     putString(ARG_PARAM1, param1)
                     putString(ARG_PARAM2, param2)
