@@ -45,6 +45,7 @@ class VideosRVAdapter(
 
         Glide.with(holder.itemView.context)
             .load(imageUrl)
+            .error(R.drawable.logo)
             .into(holder.ivVideo)
 
         holder.itemView.setOnClickListener {

@@ -1,7 +1,9 @@
 package com.putragandad.urbanfarm.adapters.jualpanen
 
 import android.content.Intent
+import android.graphics.drawable.Drawable
 import android.net.Uri
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -10,6 +12,10 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
+import com.bumptech.glide.load.DataSource
+import com.bumptech.glide.load.engine.GlideException
+import com.bumptech.glide.request.RequestListener
+import com.bumptech.glide.request.target.Target
 import com.putragandad.urbanfarm.R
 import com.putragandad.urbanfarm.models.api.JualPanenModel
 
@@ -46,10 +52,16 @@ class JualPanenRVAdapter(
 
         Glide.with(holder.itemView.context)
             .load(ivProfileUrl)
+            .centerCrop()
+            .error(R.drawable.logo)
+            .placeholder(R.drawable.logo)
             .into(holder.ivProfile)
 
         Glide.with(holder.itemView.context)
             .load(ivContentUrl)
+            .error(R.drawable.logo)
+            .placeholder(R.drawable.logo)
+            .centerCrop()
             .into(holder.ivContent)
 
         holder.tvUsername.text = jualPanen.username
@@ -76,6 +88,7 @@ class JualPanenRVAdapter(
         jualPanen.clear()
         jualPanen.addAll(data)
         notifyDataSetChanged()
+        Log.d("JualPanenRVAdapter", "Data set updated. Item count: ${itemCount}")
     }
 
 }

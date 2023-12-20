@@ -5,6 +5,8 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.viewpager2.widget.ViewPager2
+import com.google.android.material.button.MaterialButton
 import com.putragandad.urbanfarm.R
 
 // TODO: Rename parameter arguments, choose names that match
@@ -61,4 +63,22 @@ class ThirdScreen : Fragment() {
                 }
             }
     }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        val btnNext = view.findViewById<MaterialButton>(R.id.btn_next_bawangmerah_polybag_mediatanam3)
+        val btnPrev = view.findViewById<MaterialButton>(R.id.btn_previous_bawangmerah_polybag_mediatanam3)
+
+        val viewPager = activity?.findViewById<ViewPager2>(R.id.viewPager_panduan_tanam_first_step)
+
+        btnNext.setOnClickListener {
+            viewPager?.currentItem = 3
+        }
+
+        btnPrev.setOnClickListener {
+            viewPager?.currentItem = 1
+        }
+    }
 }
+

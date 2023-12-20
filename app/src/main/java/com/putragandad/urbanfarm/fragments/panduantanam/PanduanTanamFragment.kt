@@ -1,11 +1,14 @@
 package com.putragandad.urbanfarm.fragments.panduantanam
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import com.google.android.material.button.MaterialButton
 import com.putragandad.urbanfarm.R
+import com.putragandad.urbanfarm.activity.tablayout_tanaman.polybag.panduantanam.FirstStepFragmentContainer
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -56,5 +59,15 @@ class PanduanTanamFragment : Fragment() {
                     putString(ARG_PARAM2, param2)
                 }
             }
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        val btnMulai = view.findViewById<MaterialButton>(R.id.btn_mulai_step1)
+
+        btnMulai.setOnClickListener {
+            startActivity(Intent(requireActivity(), FirstStepFragmentContainer::class.java))
+        }
     }
 }

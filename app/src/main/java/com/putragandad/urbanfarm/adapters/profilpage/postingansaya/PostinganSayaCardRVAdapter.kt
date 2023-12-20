@@ -45,6 +45,7 @@ class PostinganSayaCardRVAdapter(
 
         Glide.with(holder.itemView.context)
             .load(ivContentUrl)
+            .error(R.drawable.logo)
             .into(holder.ivContent)
 
         holder.tvUsername.text = jualPanen.username

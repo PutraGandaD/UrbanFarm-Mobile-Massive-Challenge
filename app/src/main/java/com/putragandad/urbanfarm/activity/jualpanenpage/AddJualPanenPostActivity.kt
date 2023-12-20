@@ -137,6 +137,7 @@ class AddJualPanenPostActivity : AppCompatActivity() {
                 Toast.makeText(this, "Please fill in all the fields", Toast.LENGTH_LONG).show()
             } else {
                 createApiRequest()
+                setResult(RESULT_OK)
                 finish()
             }
         }

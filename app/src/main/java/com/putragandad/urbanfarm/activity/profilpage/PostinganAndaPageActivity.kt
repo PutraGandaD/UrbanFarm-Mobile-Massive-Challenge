@@ -33,15 +33,7 @@ class PostinganAndaPageActivity : AppCompatActivity() {
 
         setData()
         setAdapter()
-    }
-
-    override fun onStart() {
-        super.onStart()
-        val funtimer: Timer = Timer()
-        funtimer.scheduleAtFixedRate(
-            timerTask() {
-                getNote()
-            }, 5000, 5000)
+        getMyPost()
     }
 
     private fun setData() {
@@ -57,7 +49,7 @@ class PostinganAndaPageActivity : AppCompatActivity() {
 
     }
 
-    private fun getNote() {
+    private fun getMyPost() {
         api.dataByIdUser(id_user).enqueue(object : Callback<JualPanenModel> {
             override fun onResponse(
                 call: Call<JualPanenModel>,

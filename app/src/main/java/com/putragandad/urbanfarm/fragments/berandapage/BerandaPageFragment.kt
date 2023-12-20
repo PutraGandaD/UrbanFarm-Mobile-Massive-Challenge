@@ -37,24 +37,9 @@ class BerandaPageFragment : Fragment() {
     ): View? {
         _binding = FragmentBerandaPageBinding.inflate(inflater, container, false)
 
+        getVideos()
+
         return binding.root
-    }
-
-    override fun onStart() {
-        super.onStart()
-        val funtimer: Timer = Timer()
-        funtimer.scheduleAtFixedRate(
-            timerTask() {
-                getVideos()
-            }, 5000, 5000)
-    }
-
-    private fun timer() {
-        val funtimer: Timer = Timer()
-        funtimer.scheduleAtFixedRate(
-            timerTask() {
-                getVideos()
-            }, 5000, 5000)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -70,17 +55,17 @@ class BerandaPageFragment : Fragment() {
         itemTanamanList.add(ItemTanamanModels(R.drawable.ic_home_cabairawit,
             "Cabai Rawit", "Cabai", "Hidroponik dan Polybag", "Mudah", requireContext().getString(R.string.deskripsi_cabai_merah), R.drawable.img_card_cabai_rawit_tanamanku))
         itemTanamanList.add(ItemTanamanModels(R.drawable.ic_home_buncis,
-            "Buncis", "Sayur", "Hidroponik dan Polybag", "Mudah", requireContext().getString(R.string.deskripsi_bawang_merah), R.drawable.img_card_bawangmerah_tanamanku))
+            "Buncis", "Sayur", "Hidroponik dan Polybag", "Mudah", requireContext().getString(R.string.deskripsi_bawang_merah), R.drawable.buncis))
         itemTanamanList.add(ItemTanamanModels(R.drawable.ic_home_wortel,
-            "Wortel", "Sayur", "Hidroponik dan Polybag", "Mudah", requireContext().getString(R.string.deskripsi_bawang_merah), R.drawable.img_card_bawangmerah_tanamanku))
+            "Wortel", "Sayur", "Hidroponik dan Polybag", "Mudah", requireContext().getString(R.string.deskripsi_bawang_merah), R.drawable.wortel))
         itemTanamanList.add(ItemTanamanModels(R.drawable.ic_home_kembangkol,
             "Kembang Kol", "Sayur", "Hidroponik dan Polybag", "Mudah", requireContext().getString(R.string.deskripsi_bawang_merah), R.drawable.img_card_bawangmerah_tanamanku))
         itemTanamanList.add(ItemTanamanModels(R.drawable.ic_home_tomat,
-            "Tomat", "Sayur", "Hidroponik dan Polybag", "Mudah", requireContext().getString(R.string.deskripsi_bawang_merah), R.drawable.img_card_bawangmerah_tanamanku))
+            "Tomat", "Sayur", "Hidroponik dan Polybag", "Mudah", requireContext().getString(R.string.deskripsi_bawang_merah), R.drawable.tomat))
         itemTanamanList.add(ItemTanamanModels(R.drawable.ic_home_kacangpanjang,
-            "Kacang Panjang", "Sayur", "Hidroponik dan Polybag", "Mudah", requireContext().getString(R.string.deskripsi_bawang_merah), R.drawable.img_card_bawangmerah_tanamanku))
+            "Kacang Panjang", "Sayur", "Hidroponik dan Polybag", "Mudah", requireContext().getString(R.string.deskripsi_bawang_merah), R.drawable.kacangpanjang))
         itemTanamanList.add(ItemTanamanModels(R.drawable.ic_home_timun,
-            "Timun", "Sayur", "Hidroponik dan Polybag", "Mudah", requireContext().getString(R.string.deskripsi_bawang_merah), R.drawable.img_card_bawangmerah_tanamanku))
+            "Timun", "Sayur", "Hidroponik dan Polybag", "Mudah", requireContext().getString(R.string.deskripsi_bawang_merah), R.drawable.timun))
 
         val itemTanamanAdapter = IconTanamanRVAdapter(itemTanamanList)
         recyclerView.adapter = itemTanamanAdapter
@@ -97,7 +82,6 @@ class BerandaPageFragment : Fragment() {
         videosDashboardRVAdapter = VideosRVAdapter(arrayListOf())
         videosRV.adapter = videosDashboardRVAdapter
         videosRV.layoutManager = layoutManagerVideos
-        timer()
     }
 
     private fun getVideos() {
