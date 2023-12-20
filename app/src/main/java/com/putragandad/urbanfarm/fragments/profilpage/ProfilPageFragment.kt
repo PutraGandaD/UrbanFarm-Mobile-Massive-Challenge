@@ -14,6 +14,9 @@ import com.putragandad.urbanfarm.activity.landingpage.LandingPageActivity
 import com.putragandad.urbanfarm.activity.profilpage.PostinganAndaPageActivity
 import com.putragandad.urbanfarm.activity.profilpage.ProfilEditPageActivity
 import com.putragandad.urbanfarm.databinding.FragmentProfilPageBinding
+import com.putragandad.urbanfarm.fragments.dialogfragment.AlphaDialogFragment
+import com.putragandad.urbanfarm.fragments.dialogfragment.InDevelopmentFragment
+import com.putragandad.urbanfarm.fragments.dialogfragment.TentangKamiDialogFragment
 
 class ProfilPageFragment : Fragment() {
     private var _binding : FragmentProfilPageBinding? = null
@@ -53,6 +56,16 @@ class ProfilPageFragment : Fragment() {
         binding.btnPostinganAnda.setOnClickListener {
             startActivity(Intent(requireContext(), PostinganAndaPageActivity::class.java))
         }
+
+        binding.btnPengaturanAplikasi.setOnClickListener {
+            InDevelopmentFragment().show(parentFragmentManager, "INDEVELOPMENT_DIALOG")
+        }
+
+        binding.tvTentangKami.setOnClickListener {
+            TentangKamiDialogFragment().show(parentFragmentManager, "TENTANGKAMI_DIALOG")
+        }
+
+
 
         return binding.root
     }

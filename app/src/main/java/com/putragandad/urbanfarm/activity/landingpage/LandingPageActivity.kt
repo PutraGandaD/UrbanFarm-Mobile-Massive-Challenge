@@ -16,6 +16,8 @@ import com.google.firebase.auth.GoogleAuthProvider
 import com.putragandad.urbanfarm.R
 import com.putragandad.urbanfarm.activity.beranda.FragmentContainerNavbarActivity
 import com.putragandad.urbanfarm.databinding.ActivityLandingPageBinding
+import com.putragandad.urbanfarm.fragments.dialogfragment.AlphaDialogFragment
+import com.putragandad.urbanfarm.fragments.dialogfragment.InDevelopmentLoginFragment
 
 class LandingPageActivity : AppCompatActivity() {
     private lateinit var binding: ActivityLandingPageBinding
@@ -40,6 +42,14 @@ class LandingPageActivity : AppCompatActivity() {
             googleSignInClient.signOut().addOnCompleteListener {
                 signInGoogle()
             }
+        }
+
+        binding.btnSigninLanding.setOnClickListener {
+            InDevelopmentLoginFragment().show(supportFragmentManager, "LOGIN_DEV_DIALOG")
+        }
+
+        binding.btnSignupLanding.setOnClickListener {
+            InDevelopmentLoginFragment().show(supportFragmentManager, "LOGIN_DEV_DIALOG")
         }
 
         // Check if user already login or not

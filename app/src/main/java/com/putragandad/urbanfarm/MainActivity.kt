@@ -9,6 +9,7 @@ import android.view.WindowManager
 import com.putragandad.urbanfarm.activity.landingpage.LandingPageActivity
 import com.putragandad.urbanfarm.activity.onboarding.OnboardingActivity
 import com.putragandad.urbanfarm.databinding.ActivityMainBinding
+import com.putragandad.urbanfarm.fragments.dialogfragment.AlphaDialogFragment
 
 class MainActivity : AppCompatActivity() {
 

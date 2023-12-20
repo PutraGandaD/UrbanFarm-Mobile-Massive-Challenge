@@ -6,6 +6,8 @@ import com.bumptech.glide.Glide
 import com.google.firebase.auth.FirebaseAuth
 import com.putragandad.urbanfarm.R
 import com.putragandad.urbanfarm.databinding.ActivityProfilEditPageBinding
+import com.putragandad.urbanfarm.fragments.dialogfragment.AlphaDialogFragment
+import com.putragandad.urbanfarm.fragments.dialogfragment.InDevelopmentFragment
 
 class ProfilEditPageActivity : AppCompatActivity() {
     private lateinit var binding : ActivityProfilEditPageBinding
@@ -31,5 +33,7 @@ class ProfilEditPageActivity : AppCompatActivity() {
         Glide.with(this)
             .load(profileImageUri)
             .into(binding.ivAccount)
+
+        InDevelopmentFragment().show(supportFragmentManager, "INDEVELOPMENT_DIALOG")
     }
 }

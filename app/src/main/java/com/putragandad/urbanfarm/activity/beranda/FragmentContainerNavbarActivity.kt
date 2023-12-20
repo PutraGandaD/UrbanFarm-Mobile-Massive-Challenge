@@ -6,6 +6,7 @@ import androidx.fragment.app.Fragment
 import com.putragandad.urbanfarm.R
 import com.putragandad.urbanfarm.databinding.ActivityFragmentContainerBinding
 import com.putragandad.urbanfarm.fragments.berandapage.BerandaPageFragment
+import com.putragandad.urbanfarm.fragments.dialogfragment.AlphaDialogFragment
 import com.putragandad.urbanfarm.fragments.jualpanenpage.JualPanenPageFragment
 import com.putragandad.urbanfarm.fragments.profilpage.ProfilPageFragment
 import com.putragandad.urbanfarm.fragments.tanamankupage.TanamankuPageFragment
@@ -19,6 +20,8 @@ class FragmentContainerNavbarActivity : AppCompatActivity() {
         binding = ActivityFragmentContainerBinding.inflate(layoutInflater)
 
         setContentView(binding.root)
+
+        AlphaDialogFragment().show(supportFragmentManager, "ALPHA_TEST_DIALOG")
 
         replaceFragment(BerandaPageFragment())
 

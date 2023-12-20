@@ -248,4 +248,40 @@ Cabai rawit sangat mudah ditanam di rumah. Cabai rawit juga dapat tumbuh dengan 
     <string name="wortel_polybag_perawatan_step2">Pemupukan dilakukan setelah tanaman berumur 1 bulan, dilakukan selama 2 minggu sekali, hingga panen. Tanamkan di bagian pinggir polybag sebanyak 1 sdt jangan terlalu dekat dengan perakaran, karena wortel dapat gosong.</string>
     <string name="wortel_polybag_panen_step1">Wortel dapat dipanen ketika sudah berusia 3 bulan.</string>
 
+    <!-- Deskripsi Tanaman -->
+    <string name="alpha_text">
+        Selamat Datang di UrbanFarm ALPHA Version!\n
+        \n
+        Saat ini aplikasi UrbanFarm sedang dalam fase alpha test\n
+        Untuk beberapa fitur kemungkinan tidak berjalan dengan semestinya dan belum selesai diimplementasi\n
+        \n
+        Karena kami menggunakan server gratis untuk API, mohon tunggu beberapa saat (max.1 menit)\n
+        hingga API terload dengan baik (Khususnya untuk di halaman Beranda dan Jual Panen).\n
+        \n
+        Terima kasih telah menggunakan UrbanFarm!\n
+    </string>
+
+    <string name="indevelopment_text">
+        Fitur ini sedang dalam pengembangan!
+    </string>
+
+    <string name="indevelopment_login_text">
+        Fitur ini sedang dalam pengembangan!\n
+        Gunakan tombol Login dengan Google untuk Login!
+    </string>
+
+    <string name="tentang_kami">
+        UrbanFarm Alpha Version\n
+        Copyright 2023 CodeSmiths Team\n
+        \n
+        Dikembangkan oleh Putra Ganda Dewata dan Dewangga Nanda Arjuna
+        \n
+        Serta tim dari Mobile Development - Grup Merge 13 CodeSmiths :\n
+        1. Novia Indah Ramadhani\n
+        2. Sugini Injani\n
+        \n
+        Bagian dari Massive Challenge - Studi Independen Bersertifikat Android
+        Mobile Development di Infinite Learning, Kota Batam.
+    </string>
+
 </resources>
