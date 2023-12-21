@@ -29,7 +29,7 @@ class ThirdScreen : Fragment() {
         val btnNext = view.findViewById<MaterialButton>(R.id.btn_next_bawangmerah_polybag_menanam3)
         val btnPrev = view.findViewById<MaterialButton>(R.id.btn_previous_bawangmerah_polybag_menanam3)
 
-        val viewPager = activity?.findViewById<ViewPager2>(R.id.viewPager_panduan_tanam_second_step)
+        val viewPager = activity?.findViewById<ViewPager2>(R.id.viewPager_panduan_tanam_polybag_second_step)
 
         btnNext.setOnClickListener {
             viewPager?.currentItem = 3

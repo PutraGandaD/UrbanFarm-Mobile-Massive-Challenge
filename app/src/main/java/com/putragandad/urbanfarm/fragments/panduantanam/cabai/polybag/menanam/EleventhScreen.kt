@@ -31,7 +31,7 @@ class EleventhScreen : Fragment() {
         val btnDone = view.findViewById<MaterialButton>(R.id.btn_next_cabai_polybag_menanam11)
         val btnPrev = view.findViewById<MaterialButton>(R.id.btn_previous_cabai_polybag_menanam11)
 
-        val viewPager = activity?.findViewById<ViewPager2>(R.id.viewPager_panduan_tanam_second_step)
+        val viewPager = activity?.findViewById<ViewPager2>(R.id.viewPager_panduan_tanam_polybag_second_step)
 
         btnDone.setOnClickListener {
             val intent = Intent(requireContext(), TabLayoutPagePolybagActivity::class.java)

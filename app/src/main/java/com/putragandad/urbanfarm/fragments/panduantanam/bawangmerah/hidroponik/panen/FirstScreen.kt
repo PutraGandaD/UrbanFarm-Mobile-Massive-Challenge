@@ -30,7 +30,7 @@ class FirstScreen : Fragment() {
 
         val btnDone = view.findViewById<MaterialButton>(R.id.btn_next_bawangmerah_hidroponik_panen1)
 
-        val viewPager = activity?.findViewById<ViewPager2>(R.id.viewPager_panduan_tanam_third_step)
+        val viewPager = activity?.findViewById<ViewPager2>(R.id.viewPager_panduan_tanam_hidroponik_third_step)
 
         btnDone.setOnClickListener {
             val intent = Intent(requireContext(), TabLayoutPageHidroponikActivity::class.java)

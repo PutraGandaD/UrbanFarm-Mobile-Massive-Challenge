@@ -9,6 +9,7 @@ import android.view.ViewGroup
 import androidx.viewpager2.widget.ViewPager2
 import com.google.android.material.button.MaterialButton
 import com.putragandad.urbanfarm.R
+import com.putragandad.urbanfarm.activity.tablayout_tanaman.hidroponik.TabLayoutPageHidroponikActivity
 
 class SecondScreen : Fragment() {
 
@@ -31,7 +32,7 @@ class SecondScreen : Fragment() {
         val btnDone = view.findViewById<MaterialButton>(R.id.btn_next_bawangmerah_hidroponik_mediatanam2)
         val btnPrev = view.findViewById<MaterialButton>(R.id.btn_previous_bawangmerah_hidroponik_mediatanam2)
 
-        val viewPager = activity?.findViewById<ViewPager2>(R.id.viewPager_panduan_tanam_first_step)
+        val viewPager = activity?.findViewById<ViewPager2>(R.id.viewPager_panduan_tanam_hidroponik_first_step)
 
         btnDone.setOnClickListener {
             val intent = Intent(requireContext(), TabLayoutPageHidroponikActivity::class.java)

@@ -31,7 +31,7 @@ class FifthScreen : Fragment() {
         val btnDone = view.findViewById<MaterialButton>(R.id.btn_next_buncis_polybag_perawatan5)
         val btnPrev = view.findViewById<MaterialButton>(R.id.btn_previous_buncis_polybag_perawatan5)
 
-        val viewPager = activity?.findViewById<ViewPager2>(R.id.viewPager_perawatan_page)
+        val viewPager = activity?.findViewById<ViewPager2>(R.id.viewPager_perawatan_polybag)
 
         btnDone.setOnClickListener {
             val intent = Intent(requireContext(), TabLayoutPagePolybagActivity::class.java)

@@ -31,7 +31,7 @@ class SecondScreen : Fragment() {
         val btnDone = view.findViewById<MaterialButton>(R.id.btn_next_buncis_polybag_mediatanam2)
         val btnPrev = view.findViewById<MaterialButton>(R.id.btn_previous_buncis_polybag_mediatanam2)
 
-        val viewPager = activity?.findViewById<ViewPager2>(R.id.viewPager_panduan_tanam_first_step)
+        val viewPager = activity?.findViewById<ViewPager2>(R.id.viewPager_panduan_tanam_polybag_first_step)
 
         btnDone.setOnClickListener {
             val intent = Intent(requireContext(), TabLayoutPagePolybagActivity::class.java)

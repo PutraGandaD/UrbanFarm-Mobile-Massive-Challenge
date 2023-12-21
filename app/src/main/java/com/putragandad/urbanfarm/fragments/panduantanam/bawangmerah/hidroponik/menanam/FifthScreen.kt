@@ -31,7 +31,7 @@ class FifthScreen : Fragment() {
         val btnDone = view.findViewById<MaterialButton>(R.id.btn_next_bawangmerah_hidroponik_menanam5)
         val btnPrev = view.findViewById<MaterialButton>(R.id.btn_previous_bawangmerah_hidroponik_menanam5)
 
-        val viewPager = activity?.findViewById<ViewPager2>(R.id.viewPager_panduan_tanam_second_step)
+        val viewPager = activity?.findViewById<ViewPager2>(R.id.viewPager_panduan_tanam_hidroponik_second_step)
 
         btnDone.setOnClickListener {
             val intent = Intent(requireContext(), TabLayoutPageHidroponikActivity::class.java)
