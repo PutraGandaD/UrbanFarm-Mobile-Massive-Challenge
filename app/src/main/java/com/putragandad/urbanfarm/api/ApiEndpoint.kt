@@ -21,6 +21,12 @@ interface ApiEndpoint {
     @Headers("Content-Type: application/json")
     fun getVideos(): Call<VideosDashboardModel>
 
+    @GET("api/v1/alat/jenistanaman/{jenisTanaman}")
+    @Headers("Content-Type: application/json")
+    fun getAlat(
+        @Path("jenisTanaman") jenisTanaman: String,
+    ): Call<JualPanenModel>
+
     @GET("api/v1/jualpanen/users/{id_user}")
     @Headers("Content-Type: application/json")
     fun dataByIdUser(
