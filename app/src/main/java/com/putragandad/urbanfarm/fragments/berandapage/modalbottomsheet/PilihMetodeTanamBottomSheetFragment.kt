@@ -8,6 +8,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment
+import com.putragandad.urbanfarm.activity.tablayout_tanaman.hidroponik.TabLayoutPageHidroponikActivity
 import com.putragandad.urbanfarm.activity.tablayout_tanaman.polybag.TabLayoutPagePolybagActivity
 import com.putragandad.urbanfarm.databinding.FragmentPilihMetodeTanamBinding
 
@@ -41,6 +42,7 @@ class PilihMetodeTanamBottomSheetFragment : BottomSheetDialogFragment() {
                     val sharedPreferences = context?.getSharedPreferences("BottomSheetNamaTanaman", Context.MODE_PRIVATE)
                     val editor = sharedPreferences?.edit()
                     editor?.putString("namaTanaman", "bawangmerah")
+                    editor?.putString("metodeTanam", "polybag")
                     editor?.apply()
                 }
                 "Cabai Rawit" -> {
@@ -49,6 +51,7 @@ class PilihMetodeTanamBottomSheetFragment : BottomSheetDialogFragment() {
                     val sharedPreferences = context?.getSharedPreferences("BottomSheetNamaTanaman", Context.MODE_PRIVATE)
                     val editor = sharedPreferences?.edit()
                     editor?.putString("namaTanaman", "cabairawit")
+                    editor?.putString("metodeTanam", "polybag")
                     editor?.apply()
                 }
                 "Buncis" -> {
@@ -57,6 +60,7 @@ class PilihMetodeTanamBottomSheetFragment : BottomSheetDialogFragment() {
                     val sharedPreferences = context?.getSharedPreferences("BottomSheetNamaTanaman", Context.MODE_PRIVATE)
                     val editor = sharedPreferences?.edit()
                     editor?.putString("namaTanaman", "buncis")
+                    editor?.putString("metodeTanam", "polybag")
                     editor?.apply()
                 }
                 "Wortel" -> {
@@ -65,6 +69,7 @@ class PilihMetodeTanamBottomSheetFragment : BottomSheetDialogFragment() {
                     val sharedPreferences = context?.getSharedPreferences("BottomSheetNamaTanaman", Context.MODE_PRIVATE)
                     val editor = sharedPreferences?.edit()
                     editor?.putString("namaTanaman", "wortel")
+                    editor?.putString("metodeTanam", "polybag")
                     editor?.apply()
                 }
                 "Kembang Kol" -> {
@@ -73,6 +78,7 @@ class PilihMetodeTanamBottomSheetFragment : BottomSheetDialogFragment() {
                     val sharedPreferences = context?.getSharedPreferences("BottomSheetNamaTanaman", Context.MODE_PRIVATE)
                     val editor = sharedPreferences?.edit()
                     editor?.putString("namaTanaman", "kembangkol")
+                    editor?.putString("metodeTanam", "polybag")
                     editor?.apply()
                 }
                 "Tomat" -> {
@@ -81,6 +87,7 @@ class PilihMetodeTanamBottomSheetFragment : BottomSheetDialogFragment() {
                     val sharedPreferences = context?.getSharedPreferences("BottomSheetNamaTanaman", Context.MODE_PRIVATE)
                     val editor = sharedPreferences?.edit()
                     editor?.putString("namaTanaman", "tomat")
+                    editor?.putString("metodeTanam", "polybag")
                     editor?.apply()
                 }
                 "Kacang Panjang" -> {
@@ -89,6 +96,7 @@ class PilihMetodeTanamBottomSheetFragment : BottomSheetDialogFragment() {
                     val sharedPreferences = context?.getSharedPreferences("BottomSheetNamaTanaman", Context.MODE_PRIVATE)
                     val editor = sharedPreferences?.edit()
                     editor?.putString("namaTanaman", "kacangpanjang")
+                    editor?.putString("metodeTanam", "polybag")
                     editor?.apply()
                 }
                 "Timun" -> {
@@ -97,6 +105,7 @@ class PilihMetodeTanamBottomSheetFragment : BottomSheetDialogFragment() {
                     val sharedPreferences = context?.getSharedPreferences("BottomSheetNamaTanaman", Context.MODE_PRIVATE)
                     val editor = sharedPreferences?.edit()
                     editor?.putString("namaTanaman", "timun")
+                    editor?.putString("metodeTanam", "polybag")
                     editor?.apply()
                 }
             }
@@ -107,9 +116,74 @@ class PilihMetodeTanamBottomSheetFragment : BottomSheetDialogFragment() {
             when(namaTanaman) {
                 "Bawang Merah" -> {
                     Toast.makeText(requireContext(), "Debug : nama tanaman $namaTanaman, get from bundle", Toast.LENGTH_SHORT).show()
-                    val sharedPreferences = context?.getSharedPreferences("BottomSheet", Context.MODE_PRIVATE)
+                    startActivity(Intent(requireContext(), TabLayoutPageHidroponikActivity::class.java))
+                    val sharedPreferences = context?.getSharedPreferences("BottomSheetNamaTanaman", Context.MODE_PRIVATE)
                     val editor = sharedPreferences?.edit()
                     editor?.putString("namaTanaman", "bawangmerah")
+                    editor?.putString("metodeTanam", "hidroponik")
+                    editor?.apply()
+                }
+                "Cabai Rawit" -> {
+                    Toast.makeText(requireContext(), "Debug : nama tanaman $namaTanaman, get from bundle", Toast.LENGTH_SHORT).show()
+                    startActivity(Intent(requireContext(), TabLayoutPageHidroponikActivity::class.java))
+                    val sharedPreferences = context?.getSharedPreferences("BottomSheetNamaTanaman", Context.MODE_PRIVATE)
+                    val editor = sharedPreferences?.edit()
+                    editor?.putString("namaTanaman", "cabairawit")
+                    editor?.putString("metodeTanam", "hidroponik")
+                    editor?.apply()
+                }
+                "Buncis" -> {
+                    Toast.makeText(requireContext(), "Debug : nama tanaman $namaTanaman, get from bundle", Toast.LENGTH_SHORT).show()
+                    startActivity(Intent(requireContext(), TabLayoutPageHidroponikActivity::class.java))
+                    val sharedPreferences = context?.getSharedPreferences("BottomSheetNamaTanaman", Context.MODE_PRIVATE)
+                    val editor = sharedPreferences?.edit()
+                    editor?.putString("namaTanaman", "buncis")
+                    editor?.putString("metodeTanam", "hidroponik")
+                    editor?.apply()
+                }
+                "Wortel" -> {
+                    Toast.makeText(requireContext(), "Debug : nama tanaman $namaTanaman, get from bundle", Toast.LENGTH_SHORT).show()
+                    startActivity(Intent(requireContext(), TabLayoutPageHidroponikActivity::class.java))
+                    val sharedPreferences = context?.getSharedPreferences("BottomSheetNamaTanaman", Context.MODE_PRIVATE)
+                    val editor = sharedPreferences?.edit()
+                    editor?.putString("namaTanaman", "wortel")
+                    editor?.putString("metodeTanam", "hidroponik")
+                    editor?.apply()
+                }
+                "Kembang Kol" -> {
+                    Toast.makeText(requireContext(), "Debug : nama tanaman $namaTanaman, get from bundle", Toast.LENGTH_SHORT).show()
+                    startActivity(Intent(requireContext(), TabLayoutPageHidroponikActivity::class.java))
+                    val sharedPreferences = context?.getSharedPreferences("BottomSheetNamaTanaman", Context.MODE_PRIVATE)
+                    val editor = sharedPreferences?.edit()
+                    editor?.putString("namaTanaman", "kembangkol")
+                    editor?.putString("metodeTanam", "hidroponik")
+                    editor?.apply()
+                }
+                "Tomat" -> {
+                    Toast.makeText(requireContext(), "Debug : nama tanaman $namaTanaman, get from bundle", Toast.LENGTH_SHORT).show()
+                    startActivity(Intent(requireContext(), TabLayoutPageHidroponikActivity::class.java))
+                    val sharedPreferences = context?.getSharedPreferences("BottomSheetNamaTanaman", Context.MODE_PRIVATE)
+                    val editor = sharedPreferences?.edit()
+                    editor?.putString("namaTanaman", "tomat")
+                    editor?.putString("metodeTanam", "hidroponik")
+                    editor?.apply()
+                }
+                "Kacang Panjang" -> {
+                    Toast.makeText(requireContext(), "Debug : nama tanaman $namaTanaman, get from bundle", Toast.LENGTH_SHORT).show()
+                    startActivity(Intent(requireContext(), TabLayoutPageHidroponikActivity::class.java))
+                    val sharedPreferences = context?.getSharedPreferences("BottomSheetNamaTanaman", Context.MODE_PRIVATE)
+                    val editor = sharedPreferences?.edit()
+                    editor?.putString("namaTanaman", "kacangpanjang")
+                    editor?.putString("metodeTanam", "hidroponik")
+                    editor?.apply()
+                }
+                "Timun" -> {
+                    Toast.makeText(requireContext(), "Debug : nama tanaman $namaTanaman, get from bundle", Toast.LENGTH_SHORT).show()
+                    startActivity(Intent(requireContext(), TabLayoutPageHidroponikActivity::class.java))
+                    val sharedPreferences = context?.getSharedPreferences("BottomSheetNamaTanaman", Context.MODE_PRIVATE)
+                    val editor = sharedPreferences?.edit()
+                    editor?.putString("namaTanaman", "timun")
+                    editor?.putString("metodeTanam", "hidroponik")
                     editor?.apply()
                 }
             }

@@ -1,5 +1,7 @@
 package com.putragandad.urbanfarm.api
 
+import com.putragandad.urbanfarm.models.api.AlatTanamModel
+import com.putragandad.urbanfarm.models.api.BahanTanamModel
 import com.putragandad.urbanfarm.models.api.JualPanenModel
 import com.putragandad.urbanfarm.models.api.ResponseModel
 import com.putragandad.urbanfarm.models.api.VideosDashboardModel
@@ -21,11 +23,19 @@ interface ApiEndpoint {
     @Headers("Content-Type: application/json")
     fun getVideos(): Call<VideosDashboardModel>
 
-    @GET("api/v1/alat/jenistanaman/{jenisTanaman}")
+    @GET("api/v1/alat/jenistanaman/{jenisTanaman}/{metodeTanam}")
     @Headers("Content-Type: application/json")
     fun getAlat(
-        @Path("jenisTanaman") jenisTanaman: String,
-    ): Call<JualPanenModel>
+        @Path("jenisTanaman") jenisTanaman: String?,
+        @Path("metodeTanam") metodeTanam: String?,
+    ): Call<AlatTanamModel>
+
+    @GET("api/v1/bahan/jenistanaman/{jenisTanaman}/{metodeTanam}")
+    @Headers("Content-Type: application/json")
+    fun getBahan(
+        @Path("jenisTanaman") jenisTanaman: String?,
+        @Path("metodeTanam") metodeTanam: String?,
+    ): Call<BahanTanamModel>
 
     @GET("api/v1/jualpanen/users/{id_user}")
     @Headers("Content-Type: application/json")

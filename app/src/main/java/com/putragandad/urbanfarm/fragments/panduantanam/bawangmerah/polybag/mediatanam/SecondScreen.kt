@@ -70,7 +70,7 @@ class SecondScreen : Fragment() {
         val btnNext = view.findViewById<MaterialButton>(R.id.btn_next_bawangmerah_polybag_mediatanam2)
         val btnPrev = view.findViewById<MaterialButton>(R.id.btn_previous_bawangmerah_polybag_mediatanam2)
 
-        val viewPager = activity?.findViewById<ViewPager2>(R.id.viewPager_panduan_tanam_first_step)
+        val viewPager = activity?.findViewById<ViewPager2>(R.id.viewPager_panduan_tanam_polybag_first_step)
 
         btnNext.setOnClickListener {
             viewPager?.currentItem = 2

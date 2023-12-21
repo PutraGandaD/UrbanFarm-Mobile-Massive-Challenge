@@ -89,18 +89,15 @@ class JualPanenPageFragment : Fragment() {
             ) {
                 if (response.isSuccessful) {
                     val alatTanamModel = response.body()
-                    val listData = alatTanamModel!!.data
+                    val listData = alatTanamModel?.data
 
                     if (listData != null && listData.isNotEmpty()) {
-                        Log.d("JualPanenPageFragment", "Data size: ${listData.size}")
-                        for (item in listData) {
-                            Log.e("MainActivity", "ID : ${item.id}")
-                        }
+                        jualPanenRVAdapter.setData(listData)
                     } else {
                         Log.e("MainActivity", "ListData is null or empty")
                     }
 
-                    jualPanenRVAdapter.setData(listData)
+
                     Log.d("JualPanenPageFragment", "Content-Type: ${response.headers().get("Content-Type")}")
                 }
             }

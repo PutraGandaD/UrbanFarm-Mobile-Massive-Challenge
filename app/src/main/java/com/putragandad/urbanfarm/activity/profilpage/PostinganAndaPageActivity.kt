@@ -57,17 +57,14 @@ class PostinganAndaPageActivity : AppCompatActivity() {
             ) {
                 if(response.isSuccessful) {
                     val alatTanamModel = response.body()
-                    val listData = alatTanamModel!!.data
+                    val listData = alatTanamModel?.data
 
-//                    if (listData != null && listData.isNotEmpty()) {
-//                        for (item in listData) {
-//                            Log.e("MainActivity", "ID : ${item.id}")
-//                        }
-//                    } else {
-//                        Log.e("MainActivity", "ListData is null or empty")
-//
-//                    }
-                    postinganSayaCardRVAdapter.setData(listData)
+                    if (listData != null && listData.isNotEmpty()) {
+                        postinganSayaCardRVAdapter.setData(listData)
+                    } else {
+                        Log.e("MainActivity", "ListData is null or empty")
+
+                    }
                     Log.e("MainActivity", "Content-Type: ${response.headers().get("Content-Type")}")
                 }
             }

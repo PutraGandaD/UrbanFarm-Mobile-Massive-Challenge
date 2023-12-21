@@ -98,17 +98,15 @@ class BerandaPageFragment : Fragment() {
             ) {
                 if(response.isSuccessful) {
                     val videosModel = response.body()
-                    val listData = videosModel!!.data
+                    val listData = videosModel?.data
 
                     if (listData != null && listData.isNotEmpty()) {
-                        for (item in listData) {
-                            Log.e("MainActivity", "ID : ${item.id}")
-                        }
+                        videosDashboardRVAdapter.setData(listData)
                     } else {
                         Log.e("MainActivity", "ListData is null or empty")
 
                     }
-                    videosDashboardRVAdapter.setData(listData)
+
                     Log.e("JualPanenFragment", "Content-Type: ${response.headers().get("Content-Type")}")
                 }
             }

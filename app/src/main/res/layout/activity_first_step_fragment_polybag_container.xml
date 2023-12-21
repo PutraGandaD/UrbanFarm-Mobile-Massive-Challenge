@@ -4,10 +4,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".activity.tablayout_tanaman.polybag.panduantanam.FirstStepFragmentContainer">
+    tools:context=".activity.tablayout_tanaman.polybag.panduantanam.FirstStepFragmentPolybagContainer">
 
     <androidx.viewpager2.widget.ViewPager2
-        android:id="@+id/viewPager_panduan_tanam_first_step"
+        android:id="@+id/viewPager_panduan_tanam_polybag_first_step"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         app:layout_constraintBottom_toBottomOf="parent"
