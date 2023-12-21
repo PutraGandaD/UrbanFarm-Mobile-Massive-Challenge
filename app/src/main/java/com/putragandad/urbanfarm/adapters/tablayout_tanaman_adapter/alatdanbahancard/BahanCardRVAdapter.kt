@@ -8,6 +8,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
+import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.google.android.material.button.MaterialButton
@@ -49,9 +50,19 @@ class BahanCardRVAdapter(
             .into(holder.ivCard)
 
         holder.btnBeli.setOnClickListener {
-            var beliUri: Uri = Uri.parse(linkBeliUrl)
-            val intent = Intent(Intent.ACTION_VIEW, beliUri)
-            holder.itemView.context.startActivity(intent)
+            val context = holder.itemView.context
+            val beliUri: Uri
+            if (!linkBeliUrl.isNullOrBlank()) {
+                if (!linkBeliUrl.startsWith("http://") && !linkBeliUrl.startsWith("https://")) {
+                    beliUri = Uri.parse("http://" + linkBeliUrl);
+                } else {
+                    beliUri = Uri.parse(linkBeliUrl)
+                }
+                val intent = Intent(Intent.ACTION_VIEW, beliUri)
+                context.startActivity(intent)
+            } else {
+                Toast.makeText(context, "URL is not valid", Toast.LENGTH_SHORT).show()
+            }
         }
     }
 
