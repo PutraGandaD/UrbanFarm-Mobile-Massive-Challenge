@@ -27,8 +27,8 @@ class ThirdScreen : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        val btnDone = view.findViewById<MaterialButton>(R.id.btn_next_wortel_polybag_mediatanam2)
-        val btnPrev = view.findViewById<MaterialButton>(R.id.btn_previous_wortel_polybag_mediatanam2)
+        val btnDone = view.findViewById<MaterialButton>(R.id.btn_next_wortel_polybag_mediatanam3)
+        val btnPrev = view.findViewById<MaterialButton>(R.id.btn_previous_wortel_polybag_mediatanam3)
 
         val viewPager = activity?.findViewById<ViewPager2>(R.id.viewPager_panduan_tanam_polybag_first_step)
 
